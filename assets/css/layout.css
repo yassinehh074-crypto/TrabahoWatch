@@ -1,0 +1,379 @@
+/* ============================================================
+   LAYOUT.CSS — Page structure, container, grid, scaffold
+   TrabahoWatch v1.0
+   ============================================================ */
+
+/* ── Container ──────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--container-max, 1200px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+}
+
+/* ── Page Scaffold ──────────────────────────────────────────── */
+#root,
+.page-scaffold {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#main-content {
+  flex: 1;
+  outline: none;
+}
+
+/* ── Page Wrapper (with / without sidebar) ──────────────────── */
+.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr var(--sidebar-width, 300px);
+  gap: var(--space-8);
+  align-items: start;
+  max-width: var(--container-max, 1200px);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-16, 4rem);
+  width: 100%;
+}
+
+.page-wrapper.no-sidebar {
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media (max-width: 1024px) {
+  .page-wrapper {
+    grid-template-columns: 1fr;
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  .page-wrapper #site-sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-wrapper {
+    padding: var(--space-6) var(--space-4) var(--space-12);
+    gap: var(--space-6);
+  }
+}
+
+/* ── Article Wrap ───────────────────────────────────────────── */
+.article-wrap {
+  max-width: var(--article-max, 720px);
+  margin: 0 auto;
+  padding: var(--space-8) 0 var(--space-12);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .article-wrap {
+    padding: var(--space-6) 0 var(--space-10);
+  }
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+#site-sidebar {
+  position: sticky;
+  top: calc(var(--header-height, 64px) + var(--space-4));
+  max-height: calc(100vh - var(--header-height, 64px) - var(--space-8));
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding-bottom: var(--space-4);
+  scrollbar-width: thin;
+}
+
+#site-sidebar::-webkit-scrollbar {
+  width: 4px;
+}
+
+#site-sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+/* ── Header ─────────────────────────────────────────────────── */
+#site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky, 200);
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  height: var(--header-height, 64px);
+  display: flex;
+  align-items: center;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+#site-footer {
+  background: var(--bg-surface-2);
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+/* ── Two Column Grid ────────────────────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+/* ── Three Column Grid ──────────────────────────────────────── */
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .three-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .three-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Hero Section ───────────────────────────────────────────── */
+.hero {
+  padding: var(--space-20, 5rem) 0 var(--space-16, 4rem);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-dark, #0f3172) 100%
+  );
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 70% 50%,
+    rgba(255,255,255,0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Section Spacing ────────────────────────────────────────── */
+.section {
+  padding: var(--space-10) 0;
+}
+
+.section--lg {
+  padding: var(--space-16, 4rem) 0;
+}
+
+.section--sm {
+  padding: var(--space-6) 0;
+}
+
+/* ── Divider ────────────────────────────────────────────────── */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-color);
+  margin: var(--space-8) 0;
+}
+
+.divider--sm {
+  margin: var(--space-4) 0;
+}
+
+.divider--thick {
+  height: 2px;
+  background: var(--border-strong);
+}
+
+/* ── Stack (flex column) ────────────────────────────────────── */
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stack--sm { gap: var(--space-2); }
+.stack--lg { gap: var(--space-8); }
+
+/* ── Cluster (flex row wrap) ────────────────────────────────── */
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.cluster--sm { gap: var(--space-2); }
+.cluster--lg { gap: var(--space-5); }
+
+/* ── Center ─────────────────────────────────────────────────── */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center--col {
+  flex-direction: column;
+}
+
+/* ── Spacer ─────────────────────────────────────────────────── */
+.spacer {
+  flex: 1;
+}
+
+/* ── Max Width Wrappers ─────────────────────────────────────── */
+.max-w-sm  { max-width: 480px;  margin: 0 auto; }
+.max-w-md  { max-width: 640px;  margin: 0 auto; }
+.max-w-lg  { max-width: 800px;  margin: 0 auto; }
+.max-w-xl  { max-width: 960px;  margin: 0 auto; }
+.max-w-2xl { max-width: 1200px; margin: 0 auto; }
+
+/* ── Overflow helpers ───────────────────────────────────────── */
+.overflow-x-auto {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ── Display utilities ──────────────────────────────────────── */
+.hidden       { display: none !important; }
+.block        { display: block; }
+.inline-block { display: inline-block; }
+.flex         { display: flex; }
+.grid         { display: grid; }
+
+@media (max-width: 768px) {
+  .hidden-mobile { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .hidden-desktop { display: none !important; }
+}
+
+/* ── Loading state ──────────────────────────────────────────── */
+[data-loading] {
+  min-height: 60px;
+  background: var(--bg-surface-2);
+  border-radius: var(--radius-lg);
+  animation: skeleton-wave-anim 1.5s ease-in-out infinite;
+}
+
+[data-loading].loaded {
+  min-height: unset;
+  background: unset;
+  animation: none;
+  border-radius: unset;
+}
+
+/* ── Toast Container ────────────────────────────────────────── */
+#toast-container {
+  position: fixed;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: var(--z-toast, 500);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  pointer-events: none;
+  width: 100%;
+  max-width: 400px;
+  padding: 0 var(--space-4);
+}
+
+@media (max-width: 480px) {
+  #toast-container {
+    bottom: var(--space-4);
+    max-width: 100%;
+  }
+}
+
+/* ── Print Layout ───────────────────────────────────────────── */
+@media print {
+  #site-header,
+  #site-footer,
+  #site-sidebar,
+  #toast-container,
+  #scroll-top-btn,
+  #reading-progress,
+  .btn,
+  .share-bar,
+  .adsense-slot,
+  .filter-bar,
+  .load-more-container {
+    display: none !important;
+  }
+
+  .page-wrapper,
+  .page-wrapper.no-sidebar {
+    display: block;
+    padding: 0;
+  }
+
+  .article-wrap {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  p, li {
+    page-break-inside: avoid;
+  }
+}

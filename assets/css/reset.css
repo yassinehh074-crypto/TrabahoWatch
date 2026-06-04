@@ -1,0 +1,261 @@
+/* ============================================================
+   FILE: assets/css/reset.css
+   PURPOSE: Normalize browser defaults — zero surprises.
+   Based on: modern-normalize + custom additions for our needs.
+   RULE: No colors, no fonts, no spacing here.
+         Only neutralizing browser inconsistencies.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   BOX SIZING
+   Makes width/height calculations predictable everywhere.
+---------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ----------------------------------------------------------
+   ROOT & BODY
+---------------------------------------------------------- */
+html {
+  /* Smooth scrolling — but only if user has no motion preference */
+  scroll-behavior: smooth;
+
+  /* Prevent font size inflation on mobile orientation change */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+
+  /* Better font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Scrollbar always visible — prevents layout shift */
+  overflow-y: scroll;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+
+/* ----------------------------------------------------------
+   RESPECT USER MOTION PREFERENCES
+   Important for accessibility.
+---------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ----------------------------------------------------------
+   TYPOGRAPHY RESET
+---------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: var(--leading-tight);
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Remove default list styles — re-add in components when needed */
+ul, ol {
+  list-style: none;
+}
+
+/* Quotes */
+blockquote, q {
+  quotes: none;
+}
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: none;
+}
+
+
+/* ----------------------------------------------------------
+   LINKS
+---------------------------------------------------------- */
+a {
+  color: inherit;
+  text-decoration: none;
+  /* Do NOT remove outline here — handled in base.css with
+     a better focus style */
+}
+
+
+/* ----------------------------------------------------------
+   MEDIA
+   Prevent overflow, make responsive by default.
+---------------------------------------------------------- */
+img,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+/* Prevent alt text from being styled weirdly */
+img {
+  font-style: italic;
+  font-size: var(--text-sm);
+}
+
+
+/* ----------------------------------------------------------
+   FORMS & INTERACTIVE ELEMENTS
+---------------------------------------------------------- */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  /* Remove default browser styling */
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+button {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Disabled state */
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Textarea no horizontal resize — prevents layout breaks */
+textarea {
+  resize: vertical;
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove search input default styling */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+
+/* ----------------------------------------------------------
+   TABLES
+---------------------------------------------------------- */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: var(--font-semibold);
+}
+
+
+/* ----------------------------------------------------------
+   MISC
+---------------------------------------------------------- */
+
+/* Hidden attribute works correctly */
+[hidden] {
+  display: none !important;
+}
+
+/* SVG icons inherit color from parent by default */
+svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  overflow: visible;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: 0;
+}
+
+/* Selection color — brand-aware */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Scrollbar — subtle, doesn't distract */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-300);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-400);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: var(--color-gray-600);
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}

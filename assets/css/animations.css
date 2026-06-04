@@ -1,0 +1,664 @@
+/* ============================================================
+   FILE: assets/css/animations.css
+   PURPOSE: All keyframe animations and transition utilities
+            used across the site. Entrance animations,
+            hover effects, loading states, scroll reveals.
+   DEPENDS ON: variables.css
+   RULE: Never add animation directly to a component file
+         if it's reused in more than one place.
+         Everything here respects prefers-reduced-motion.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   REDUCED MOTION GATE
+   All animations in this file are wrapped or
+   overridden by this preference.
+   Already set globally in reset.css —
+   this adds extra safety for complex animations.
+---------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration:        0.01ms !important;
+    animation-iteration-count: 1      !important;
+    transition-duration:       0.01ms !important;
+  }
+}
+
+
+/* ============================================================
+   KEYFRAMES
+   Defined once — used via utility classes below.
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   ENTRANCE ANIMATIONS
+---------------------------------------------------------- */
+
+/* Fade in */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Fade in — from bottom (most common card entrance) */
+@keyframes fadeInUp {
+  from {
+    opacity:   0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in — from top (dropdowns, notifications) */
+@keyframes fadeInDown {
+  from {
+    opacity:   0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in — from left (mobile menu) */
+@keyframes fadeInLeft {
+  from {
+    opacity:   0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in — from right (sidebar, slide-ins) */
+@keyframes fadeInRight {
+  from {
+    opacity:   0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale in — modals, popovers */
+@keyframes scaleIn {
+  from {
+    opacity:   0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity:   1;
+    transform: scale(1);
+  }
+}
+
+/* Scale in from center — badges, chips */
+@keyframes scalePop {
+  0%   { transform: scale(0.8);  opacity: 0; }
+  70%  { transform: scale(1.08); opacity: 1; }
+  100% { transform: scale(1);    opacity: 1; }
+}
+
+
+/* ----------------------------------------------------------
+   EXIT ANIMATIONS
+---------------------------------------------------------- */
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity:   1;
+    transform: translateY(0);
+  }
+  to {
+    opacity:   0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fadeOutUp {
+  from {
+    opacity:   1;
+    transform: translateY(0);
+  }
+  to {
+    opacity:   0;
+    transform: translateY(-16px);
+  }
+}
+
+
+/* ----------------------------------------------------------
+   LOADING / SPINNER ANIMATIONS
+---------------------------------------------------------- */
+
+/* Continuous spin — buttons, page loader */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Slow spin — page-level loading indicator */
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Pulse — skeleton loaders (also in base.css) */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.4; }
+}
+
+/* Wave skeleton — more natural loading feel */
+@keyframes skeletonWave {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+/* Bounce — attention-grabbing, used sparingly */
+@keyframes bounce {
+  0%, 100% {
+    transform:                 translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform:                 translateY(-8px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Pulse ring — live/open badge */
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Urgent blink — deadline warning */
+@keyframes badge-urgent-pulse {
+  0%, 100% { opacity: 1;   }
+  50%       { opacity: 0.6; }
+}
+
+/* Countdown number flip */
+@keyframes flipDown {
+  0%   { transform: rotateX(0deg);   opacity: 1; }
+  50%  { transform: rotateX(90deg);  opacity: 0; }
+  51%  { transform: rotateX(-90deg); opacity: 0; }
+  100% { transform: rotateX(0deg);   opacity: 1; }
+}
+
+/* Progress bar fill */
+@keyframes progressFill {
+  from { width: 0%; }
+  to   { width: var(--target-width, 100%); }
+}
+
+/* Toast progress bar */
+@keyframes toast-progress {
+  from { width: 100%; }
+  to   { width: 0%;   }
+}
+
+/* Button spinner */
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* ----------------------------------------------------------
+   SCROLL REVEAL ANIMATIONS
+   Used for sections entering viewport.
+   JS adds .revealed class via IntersectionObserver.
+---------------------------------------------------------- */
+
+/* Cards reveal — stagger via --delay */
+@keyframes revealCard {
+  from {
+    opacity:   0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats counter — slide up */
+@keyframes countUp {
+  from {
+    opacity:   0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+/* Section title underline grow */
+@keyframes underlineGrow {
+  from { width: 0%;   }
+  to   { width: 100%; }
+}
+
+
+/* ----------------------------------------------------------
+   HERO ANIMATIONS
+   Homepage entrance sequence.
+---------------------------------------------------------- */
+
+@keyframes heroTitleIn {
+  from {
+    opacity:   0;
+    transform: translateY(30px);
+    filter:    blur(4px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+    filter:    blur(0);
+  }
+}
+
+@keyframes heroSubtitleIn {
+  from {
+    opacity:   0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroSearchIn {
+  from {
+    opacity:   0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* ----------------------------------------------------------
+   MISCELLANEOUS
+---------------------------------------------------------- */
+
+/* Shake — form validation error */
+@keyframes shake {
+  0%, 100% { transform: translateX(0);   }
+  15%       { transform: translateX(-6px); }
+  30%       { transform: translateX(6px);  }
+  45%       { transform: translateX(-4px); }
+  60%       { transform: translateX(4px);  }
+  75%       { transform: translateX(-2px); }
+  90%       { transform: translateX(2px);  }
+}
+
+/* Wiggle — notification, badge */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg);  }
+  25%       { transform: rotate(-8deg); }
+  75%       { transform: rotate(8deg);  }
+}
+
+/* Float — decorative elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0px);  }
+  50%       { transform: translateY(-6px); }
+}
+
+/* Ripple — click effect */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity:   0;
+  }
+}
+
+/* Number tick — counter animation */
+@keyframes numberTick {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+
+/* ============================================================
+   ANIMATION UTILITY CLASSES
+   Apply directly in HTML.
+   e.g. class="animate-fade-in"
+   ============================================================ */
+
+/* ----------------------------------------------------------
+   BASE ANIMATION DEFAULTS
+   All .animate-* classes share these.
+---------------------------------------------------------- */
+[class*="animate-"] {
+  animation-duration:        var(--anim-duration, 400ms);
+  animation-timing-function: var(--anim-easing,   ease-out);
+  animation-fill-mode:       both;
+  animation-delay:           var(--anim-delay,    0ms);
+}
+
+
+/* ----------------------------------------------------------
+   ENTRANCE UTILITIES
+---------------------------------------------------------- */
+.animate-fade-in       { animation-name: fadeIn;      }
+.animate-fade-in-up    { animation-name: fadeInUp;    }
+.animate-fade-in-down  { animation-name: fadeInDown;  }
+.animate-fade-in-left  { animation-name: fadeInLeft;  }
+.animate-fade-in-right { animation-name: fadeInRight; }
+.animate-scale-in      { animation-name: scaleIn;     }
+.animate-scale-pop     { animation-name: scalePop;    }
+
+
+/* ----------------------------------------------------------
+   EXIT UTILITIES
+   Add these programmatically via JS before removal.
+---------------------------------------------------------- */
+.animate-fade-out      { animation-name: fadeOut;     }
+.animate-fade-out-down { animation-name: fadeOutDown; }
+.animate-fade-out-up   { animation-name: fadeOutUp;   }
+
+
+/* ----------------------------------------------------------
+   CONTINUOUS UTILITIES
+   Loop infinitely.
+---------------------------------------------------------- */
+.animate-spin       {
+  animation-name:            spin;
+  animation-duration:        1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-spin-slow  {
+  animation-name:            spinSlow;
+  animation-duration:        3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-pulse      {
+  animation-name:            skeleton-pulse;
+  animation-duration:        1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.animate-bounce     {
+  animation-name:            bounce;
+  animation-duration:        1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+.animate-float      {
+  animation-name:            float;
+  animation-duration:        3s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.animate-wiggle     {
+  animation-name:            wiggle;
+  animation-duration:        500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.animate-shake      {
+  animation-name:            shake;
+  animation-duration:        500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+
+/* ----------------------------------------------------------
+   DURATION MODIFIERS
+---------------------------------------------------------- */
+.anim-fast    { --anim-duration: 150ms; }
+.anim-normal  { --anim-duration: 300ms; }
+.anim-slow    { --anim-duration: 500ms; }
+.anim-slower  { --anim-duration: 800ms; }
+
+
+/* ----------------------------------------------------------
+   DELAY MODIFIERS
+   Used for staggered card entrances.
+---------------------------------------------------------- */
+.anim-delay-0   { --anim-delay: 0ms;   }
+.anim-delay-1   { --anim-delay: 75ms;  }
+.anim-delay-2   { --anim-delay: 150ms; }
+.anim-delay-3   { --anim-delay: 225ms; }
+.anim-delay-4   { --anim-delay: 300ms; }
+.anim-delay-5   { --anim-delay: 375ms; }
+.anim-delay-6   { --anim-delay: 450ms; }
+
+
+/* ----------------------------------------------------------
+   EASING MODIFIERS
+---------------------------------------------------------- */
+.anim-ease-in      { --anim-easing: ease-in;                          }
+.anim-ease-out     { --anim-easing: ease-out;                         }
+.anim-ease-in-out  { --anim-easing: ease-in-out;                      }
+.anim-ease-spring  { --anim-easing: cubic-bezier(0.34, 1.56, 0.64, 1); }
+.anim-ease-linear  { --anim-easing: linear;                            }
+
+
+/* ----------------------------------------------------------
+   SCROLL REVEAL
+   JS adds .reveal to elements with IntersectionObserver.
+   Initial state — hidden.
+   Revealed state — animate in.
+---------------------------------------------------------- */
+.reveal {
+  opacity:   0;
+  transform: translateY(20px);
+  transition:
+    opacity   500ms ease-out,
+    transform 500ms ease-out;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.revealed {
+  opacity:   1;
+  transform: translateY(0);
+}
+
+/* Stagger helper for card grids */
+.card-grid .reveal:nth-child(1) { --reveal-delay: 0ms;   }
+.card-grid .reveal:nth-child(2) { --reveal-delay: 75ms;  }
+.card-grid .reveal:nth-child(3) { --reveal-delay: 150ms; }
+.card-grid .reveal:nth-child(4) { --reveal-delay: 225ms; }
+.card-grid .reveal:nth-child(5) { --reveal-delay: 300ms; }
+.card-grid .reveal:nth-child(6) { --reveal-delay: 375ms; }
+
+
+/* ----------------------------------------------------------
+   HOMEPAGE HERO ENTRANCE SEQUENCE
+   Applied directly to hero elements.
+   Staggered for a polished first impression.
+---------------------------------------------------------- */
+.hero-animate .page-hero__title {
+  animation:
+    heroTitleIn 600ms ease-out both;
+  animation-delay: 100ms;
+}
+
+.hero-animate .page-hero__subtitle {
+  animation:
+    heroSubtitleIn 500ms ease-out both;
+  animation-delay: 250ms;
+}
+
+.hero-animate .hero-search {
+  animation:
+    heroSearchIn 500ms ease-out both;
+  animation-delay: 400ms;
+}
+
+.hero-animate .stats-bar {
+  animation:
+    fadeInUp 400ms ease-out both;
+  animation-delay: 550ms;
+}
+
+
+/* ----------------------------------------------------------
+   SKELETON WAVE
+   More polished skeleton loading than pulse.
+   Apply to .skeleton elements.
+---------------------------------------------------------- */
+.skeleton-wave {
+  background: linear-gradient(
+    90deg,
+    var(--bg-surface-2) 25%,
+    var(--bg-surface-3) 50%,
+    var(--bg-surface-2) 75%
+  );
+  background-size: 200% 100%;
+  animation:
+    skeletonWave 1.5s ease-in-out infinite;
+}
+
+
+/* ----------------------------------------------------------
+   COUNTDOWN FLIP
+   For CSC exam countdown numbers.
+   Apply to .csc-countdown__number when value changes.
+---------------------------------------------------------- */
+.countdown-flip {
+  animation:
+    flipDown 300ms ease-in-out;
+}
+
+
+/* ----------------------------------------------------------
+   RIPPLE EFFECT
+   Click feedback on buttons and cards.
+   JS creates .ripple span on click.
+---------------------------------------------------------- */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position:      absolute;
+  border-radius: var(--radius-full);
+  background:    rgba(255, 255, 255, 0.25);
+  transform:     scale(0);
+  animation:     ripple 600ms linear;
+  pointer-events:none;
+}
+
+
+/* ----------------------------------------------------------
+   STAT COUNTER
+   Animated number counting up on homepage.
+   JS triggers .counting class.
+---------------------------------------------------------- */
+.stat-number {
+  display:             inline-block;
+  font-variant-numeric:tabular-nums;
+  transition:          all var(--transition-normal);
+}
+
+.stat-number.counting {
+  animation: countUp 400ms ease-out both;
+}
+
+
+/* ----------------------------------------------------------
+   PAGE TRANSITION
+   Subtle fade between page navigations.
+   Applied to <main> by router.js.
+---------------------------------------------------------- */
+.page-enter {
+  animation: fadeIn 200ms ease-out both;
+}
+
+.page-exit {
+  animation: fadeOut 150ms ease-in both;
+}
+
+
+/* ----------------------------------------------------------
+   READING PROGRESS
+   Thin accent bar at page top.
+   Width driven by JS scroll position.
+   Transition already in layout.css — this adds glow.
+---------------------------------------------------------- */
+#reading-progress {
+  box-shadow: 0 0 8px rgba(220, 38, 38, 0.4);
+}
+
+
+/* ----------------------------------------------------------
+   SECTION UNDERLINE DECORATION
+   Animated underline on section titles.
+---------------------------------------------------------- */
+.section-title-decorated {
+  position:   relative;
+  display:    inline-block;
+}
+
+.section-title-decorated::after {
+  content:       '';
+  position:      absolute;
+  bottom:        -6px;
+  left:          0;
+  height:        3px;
+  width:         0%;
+  background:    var(--color-accent);
+  border-radius: var(--radius-full);
+  transition:    width 600ms ease-out;
+}
+
+.section-title-decorated.revealed::after {
+  width: 60px;
+}
+
+
+/* ----------------------------------------------------------
+   CARD HOVER LIFT
+   Defined here as a utility — cards.css references it.
+   Separated so other elements can reuse it.
+---------------------------------------------------------- */
+.hover-lift {
+  transition:
+    transform  var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform:  translateY(-3px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.hover-lift-sm:hover {
+  transform:  translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
