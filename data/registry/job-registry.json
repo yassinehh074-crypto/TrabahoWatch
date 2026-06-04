@@ -1,0 +1,442 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-01",
+  "totalJobs": 18,
+  "jobs": [
+    {
+      "id": "deped-teacher-i-ncr-2026",
+      "sector": "government",
+      "category": "deped",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-01",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "deped-master-teacher-i-ncr-2026",
+      "sector": "government",
+      "category": "deped",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-01",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "doh-nurse-i-ncr-2026",
+      "sector": "government",
+      "category": "doh",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-15",
+      "deadline": "2026-07-15"
+    },
+    {
+      "id": "lgu-admin-aide-iii-metro-manila-2026",
+      "sector": "government",
+      "category": "lgu",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-04-20",
+      "deadline": "2026-06-20"
+    },
+    {
+      "id": "lgu-bhw-coordinator-manila-2026",
+      "sector": "government",
+      "category": "lgu",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-04-20",
+      "deadline": "2026-06-20"
+    },
+    {
+      "id": "pnp-po1-ncr-2026",
+      "sector": "government",
+      "category": "pnp",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-03-01",
+      "deadline": "2026-07-31"
+    },
+    {
+      "id": "bfp-fo1-ncr-2026",
+      "sector": "government",
+      "category": "bfp",
+      "tier": 3,
+      "status": "open",
+      "published": "2026-03-01",
+      "deadline": "2026-07-31"
+    },
+    {
+      "id": "nbi-special-investigator-2026",
+      "sector": "government",
+      "category": "nbi",
+      "tier": 3,
+      "status": "open",
+      "published": "2026-04-10",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "bpo-csr-concentrix-bgc-2026",
+      "sector": "private",
+      "category": "bpo",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-05-01",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "bpo-comms-trainer-makati-2026",
+      "sector": "private",
+      "category": "bpo",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-05-01",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "jr-software-dev-ortigas-2026",
+      "sector": "private",
+      "category": "tech",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-25",
+      "deadline": "2026-07-25"
+    },
+    {
+      "id": "finance-analyst-bdo-2026",
+      "sector": "private",
+      "category": "finance",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-04-15",
+      "deadline": "2026-06-15"
+    },
+    {
+      "id": "staff-nurse-st-lukes-2026",
+      "sector": "private",
+      "category": "healthcare",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-05-01",
+      "deadline": "2026-07-01"
+    },
+    {
+      "id": "retail-store-supervisor-sm-2026",
+      "sector": "private",
+      "category": "retail",
+      "tier": 3,
+      "status": "paused",
+      "published": "2026-03-15",
+      "deadline": "2026-06-15"
+    },
+    {
+      "id": "rn-kfmc-riyadh-saudi-2026",
+      "sector": "ofw",
+      "category": "middle-east",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-01",
+      "deadline": "2026-07-01"
+    },
+    {
+      "id": "heavy-equipment-op-dubai-2026",
+      "sector": "ofw",
+      "category": "middle-east",
+      "tier": 2,
+      "status": "open",
+      "published": "2026-04-10",
+      "deadline": "2026-06-30"
+    },
+    {
+      "id": "careworker-tokyo-japan-2026",
+      "sector": "ofw",
+      "category": "asia-pacific",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-15",
+      "deadline": "2026-07-15"
+    },
+    {
+      "id": "rn-providence-canada-2026",
+      "sector": "ofw",
+      "category": "europe-americas",
+      "tier": 1,
+      "status": "open",
+      "published": "2026-04-20",
+      "deadline": "2026-08-20"
+    }
+  ]
+}     "deadline":      "2026-08-01",
+      "addedBy":       "manual",
+      "addedDate":     "2026-04-25",
+      "lastModified":  "2026-04-25",
+      "contentScore":  6,
+      "notes":         "Community health coordinator. SG 6."
+    },
+
+    {
+      "id":            "pnp-po1-ncr-2026",
+      "title":         "Patrolman / PO1",
+      "agency":        "PNP NCR",
+      "sector":        "government",
+      "category":      "pnp",
+      "tier":          2,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-08",
+      "deadline":      "2026-09-30",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-08",
+      "lastModified":  "2026-05-08",
+      "contentScore":  7,
+      "notes":         "PNP entry rank. SG 10. Physical fitness requirements critical."
+    },
+
+    {
+      "id":            "bfp-fo1-ncr-2026",
+      "title":         "Fire Officer I (FO1)",
+      "agency":        "BFP NCR",
+      "sector":        "government",
+      "category":      "bfp",
+      "tier":          3,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-10",
+      "deadline":      "2026-10-15",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-10",
+      "lastModified":  "2026-05-10",
+      "contentScore":  5,
+      "notes":         "BFP entry rank. Tier 3 brief article."
+    },
+
+    {
+      "id":            "nbi-special-investigator-2026",
+      "title":         "Special Investigator",
+      "agency":        "NBI",
+      "sector":        "government",
+      "category":      "nbi",
+      "tier":          3,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-04-15",
+      "deadline":      "2026-08-15",
+      "addedBy":       "manual",
+      "addedDate":     "2026-04-15",
+      "lastModified":  "2026-04-15",
+      "contentScore":  5,
+      "notes":         "NBI investigator. Tier 3 brief. SG 15."
+    },
+
+    {
+      "id":            "bpo-csr-concentrix-bgc-2026",
+      "title":         "Customer Service Representative",
+      "agency":        "Major BPO Company",
+      "sector":        "private",
+      "category":      "bpo",
+      "tier":          1,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-01",
+      "deadline":      "2026-07-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-01",
+      "lastModified":  "2026-05-01",
+      "contentScore":  9,
+      "notes":         "Flagship BPO article. Tier 1 with graveyard shift Day in the Life."
+    },
+
+    {
+      "id":            "bpo-comms-trainer-makati-2026",
+      "title":         "Communications Trainer",
+      "agency":        "Large BPO Company",
+      "sector":        "private",
+      "category":      "bpo",
+      "tier":          2,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-04",
+      "deadline":      "2026-08-15",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-04",
+      "lastModified":  "2026-05-04",
+      "contentScore":  7,
+      "notes":         "L&D trainer role in BPO. Tier 2 core article."
+    },
+
+    {
+      "id":            "jr-software-dev-ortigas-2026",
+      "title":         "Junior Software Developer",
+      "agency":        "Philippine Tech Company",
+      "sector":        "private",
+      "category":      "tech",
+      "tier":          1,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-02",
+      "deadline":      "2026-08-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-02",
+      "lastModified":  "2026-05-02",
+      "contentScore":  8,
+      "notes":         "Tier 1 tech article with hybrid WFH Day in the Life."
+    },
+
+    {
+      "id":            "finance-analyst-bdo-2026",
+      "title":         "Financial Analyst",
+      "agency":        "Major Philippine Bank",
+      "sector":        "private",
+      "category":      "finance",
+      "tier":          2,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-03",
+      "deadline":      "2026-09-15",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-03",
+      "lastModified":  "2026-05-03",
+      "contentScore":  7,
+      "notes":         "Banking finance analyst. Tier 2 core."
+    },
+
+    {
+      "id":            "staff-nurse-st-lukes-2026",
+      "title":         "Staff Nurse",
+      "agency":        "Major Private Hospital",
+      "sector":        "private",
+      "category":      "healthcare",
+      "tier":          2,
+      "status":        "open",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-06",
+      "deadline":      "2026-08-01",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-06",
+      "lastModified":  "2026-05-06",
+      "contentScore":  7,
+      "notes":         "Private hospital nurse. Tier 2. Compare with DOH Nurse I."
+    },
+
+    {
+      "id":            "retail-store-supervisor-sm-2026",
+      "title":         "Store Supervisor",
+      "agency":        "Major Retail Chain",
+      "sector":        "private",
+      "category":      "retail",
+      "tier":          3,
+      "status":        "paused",
+      "region":        "NCR",
+      "imageCount":    0,
+      "publishedDate": "2026-05-05",
+      "deadline":      "2026-07-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-05",
+      "lastModified":  "2026-05-10",
+      "contentScore":  5,
+      "notes":         "Paused pending image upload. Content complete. Resume when image is ready."
+    },
+
+    {
+      "id":            "rn-kfmc-riyadh-saudi-2026",
+      "title":         "Registered Nurse — Saudi Arabia",
+      "agency":        "King Faisal Medical City",
+      "sector":        "ofw",
+      "category":      "middle-east",
+      "tier":          1,
+      "status":        "open",
+      "region":        "Middle East",
+      "imageCount":    0,
+      "publishedDate": "2026-05-01",
+      "deadline":      "2026-09-30",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-01",
+      "lastModified":  "2026-05-01",
+      "contentScore":  9,
+      "notes":         "Flagship OFW nurse article. Riyadh compound life Day in the Life. SAR salary with peso conversion."
+    },
+
+    {
+      "id":            "heavy-equipment-op-dubai-2026",
+      "title":         "Heavy Equipment Operator — Dubai",
+      "agency":        "Large Construction Company",
+      "sector":        "ofw",
+      "category":      "middle-east",
+      "tier":          2,
+      "status":        "open",
+      "region":        "Middle East",
+      "imageCount":    0,
+      "publishedDate": "2026-05-03",
+      "deadline":      "2026-08-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-03",
+      "lastModified":  "2026-05-03",
+      "contentScore":  7,
+      "notes":         "TESDA NC II required. AED salary. Tier 2 core."
+    },
+
+    {
+      "id":            "careworker-tokyo-japan-2026",
+      "title":         "Certified Care Worker — Japan",
+      "agency":        "Elderly Care Facility Tokyo",
+      "sector":        "ofw",
+      "category":      "asia-pacific",
+      "tier":          1,
+      "status":        "open",
+      "region":        "Asia Pacific",
+      "imageCount":    0,
+      "publishedDate": "2026-05-02",
+      "deadline":      "2026-10-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-05-02",
+      "lastModified":  "2026-05-02",
+      "contentScore":  8,
+      "notes":         "Japan SSW care worker. JLPT N4 required. PR pathway included. Tier 1."
+    },
+
+    {
+      "id":            "rn-providence-canada-2026",
+      "title":         "Registered Nurse — Canada",
+      "agency":        "Providence Health Care Vancouver",
+      "sector":        "ofw",
+      "category":      "europe-americas",
+      "tier":          1,
+      "status":        "open",
+      "region":        "Europe & Americas",
+      "imageCount":    0,
+      "publishedDate": "2026-04-28",
+      "deadline":      "2026-12-31",
+      "addedBy":       "manual",
+      "addedDate":     "2026-04-28",
+      "lastModified":  "2026-05-01",
+      "contentScore":  9,
+      "notes":         "Flagship Canada nurse article. NCLEX + Express Entry pathway. Longest deadline — ongoing hiring."
+    }
+
+  ],
+
+  "archivedJobs": [],
+
+  "blocklist": {
+    "description": "Job IDs that should NEVER be re-added — duplicates, fraudulent postings, or withdrawn announcements.",
+    "ids": []
+  },
+
+  "automationLog": [
+    {
+      "timestamp":   "2026-05-01T08:00:00+08:00",
+      "action":      "initial-load",
+      "addedCount":  18,
+      "addedBy":     "manual-setup",
+      "notes":       "Initial site launch — 18 jobs manually added across 3 sectors."
+    }
+  ]
+}

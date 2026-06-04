@@ -1,0 +1,335 @@
+================================================================================
+TRABAHOWATCH — JOB REGISTRY LOG
+================================================================================
+Purpose : Human-readable audit trail of all job additions, modifications,
+          and removals. Machine log is in job-registry.json.
+Format  : [TIMESTAMP PHT] [ACTION] [ID] — Notes
+Timezone: Asia/Manila (UTC+8)
+================================================================================
+
+
+--------------------------------------------------------------------------------
+2026-05-01  INITIAL SITE LAUNCH
+--------------------------------------------------------------------------------
+
+[2026-05-01 08:00 PHT] [ADD] deped-teacher-i-ncr-2026
+  Title    : Teacher I
+  Agency   : Department of Education (DepEd)
+  Sector   : Government / DepEd
+  Tier     : 1 (Star)
+  SG       : 11 — ₱31,705/month
+  Deadline : 2026-08-31
+  Added by : Manual Setup
+  Source   : deped.gov.ph / depedncr.com.ph
+  Notes    : Flagship article. Part of DepEd 2026 mass hiring (32,916 Teacher I
+             items under NEP 2026). Salary based on SSL VI Tranche 3 (EO 64).
+
+[2026-05-01 08:05 PHT] [ADD] doh-nurse-i-ncr-2026
+  Title    : Nurse I
+  Agency   : Department of Health (DOH) — NCR
+  Sector   : Government / DOH
+  Tier     : 1 (Star)
+  SG       : 15 — ₱42,178/month
+  Deadline : 2026-07-31
+  Added by : Manual Setup
+  Source   : doh.gov.ph
+  Notes    : Flagship healthcare article. Includes salary breakdown with GSIS,
+             PhilHealth, Pag-IBIG deductions. Day in the Life covers hospital
+             shift routine.
+
+[2026-05-01 08:10 PHT] [ADD] bpo-csr-concentrix-bgc-2026
+  Title    : Customer Service Representative (CSR)
+  Agency   : Major BPO Company — BGC, Taguig
+  Sector   : Private / BPO
+  Tier     : 1 (Star)
+  Salary   : ₱20,000 – ₱28,000/month
+  Deadline : 2026-07-31
+  Added by : Manual Setup
+  Source   : Market research / JobStreet PH 2026
+  Notes    : Flagship BPO article. Graveyard shift Day in the Life. Company name
+             kept generic for legal safety — "Major BPO Company (Concentrix-level)".
+
+[2026-05-01 08:15 PHT] [ADD] rn-kfmc-riyadh-saudi-2026
+  Title    : Registered Nurse — Riyadh, Saudi Arabia
+  Agency   : King Faisal Medical City (KFMC)
+  Sector   : OFW / Middle East
+  Tier     : 1 (Star)
+  Salary   : SAR 5,000 (~₱75,000/month tax-free)
+  Deadline : 2026-09-30
+  Added by : Manual Setup
+  Source   : DMW deployment data / KFMC public recruitment
+  Notes    : Flagship OFW nurse article. SAR to PHP conversion included.
+             DataFlow, Prometric, PDOS, OEC process documented.
+             DMW warning prominently placed.
+
+[2026-05-01 08:20 PHT] [ADD] rn-providence-canada-2026
+  Title    : Registered Nurse — Vancouver, BC, Canada
+  Agency   : Providence Health Care
+  Sector   : OFW / Europe & Americas
+  Tier     : 1 (Star)
+  Salary   : CAD 42/hour (~₱132,000/month)
+  Deadline : 2026-12-31
+  Added by : Manual Setup
+  Source   : Providence Health Care careers page / CRNBC website
+  Notes    : Flagship Canada nurse article. NCLEX + NNAS + Express Entry pathway
+             documented. Longest deadline — facility ongoing hiring.
+
+
+--------------------------------------------------------------------------------
+2026-05-02  BATCH 2 — ADDITIONAL JOBS
+--------------------------------------------------------------------------------
+
+[2026-05-02 09:00 PHT] [ADD] jr-software-dev-ortigas-2026
+  Title    : Junior Software Developer
+  Agency   : Philippine Tech Company — Ortigas
+  Sector   : Private / Tech
+  Tier     : 1 (Star)
+  Salary   : ₱30,000 – ₱55,000/month
+  Deadline : 2026-08-31
+  Added by : Manual Setup
+  Source   : LinkedIn PH / JobStreet 2026 market data
+  Notes    : Tier 1 with full Day in the Life (hybrid WFH day). GitHub portfolio
+             advice included. Salary breakdown with SSS/PhilHealth/Pag-IBIG.
+
+[2026-05-02 09:15 PHT] [ADD] careworker-tokyo-japan-2026
+  Title    : Certified Care Worker (Kaigo) — Tokyo, Japan
+  Agency   : Elderly Care Facility — Tokyo Metropolitan Area
+  Sector   : OFW / Asia Pacific
+  Tier     : 1 (Star)
+  Salary   : JPY 240,000 (~₱90,000/month)
+  Deadline : 2026-10-31
+  Added by : Manual Setup
+  Source   : JICWELS / DMW Japan SSW program / DOLE-Japan cooperation
+  Notes    : Japan SSW program details — JLPT N4, Skills Evaluation Test.
+             Permanent residency pathway included. Longest OFW content.
+             Day in the Life covers Tokyo facility morning shift routine.
+
+
+--------------------------------------------------------------------------------
+2026-05-03  BATCH 3
+--------------------------------------------------------------------------------
+
+[2026-05-03 09:00 PHT] [ADD] lgu-admin-aide-iii-metro-manila-2026
+  Title    : Administrative Aide III (Clerk)
+  Agency   : LGU — Metro Manila
+  Sector   : Government / LGU
+  Tier     : 2 (Core)
+  SG       : 3 — ₱15,651/month
+  Deadline : 2026-07-15
+  Added by : Manual Setup
+  Source   : CSC Job Portal / csc.gov.ph
+  Notes    : Entry-level LGU position. Good target for CSC sub-pro exam passers.
+             Includes career path from Admin Aide to Admin Officer.
+
+[2026-05-03 09:10 PHT] [ADD] finance-analyst-bdo-2026
+  Title    : Financial Analyst
+  Agency   : Major Philippine Bank — Makati
+  Sector   : Private / Finance
+  Tier     : 2 (Core)
+  Salary   : ₱35,000 – ₱55,000/month
+  Deadline : 2026-09-15
+  Added by : Manual Setup
+  Source   : JobStreet PH / LinkedIn PH / BDO/BPI public job postings 2026
+  Notes    : Bank finance analyst. CPA advantage documented. Excel mastery tip.
+             Company name kept as "Major Philippine Bank (BDO-level)".
+
+[2026-05-03 09:20 PHT] [ADD] heavy-equipment-op-dubai-2026
+  Title    : Heavy Equipment Operator — Dubai, UAE
+  Agency   : Large Construction Company — Dubai
+  Sector   : OFW / Middle East
+  Tier     : 2 (Core)
+  Salary   : AED 3,000 (~₱46,000/month tax-free)
+  Deadline : 2026-08-31
+  Added by : Manual Setup
+  Source   : DMW deployment statistics / TESDA NC II program info
+  Notes    : TESDA NC II as key credential. AED to PHP conversion included.
+             DMW verification warning prominently placed.
+
+
+--------------------------------------------------------------------------------
+2026-05-04  BATCH 4
+--------------------------------------------------------------------------------
+
+[2026-05-04 09:00 PHT] [ADD] bpo-comms-trainer-makati-2026
+  Title    : Communications Trainer (BPO)
+  Agency   : Large BPO Company — Makati
+  Sector   : Private / BPO
+  Tier     : 2 (Core)
+  Salary   : ₱35,000 – ₱50,000/month
+  Deadline : 2026-08-15
+  Added by : Manual Setup
+  Source   : JobStreet PH / BPO industry reports 2026
+  Notes    : L&D trainer role for teachers and senior CSRs transitioning.
+             Demo teaching tip is the key differentiator for this role.
+
+
+--------------------------------------------------------------------------------
+2026-05-05  BATCH 5
+--------------------------------------------------------------------------------
+
+[2026-05-05 09:00 PHT] [ADD] deped-master-teacher-i-ncr-2026
+  Title    : Master Teacher I
+  Agency   : Department of Education (DepEd)
+  Sector   : Government / DepEd
+  Tier     : 1 (Star)
+  SG       : 18 — ₱53,818/month
+  Deadline : 2026-09-15
+  Added by : Manual Setup
+  Source   : deped.gov.ph / DepEd NCR Division Office announcements
+  Notes    : Senior DepEd position. Mentoring and instructional leadership focus.
+             Requires 3 years teaching experience + Very Satisfactory rating.
+
+[2026-05-05 09:10 PHT] [ADD] retail-store-supervisor-sm-2026
+  Title    : Store Supervisor
+  Agency   : Major Retail Chain — Metro Manila
+  Sector   : Private / Retail
+  Tier     : 3 (Brief)
+  Salary   : ₱22,000 – ₱32,000/month
+  Deadline : 2026-07-31
+  Added by : Manual Setup
+  Source   : SM Retail / Robinsons / Puregold public job listings 2026
+  Status   : PAUSED
+  Notes    : Content complete. Waiting for relevant WebP image before publishing.
+             Will set to open once image is uploaded to /assets/img/jobs/.
+
+
+--------------------------------------------------------------------------------
+2026-05-06  BATCH 6
+--------------------------------------------------------------------------------
+
+[2026-05-06 09:00 PHT] [ADD] staff-nurse-st-lukes-2026
+  Title    : Staff Nurse
+  Agency   : Major Private Hospital — BGC
+  Sector   : Private / Healthcare
+  Tier     : 2 (Core)
+  Salary   : ₱30,000 – ₱45,000/month
+  Deadline : 2026-08-01
+  Added by : Manual Setup
+  Source   : St. Luke's / Makati Med / Asian Hospital public listings 2026
+  Notes    : Compare/contrast angle with DOH Nurse I government article.
+             Private hospital nursing — acuity, HMO, rotating shift documented.
+             Company name kept as "Major Private Hospital (St. Luke's level)".
+
+
+--------------------------------------------------------------------------------
+2026-05-08  BATCH 7
+--------------------------------------------------------------------------------
+
+[2026-05-08 09:00 PHT] [ADD] pnp-po1-ncr-2026
+  Title    : Patrolman / Patrolwoman (PO1)
+  Agency   : Philippine National Police — NCR
+  Sector   : Government / PNP
+  Tier     : 2 (Core)
+  SG       : 10 — ₱29,668/month
+  Deadline : 2026-09-30
+  Added by : Manual Setup
+  Source   : pnp.gov.ph / PNP NCR recruitment announcements 2026
+  Notes    : PNP entry-level uniformed rank. Physical fitness test warning is
+             the most critical content — many applicants fail PAT.
+             Height requirements included.
+
+
+--------------------------------------------------------------------------------
+2026-05-10  BATCH 8 — FINAL INITIAL LOAD
+--------------------------------------------------------------------------------
+
+[2026-05-10 09:00 PHT] [ADD] bfp-fo1-ncr-2026
+  Title    : Fire Officer I (FO1)
+  Agency   : Bureau of Fire Protection — NCR
+  Sector   : Government / BFP
+  Tier     : 3 (Brief)
+  SG       : 10 — ₱29,668/month
+  Deadline : 2026-10-15
+  Added by : Manual Setup
+  Source   : bfp.gov.ph / BFP NCR recruitment 2026
+  Notes    : Tier 3 brief article. Physical requirements parallel to PNP PO1.
+
+[2026-05-10 09:10 PHT] [ADD] nbi-special-investigator-2026
+  Title    : Special Investigator
+  Agency   : National Bureau of Investigation (NBI)
+  Sector   : Government / NBI
+  Tier     : 3 (Brief)
+  SG       : 15 — ₱42,178/month
+  Deadline : 2026-08-15
+  Added by : Manual Setup
+  Source   : nbi.gov.ph / NBI hiring announcements 2026
+  Notes    : Tier 3 brief. Law/Criminology graduates target audience.
+             CSC Professional eligibility required.
+
+[2026-05-10 09:20 PHT] [ADD] lgu-bhw-coordinator-manila-2026
+  Title    : BHW Coordinator
+  Agency   : Manila City Health Office
+  Sector   : Government / LGU
+  Tier     : 2 (Core)
+  SG       : 6 — ₱18,998/month
+  Deadline : 2026-08-01
+  Added by : Manual Setup
+  Source   : manila.gov.ph / City Health Office announcements
+  Notes    : Community health coordinator. Bridge between formal health system
+             and barangay communities. Passion for public health emphasized.
+
+[2026-05-10 09:30 PHT] [REGISTRY-LOCK] Initial Load Complete
+  Total jobs added : 18
+  Sectors          : Government (8) / Private (6) / OFW (4)
+  Tiers            : Tier 1 (7) / Tier 2 (8) / Tier 3 (3)
+  Status           : Open (17) / Paused (1) / Archived (0)
+  Note             : Registry locked for initial launch. All future additions
+                     must go through check-registry.js before being added.
+
+
+================================================================================
+UPCOMING — PLANNED ADDITIONS (not yet added)
+================================================================================
+
+These jobs are researched and planned but not yet written.
+Add them one at a time using the standard process:
+  1. check-registry.js — verify ID is not taken
+  2. Write job object in appropriate jobs file
+  3. update-registry.js — add to job-registry.json
+  4. Add entry in this log
+  5. generate-feed.js — update feed.json
+
+PLANNED GOVERNMENT:
+  [ ] doh-midwife-ii-cebu-2026          (Region VII)
+  [ ] deped-teacher-i-davao-2026        (Region XI)
+  [ ] lgu-engineer-i-quezon-city-2026   (NCR)
+  [ ] comelec-election-officer-2026     (NCR)
+  [ ] dswd-social-worker-i-2026         (NCR)
+
+PLANNED PRIVATE:
+  [ ] hr-specialist-bgc-2026            (Private / HR)
+  [ ] graphic-designer-remote-2026      (Private / Creative)
+  [ ] barista-starbucks-ph-2026         (Private / F&B)
+  [ ] physical-therapist-private-2026   (Private / Healthcare)
+
+PLANNED OFW:
+  [ ] caregiver-israel-2026             (Middle East)
+  [ ] seafarer-ab-seaman-2026           (OFW / Maritime)
+  [ ] nurse-uk-nhs-2026                 (Europe & Americas)
+  [ ] factory-worker-korea-eps-2026     (Asia Pacific)
+
+
+================================================================================
+MODIFICATION LOG TEMPLATE
+================================================================================
+Use this format when updating existing jobs:
+
+[YYYY-MM-DD HH:MM PHT] [MODIFY] job-id-here
+  Field    : fieldName
+  Old value: previous value
+  New value: updated value
+  Reason   : Why was this changed?
+  Source   : URL or document that confirms the change
+
+[YYYY-MM-DD HH:MM PHT] [ARCHIVE] job-id-here
+  Reason   : Deadline passed / Position filled / Announcement withdrawn
+  URL kept : YES (for SEO — archived badge shown)
+  Feed     : Removed from feed.json on this date
+
+[YYYY-MM-DD HH:MM PHT] [UNPAUSE] job-id-here
+  Reason   : Image uploaded / Content completed / Reopened by agency
+
+
+================================================================================
+END OF LOG — TRABAHOWATCH REGISTRY v1.0.0
+================================================================================
