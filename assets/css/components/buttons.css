@@ -1,0 +1,516 @@
+/* ============================================================
+   FILE: assets/css/components/buttons.css
+   PURPOSE: All button variants used across the site.
+            Primary, secondary, ghost, icon, pill, CTA.
+   DEPENDS ON: variables.css
+   RULE: Buttons must work on any background.
+         Every variant must have hover, active,
+         focus, disabled states.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   BUTTON BASE
+   All buttons inherit from this.
+   Never use .btn alone — always add a variant.
+---------------------------------------------------------- */
+.btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             var(--space-2);
+
+  padding:         var(--space-3) var(--space-6);
+  border-radius:   var(--radius-lg);
+  border:          2px solid transparent;
+
+  font-family:     var(--font-sans);
+  font-size:       var(--text-sm);
+  font-weight:     var(--font-semibold);
+  line-height:     1;
+  white-space:     nowrap;
+  text-decoration: none;
+
+  cursor:      pointer;
+  user-select: none;
+
+  transition:
+    background   var(--transition-fast),
+    color        var(--transition-fast),
+    border-color var(--transition-fast),
+    box-shadow   var(--transition-fast),
+    transform    var(--transition-fast),
+    opacity      var(--transition-fast);
+
+  /* Prevent text selection on rapid clicks */
+  -webkit-user-select: none;
+}
+
+/* Active press effect — all buttons */
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Focus ring — keyboard navigation */
+.btn:focus-visible {
+  outline:        2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* Disabled — all buttons */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity:        0.55;
+  cursor:         not-allowed;
+  pointer-events: none;
+  transform:      none;
+}
+
+/* SVG icons inside buttons */
+.btn svg {
+  width:       18px;
+  height:      18px;
+  flex-shrink: 0;
+  stroke:      currentColor;
+}
+
+/* Loading state spinner */
+.btn--loading {
+  position:       relative;
+  color:          transparent !important;
+  pointer-events: none;
+}
+
+.btn--loading::after {
+  content:       '';
+  position:      absolute;
+  width:         16px;
+  height:        16px;
+  border:        2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation:     btn-spin 0.7s linear infinite;
+  color:         white;
+}
+
+@keyframes btn-spin {
+  to { transform: rotate(360deg); }
+}
+
+
+/* ----------------------------------------------------------
+   SIZE VARIANTS
+---------------------------------------------------------- */
+
+/* Small */
+.btn--sm {
+  padding:    var(--space-2) var(--space-4);
+  font-size:  var(--text-xs);
+}
+
+.btn--sm svg {
+  width:  14px;
+  height: 14px;
+}
+
+/* Default (already in base) */
+
+/* Large */
+.btn--lg {
+  padding:   var(--space-4) var(--space-8);
+  font-size: var(--text-base);
+}
+
+.btn--lg svg {
+  width:  20px;
+  height: 20px;
+}
+
+/* Full width */
+.btn--full {
+  width: 100%;
+}
+
+
+/* ----------------------------------------------------------
+   PRIMARY BUTTON
+   Main CTA — "Apply Now", "View Details", etc.
+---------------------------------------------------------- */
+.btn--primary {
+  background: var(--color-primary);
+  color:      var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background:   var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  box-shadow:   0 4px 12px rgba(22, 72, 150, 0.35);
+  color:        var(--color-white);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   SECONDARY BUTTON
+   Less prominent — "Learn More", "See All", etc.
+---------------------------------------------------------- */
+.btn--secondary {
+  background:   var(--bg-surface);
+  color:        var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn--secondary:hover {
+  background:   rgba(22, 72, 150, 0.06);
+  color:        var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  text-decoration: none;
+}
+
+html.dark .btn--secondary {
+  background:   transparent;
+  color:        var(--text-link);
+  border-color: var(--text-link);
+}
+
+html.dark .btn--secondary:hover {
+  background:   rgba(96, 165, 250, 0.1);
+  color:        var(--text-link-hover);
+  border-color: var(--text-link-hover);
+}
+
+
+/* ----------------------------------------------------------
+   GHOST BUTTON
+   Minimal — sidebar links, filter toggles.
+---------------------------------------------------------- */
+.btn--ghost {
+  background:   transparent;
+  color:        var(--text-secondary);
+  border-color: transparent;
+}
+
+.btn--ghost:hover {
+  background:      var(--bg-surface-2);
+  color:           var(--text-primary);
+  border-color:    transparent;
+  text-decoration: none;
+}
+
+.btn--ghost:active {
+  background: var(--bg-surface-3);
+}
+
+
+/* ----------------------------------------------------------
+   DANGER BUTTON
+   Destructive actions.
+---------------------------------------------------------- */
+.btn--danger {
+  background:   var(--color-danger);
+  color:        var(--color-white);
+  border-color: var(--color-danger);
+}
+
+.btn--danger:hover {
+  background:   var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  box-shadow:   0 4px 12px rgba(220, 38, 38, 0.3);
+  color:        var(--color-white);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   SUCCESS BUTTON
+   Positive actions — "Verify", "Confirm".
+---------------------------------------------------------- */
+.btn--success {
+  background:   var(--color-success);
+  color:        var(--color-white);
+  border-color: var(--color-success);
+}
+
+.btn--success:hover {
+  background:   #15803d;
+  border-color: #15803d;
+  box-shadow:   0 4px 12px rgba(22, 163, 74, 0.3);
+  color:        var(--color-white);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   ACCENT BUTTON (Red)
+   "Urgent", "Deadline Soon" CTAs.
+---------------------------------------------------------- */
+.btn--accent {
+  background:   var(--color-accent);
+  color:        var(--color-white);
+  border-color: var(--color-accent);
+}
+
+.btn--accent:hover {
+  background:   var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+  box-shadow:   0 4px 12px rgba(220, 38, 38, 0.3);
+  color:        var(--color-white);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   GOLD BUTTON
+   "Featured", "Premium" highlight actions.
+---------------------------------------------------------- */
+.btn--gold {
+  background:   var(--color-gold);
+  color:        var(--color-gray-900);
+  border-color: var(--color-gold);
+}
+
+.btn--gold:hover {
+  background:   var(--color-gold-dark);
+  border-color: var(--color-gold-dark);
+  box-shadow:   0 4px 12px rgba(234, 179, 8, 0.35);
+  color:        var(--color-gray-900);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   PILL BUTTON
+   Rounded tag-style — filter chips.
+---------------------------------------------------------- */
+.btn--pill {
+  border-radius: var(--radius-full);
+  padding:       var(--space-2) var(--space-4);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-semibold);
+  height:        32px;
+}
+
+/* Pill — unselected (default) */
+.btn--pill-inactive {
+  background:   var(--bg-surface-2);
+  color:        var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+.btn--pill-inactive:hover {
+  background:   var(--bg-surface-3);
+  color:        var(--text-primary);
+  border-color: var(--border-color-strong);
+  text-decoration: none;
+}
+
+/* Pill — selected/active */
+.btn--pill-active {
+  background:   var(--color-primary);
+  color:        var(--color-white);
+  border-color: var(--color-primary);
+}
+
+.btn--pill-active:hover {
+  background:   var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color:        var(--color-white);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   ICON BUTTON
+   Square button with only an icon.
+   Used in header, share bar, etc.
+---------------------------------------------------------- */
+.btn--icon {
+  padding:       0;
+  width:         40px;
+  height:        40px;
+  border-radius: var(--radius-md);
+  flex-shrink:   0;
+}
+
+.btn--icon.btn--sm {
+  width:  32px;
+  height: 32px;
+}
+
+.btn--icon.btn--lg {
+  width:  48px;
+  height: 48px;
+}
+
+/* Circular icon button */
+.btn--icon-round {
+  border-radius: var(--radius-full);
+}
+
+
+/* ----------------------------------------------------------
+   SECTOR BUTTONS
+   Homepage sector navigation.
+   Color-coded per sector.
+---------------------------------------------------------- */
+.btn--sector {
+  padding:       var(--space-3) var(--space-5);
+  border-radius: var(--radius-xl);
+  font-size:     var(--text-sm);
+  font-weight:   var(--font-semibold);
+  border-width:  1px;
+}
+
+/* Government */
+.btn--sector-gov {
+  background:   rgba(22, 72, 150, 0.08);
+  color:        var(--color-primary);
+  border-color: rgba(22, 72, 150, 0.2);
+}
+
+.btn--sector-gov:hover {
+  background:   rgba(22, 72, 150, 0.15);
+  color:        var(--color-primary-dark);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Private */
+.btn--sector-private {
+  background:   rgba(124, 58, 237, 0.08);
+  color:        #7c3aed;
+  border-color: rgba(124, 58, 237, 0.2);
+}
+
+.btn--sector-private:hover {
+  background:   rgba(124, 58, 237, 0.15);
+  color:        #6d28d9;
+  border-color: #7c3aed;
+  text-decoration: none;
+}
+
+/* OFW */
+.btn--sector-ofw {
+  background:   rgba(8, 145, 178, 0.08);
+  color:        var(--sector-ofw-color);
+  border-color: rgba(8, 145, 178, 0.2);
+}
+
+.btn--sector-ofw:hover {
+  background:   rgba(8, 145, 178, 0.15);
+  color:        #0e7490;
+  border-color: var(--sector-ofw-color);
+  text-decoration: none;
+}
+
+
+/* ----------------------------------------------------------
+   LOAD MORE BUTTON
+   Centered, subtle — below card grids.
+---------------------------------------------------------- */
+.btn--load-more {
+  background:   var(--bg-surface);
+  color:        var(--text-secondary);
+  border:       2px dashed var(--border-color);
+  border-radius:var(--radius-xl);
+  padding:      var(--space-4) var(--space-10);
+  font-size:    var(--text-sm);
+  transition:
+    background   var(--transition-fast),
+    border-color var(--transition-fast),
+    color        var(--transition-fast);
+}
+
+.btn--load-more:hover {
+  background:   var(--bg-surface-2);
+  border-color: var(--border-color-strong);
+  color:        var(--text-primary);
+  text-decoration: none;
+}
+
+/* Spinner when loading */
+.btn--load-more.btn--loading {
+  border-style: solid;
+}
+
+
+/* ----------------------------------------------------------
+   QUICK LINK BUTTON
+   Horizontal scrollable bar items — homepage.
+---------------------------------------------------------- */
+.btn--quick-link {
+  background:   var(--bg-surface);
+  color:        var(--text-secondary);
+  border:       1px solid var(--border-color);
+  border-radius:var(--radius-full);
+  padding:      var(--space-2) var(--space-4);
+  font-size:    var(--text-xs);
+  font-weight:  var(--font-semibold);
+  white-space:  nowrap;
+  height:       34px;
+}
+
+.btn--quick-link:hover {
+  background:   var(--color-primary);
+  color:        var(--color-white);
+  border-color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* Active quick link */
+.btn--quick-link.active {
+  background:   var(--color-primary);
+  color:        var(--color-white);
+  border-color: var(--color-primary);
+}
+
+
+/* ----------------------------------------------------------
+   BUTTON GROUP
+   Attach buttons side by side.
+---------------------------------------------------------- */
+.btn-group {
+  display:  inline-flex;
+  gap:      0;
+}
+
+.btn-group .btn {
+  border-radius: 0;
+}
+
+.btn-group .btn:first-child {
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.btn-group .btn:last-child {
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+}
+
+/* Remove double borders between buttons */
+.btn-group .btn + .btn {
+  margin-left: -2px;
+}
+
+.btn-group .btn:hover,
+.btn-group .btn:focus {
+  z-index: var(--z-raised);
+}
+
+
+/* ----------------------------------------------------------
+   RESPONSIVE — Stack buttons on mobile
+   Add .btn-stack to a wrapper to stack on mobile.
+---------------------------------------------------------- */
+.btn-stack {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-3);
+}
+
+@media (min-width: 480px) {
+  .btn-stack {
+    flex-direction: row;
+    flex-wrap:      wrap;
+  }
+}

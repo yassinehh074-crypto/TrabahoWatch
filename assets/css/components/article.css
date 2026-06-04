@@ -1,0 +1,1179 @@
+/* ============================================================
+   FILE: assets/css/components/article.css
+   PURPOSE: Job article page — all sections, meta bar,
+            source block, image gallery, share buttons,
+            tier-aware content sections.
+   DEPENDS ON: variables.css, layout.css, base.css
+   RULE: Every section here maps to a tier or a shared block.
+         Tier 3 sections must still look good with less content.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   ARTICLE PAGE LAYOUT
+   Two-column on desktop (content + sidebar)
+   handled by layout.css .page-wrapper.
+   Here we style the article content column only.
+---------------------------------------------------------- */
+.article-wrap {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-8);
+}
+
+
+/* ----------------------------------------------------------
+   ARTICLE HEADER
+   Title, agency, published date, read time.
+---------------------------------------------------------- */
+.article-header {
+  padding-bottom: var(--space-6);
+  border-bottom:  1px solid var(--border-color);
+}
+
+.article-header__sector {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--space-2);
+  padding:       var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-semibold);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  margin-bottom: var(--space-4);
+}
+
+/* Sector color variants */
+.article-header__sector--government {
+  background: rgba(22, 72, 150, 0.1);
+  color:      var(--color-primary);
+}
+
+.article-header__sector--private {
+  background: rgba(124, 58, 237, 0.1);
+  color:      #7c3aed;
+}
+
+.article-header__sector--ofw {
+  background: rgba(8, 145, 178, 0.1);
+  color:      var(--sector-ofw-color);
+}
+
+html.dark .article-header__sector--government {
+  background: rgba(22, 72, 150, 0.2);
+  color:      #60a5fa;
+}
+
+html.dark .article-header__sector--private {
+  background: rgba(124, 58, 237, 0.2);
+  color:      #a78bfa;
+}
+
+html.dark .article-header__sector--ofw {
+  background: rgba(8, 145, 178, 0.2);
+  color:      #38bdf8;
+}
+
+.article-header__title {
+  font-size:     var(--text-2xl);
+  font-weight:   var(--font-bold);
+  color:         var(--text-primary);
+  line-height:   var(--leading-tight);
+  margin-bottom: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .article-header__title { font-size: var(--text-3xl); }
+}
+
+.article-header__byline {
+  display:     flex;
+  flex-wrap:   wrap;
+  align-items: center;
+  gap:         var(--space-4);
+  font-size:   var(--text-sm);
+  color:       var(--text-muted);
+}
+
+.article-header__byline-item {
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-1);
+}
+
+.article-header__byline-item svg {
+  width:  14px;
+  height: 14px;
+}
+
+/* Tier badge in header */
+.article-header__tier {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--space-1);
+  padding:       2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-semibold);
+}
+
+.article-header__tier--1 {
+  background: var(--badge-tier1-bg);
+  color:      var(--badge-tier1-text);
+}
+.article-header__tier--2 {
+  background: var(--badge-tier2-bg);
+  color:      var(--badge-tier2-text);
+}
+.article-header__tier--3 {
+  background: var(--badge-tier3-bg);
+  color:      var(--badge-tier3-text);
+}
+
+
+/* ----------------------------------------------------------
+   META BAR
+   Key facts strip: agency, location, salary,
+   deadline, employment type, eligibility.
+   Always visible — all tiers.
+---------------------------------------------------------- */
+.meta-bar {
+  background:    var(--bg-surface);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding:       var(--space-5);
+  display:       grid;
+  grid-template-columns: 1fr 1fr;
+  gap:           var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .meta-bar { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .meta-bar { grid-template-columns: repeat(3, 1fr); }
+}
+
+.meta-bar__item {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-1);
+}
+
+.meta-bar__label {
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-semibold);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  color:         var(--text-muted);
+}
+
+.meta-bar__value {
+  font-size:   var(--text-sm);
+  font-weight: var(--font-semibold);
+  color:       var(--text-primary);
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-1);
+}
+
+.meta-bar__value svg {
+  width:      16px;
+  height:     16px;
+  flex-shrink:0;
+  color:      var(--text-muted);
+}
+
+/* Salary value — highlighted green */
+.meta-bar__item--salary .meta-bar__value {
+  color: var(--color-success);
+  font-size: var(--text-base);
+}
+
+/* Deadline — urgent warning */
+.meta-bar__item--deadline .meta-bar__value--urgent {
+  color: var(--color-accent);
+}
+
+/* Deadline countdown */
+.meta-bar__countdown {
+  font-size:   var(--text-xs);
+  color:       var(--text-muted);
+  margin-top:  2px;
+}
+
+.meta-bar__countdown--urgent {
+  color:       var(--color-accent);
+  font-weight: var(--font-medium);
+}
+
+/* SG badge */
+.meta-bar__sg-badge {
+  display:       inline-flex;
+  align-items:   center;
+  padding:       2px var(--space-2);
+  background:    rgba(22, 72, 150, 0.1);
+  color:         var(--color-primary);
+  border-radius: var(--radius-full);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-bold);
+}
+
+html.dark .meta-bar__sg-badge {
+  background: rgba(96, 165, 250, 0.15);
+  color:      var(--text-link);
+}
+
+
+/* ----------------------------------------------------------
+   VERIFIED SOURCE BLOCK
+   Shows official link + verified badge.
+   All tiers.
+---------------------------------------------------------- */
+.source-block {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-4);
+  padding:       var(--space-4) var(--space-5);
+  background:    rgba(22, 72, 150, 0.05);
+  border:        1px solid rgba(22, 72, 150, 0.2);
+  border-radius: var(--radius-lg);
+  flex-wrap:     wrap;
+}
+
+html.dark .source-block {
+  background: rgba(96, 165, 250, 0.05);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.source-block__badge {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-1);
+  padding:       var(--space-1) var(--space-3);
+  background:    var(--color-primary);
+  color:         var(--color-white);
+  border-radius: var(--radius-full);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-bold);
+  flex-shrink:   0;
+  white-space:   nowrap;
+}
+
+.source-block__badge svg {
+  width:  14px;
+  height: 14px;
+}
+
+.source-block__text {
+  flex:      1;
+  min-width: 0;
+}
+
+.source-block__label {
+  font-size:   var(--text-xs);
+  color:       var(--text-muted);
+  margin-bottom: 2px;
+}
+
+.source-block__link {
+  font-size:     var(--text-sm);
+  font-weight:   var(--font-medium);
+  color:         var(--color-primary);
+  word-break:    break-all;
+}
+
+html.dark .source-block__link {
+  color: var(--text-link);
+}
+
+.source-block__link:hover {
+  text-decoration: underline;
+}
+
+
+/* ----------------------------------------------------------
+   IMAGE GALLERY
+   Shown only when job.images.length > 0.
+   All tiers.
+---------------------------------------------------------- */
+.image-gallery {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-3);
+}
+
+/* Single image — full width */
+.image-gallery--single .image-gallery__main {
+  width:         100%;
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+  border:        1px solid var(--border-color);
+}
+
+.image-gallery__main img {
+  width:      100%;
+  height:     auto;
+  display:    block;
+  max-height: 500px;
+  object-fit: contain;
+  background: var(--bg-surface-2);
+}
+
+/* Multiple images — thumbnails below */
+.image-gallery__thumbnails {
+  display: flex;
+  gap:     var(--space-2);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.image-gallery__thumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+.image-gallery__thumb {
+  width:         80px;
+  height:        60px;
+  border-radius: var(--radius-md);
+  overflow:      hidden;
+  flex-shrink:   0;
+  border:        2px solid var(--border-color);
+  cursor:        pointer;
+  transition:    border-color var(--transition-fast);
+}
+
+.image-gallery__thumb img {
+  width:      100%;
+  height:     100%;
+  object-fit: cover;
+}
+
+.image-gallery__thumb:hover,
+.image-gallery__thumb--active {
+  border-color: var(--color-primary);
+}
+
+.image-gallery__caption {
+  font-size:  var(--text-xs);
+  color:      var(--text-muted);
+  text-align: center;
+  margin-top: var(--space-1);
+}
+
+
+/* ----------------------------------------------------------
+   CONTENT SECTIONS
+   Shared styles for all article content blocks.
+---------------------------------------------------------- */
+.article-section {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-4);
+}
+
+.article-section__title {
+  font-size:     var(--text-xl);
+  font-weight:   var(--font-bold);
+  color:         var(--text-primary);
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-3);
+  padding-bottom:var(--space-3);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.article-section__title-icon {
+  width:         36px;
+  height:        36px;
+  border-radius: var(--radius-md);
+  background:    var(--bg-surface-2);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  flex-shrink:   0;
+}
+
+.article-section__title-icon svg {
+  width:  20px;
+  height: 20px;
+  color:  var(--color-primary);
+}
+
+.article-section__body {
+  color:       var(--text-secondary);
+  line-height: var(--leading-relaxed);
+  font-size:   var(--text-base);
+}
+
+.article-section__body p + p {
+  margin-top: var(--space-4);
+}
+
+
+/* ----------------------------------------------------------
+   ABOUT AGENCY SECTION
+   Tier 1 + 2.
+---------------------------------------------------------- */
+.about-agency {
+  background:    var(--bg-surface-2);
+  border-radius: var(--radius-xl);
+  padding:       var(--space-6);
+}
+
+.about-agency__header {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.about-agency__logo {
+  width:         56px;
+  height:        56px;
+  border-radius: var(--radius-lg);
+  background:    var(--bg-surface);
+  border:        1px solid var(--border-color);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  flex-shrink:   0;
+  overflow:      hidden;
+}
+
+.about-agency__logo img {
+  width:      100%;
+  height:     100%;
+  object-fit: contain;
+  padding:    var(--space-2);
+}
+
+.about-agency__name {
+  font-size:   var(--text-lg);
+  font-weight: var(--font-bold);
+  color:       var(--text-primary);
+}
+
+.about-agency__type {
+  font-size: var(--text-sm);
+  color:     var(--text-muted);
+  margin-top: 2px;
+}
+
+
+/* ----------------------------------------------------------
+   SALARY BREAKDOWN TABLE
+   Tier 1 only.
+---------------------------------------------------------- */
+.salary-breakdown {
+  background:    var(--bg-surface);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  overflow:      hidden;
+}
+
+.salary-breakdown__header {
+  background: var(--color-primary);
+  color:      var(--color-white);
+  padding:    var(--space-4) var(--space-5);
+}
+
+.salary-breakdown__title {
+  font-size:   var(--text-base);
+  font-weight: var(--font-bold);
+}
+
+.salary-breakdown__subtitle {
+  font-size: var(--text-sm);
+  opacity:   0.8;
+  margin-top:2px;
+}
+
+.salary-breakdown__table {
+  width: 100%;
+}
+
+.salary-breakdown__table td {
+  padding:      var(--space-3) var(--space-5);
+  border-bottom:1px solid var(--border-color);
+  font-size:    var(--text-sm);
+}
+
+.salary-breakdown__table tr:last-child td {
+  border-bottom: none;
+}
+
+.salary-breakdown__table td:last-child {
+  text-align:  right;
+  font-weight: var(--font-semibold);
+}
+
+.salary-breakdown__row--total td {
+  background:  var(--bg-surface-2);
+  font-weight: var(--font-bold);
+  color:       var(--color-success);
+  font-size:   var(--text-base);
+}
+
+.salary-breakdown__row--deduction td {
+  color: var(--color-accent);
+}
+
+.salary-breakdown__note {
+  padding:    var(--space-3) var(--space-5);
+  font-size:  var(--text-xs);
+  color:      var(--text-muted);
+  background: var(--bg-surface-2);
+  border-top: 1px solid var(--border-color);
+}
+
+
+/* ----------------------------------------------------------
+   REQUIREMENTS LIST
+   All tiers.
+---------------------------------------------------------- */
+.requirements-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+}
+
+.requirements-list__item {
+  display:       flex;
+  align-items:   flex-start;
+  gap:           var(--space-3);
+  padding:       var(--space-3) var(--space-4);
+  background:    var(--bg-surface-2);
+  border-radius: var(--radius-lg);
+  font-size:     var(--text-sm);
+  color:         var(--text-secondary);
+  line-height:   var(--leading-normal);
+}
+
+.requirements-list__item svg {
+  width:      18px;
+  height:     18px;
+  flex-shrink:0;
+  margin-top: 1px;
+  color:      var(--color-primary);
+}
+
+/* Required vs preferred */
+.requirements-list__item--required svg {
+  color: var(--color-primary);
+}
+
+.requirements-list__item--preferred svg {
+  color: var(--color-gold-dark);
+}
+
+
+/* ----------------------------------------------------------
+   DOCUMENTS REQUIRED
+   All tiers — people take this to the office.
+---------------------------------------------------------- */
+.documents-list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-2);
+}
+
+.documents-list__item {
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-3);
+  padding:       var(--space-3) var(--space-4);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  font-size:     var(--text-sm);
+  color:         var(--text-secondary);
+  background:    var(--bg-surface);
+  transition:    background var(--transition-fast);
+}
+
+/* Printable checklist — checkbox on the left */
+.documents-list__checkbox {
+  width:         18px;
+  height:        18px;
+  border:        2px solid var(--border-color-strong);
+  border-radius: var(--radius-sm);
+  flex-shrink:   0;
+}
+
+@media print {
+  .documents-list__checkbox {
+    border-color: black;
+  }
+}
+
+.documents-list__item svg {
+  width:      18px;
+  height:     18px;
+  flex-shrink:0;
+  color:      var(--text-muted);
+}
+
+.documents-list__note {
+  font-size:  var(--text-xs);
+  color:      var(--text-muted);
+  font-style: italic;
+  padding:    var(--space-3) var(--space-4);
+  background: var(--badge-soon-bg);
+  border-radius: var(--radius-md);
+  border-left:   3px solid var(--color-gold);
+  margin-top:    var(--space-2);
+}
+
+
+/* ----------------------------------------------------------
+   HOW TO APPLY — Steps
+   All tiers.
+---------------------------------------------------------- */
+.apply-steps {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-4);
+}
+
+.apply-step {
+  display:   flex;
+  gap:       var(--space-4);
+  position:  relative;
+}
+
+/* Connecting line between steps */
+.apply-step::before {
+  content:    '';
+  position:   absolute;
+  left:       19px;
+  top:        40px;
+  bottom:     -16px;
+  width:      2px;
+  background: var(--border-color);
+}
+
+.apply-step:last-child::before {
+  display: none;
+}
+
+.apply-step__number {
+  width:         40px;
+  height:        40px;
+  border-radius: var(--radius-full);
+  background:    var(--color-primary);
+  color:         var(--color-white);
+  font-size:     var(--text-sm);
+  font-weight:   var(--font-bold);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  flex-shrink:   0;
+  position:      relative;
+  z-index:       var(--z-raised);
+}
+
+.apply-step__content {
+  flex:       1;
+  min-width:  0;
+  padding-bottom: var(--space-4);
+}
+
+.apply-step__title {
+  font-size:   var(--text-base);
+  font-weight: var(--font-semibold);
+  color:       var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.apply-step__body {
+  font-size:  var(--text-sm);
+  color:      var(--text-secondary);
+  line-height:var(--leading-relaxed);
+}
+
+/* CTA button inside how to apply */
+.apply-cta {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             var(--space-2);
+  padding:         var(--space-3) var(--space-6);
+  background:      var(--color-primary);
+  color:           var(--color-white);
+  border-radius:   var(--radius-lg);
+  font-size:       var(--text-sm);
+  font-weight:     var(--font-semibold);
+  text-decoration: none;
+  margin-top:      var(--space-4);
+  transition:      background var(--transition-fast);
+  border:          none;
+  cursor:          pointer;
+}
+
+.apply-cta:hover {
+  background:      var(--color-primary-dark);
+  color:           var(--color-white);
+  text-decoration: none;
+}
+
+.apply-cta svg {
+  width:  18px;
+  height: 18px;
+}
+
+
+/* ----------------------------------------------------------
+   DAY IN THE LIFE
+   Tier 1 only.
+---------------------------------------------------------- */
+.day-in-life {
+  background:    linear-gradient(
+    135deg,
+    rgba(22, 72, 150, 0.04) 0%,
+    rgba(22, 72, 150, 0.08) 100%
+  );
+  border:        1px solid rgba(22, 72, 150, 0.15);
+  border-radius: var(--radius-xl);
+  padding:       var(--space-6);
+}
+
+html.dark .day-in-life {
+  background:  rgba(96, 165, 250, 0.05);
+  border-color:rgba(96, 165, 250, 0.15);
+}
+
+.day-in-life__timeline {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-3);
+  margin-top:     var(--space-4);
+}
+
+.day-in-life__slot {
+  display:       flex;
+  gap:           var(--space-4);
+  align-items:   flex-start;
+}
+
+.day-in-life__time {
+  font-size:   var(--text-xs);
+  font-weight: var(--font-bold);
+  color:       var(--color-primary);
+  white-space: nowrap;
+  width:       60px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+html.dark .day-in-life__time {
+  color: var(--text-link);
+}
+
+.day-in-life__task {
+  font-size:  var(--text-sm);
+  color:      var(--text-secondary);
+  line-height:var(--leading-normal);
+  flex:       1;
+}
+
+
+/* ----------------------------------------------------------
+   CAREER PATH
+   Tier 1 + 2.
+---------------------------------------------------------- */
+.career-path {
+  display:   flex;
+  flex-wrap: wrap;
+  align-items:center;
+  gap:       var(--space-2);
+}
+
+.career-path__step {
+  display:       flex;
+  flex-direction:column;
+  align-items:   center;
+  gap:           var(--space-1);
+  padding:       var(--space-3) var(--space-4);
+  background:    var(--bg-surface-2);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  text-align:    center;
+  min-width:     100px;
+}
+
+.career-path__step--current {
+  background:   rgba(22, 72, 150, 0.08);
+  border-color: var(--color-primary);
+}
+
+html.dark .career-path__step--current {
+  background:   rgba(96, 165, 250, 0.1);
+  border-color: var(--text-link);
+}
+
+.career-path__step-title {
+  font-size:   var(--text-xs);
+  font-weight: var(--font-semibold);
+  color:       var(--text-primary);
+}
+
+.career-path__step--current .career-path__step-title {
+  color: var(--color-primary);
+}
+
+.career-path__step-sg {
+  font-size: var(--text-xs);
+  color:     var(--text-muted);
+}
+
+/* Arrow between steps */
+.career-path__arrow {
+  color:     var(--text-muted);
+  font-size: var(--text-lg);
+  flex-shrink:0;
+}
+
+
+/* ----------------------------------------------------------
+   HOW TO STAND OUT
+   Tier 1 + 2.
+   Tips shown as cards.
+---------------------------------------------------------- */
+.standout-tips {
+  display:               grid;
+  grid-template-columns: 1fr;
+  gap:                   var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .standout-tips { grid-template-columns: repeat(2, 1fr); }
+}
+
+.standout-tip {
+  padding:       var(--space-4);
+  background:    var(--bg-surface-2);
+  border-radius: var(--radius-lg);
+  border-left:   3px solid var(--color-gold);
+}
+
+.standout-tip__title {
+  font-size:   var(--text-sm);
+  font-weight: var(--font-semibold);
+  color:       var(--text-primary);
+  margin-bottom: var(--space-2);
+  display:     flex;
+  align-items: center;
+  gap:         var(--space-2);
+}
+
+.standout-tip__title svg {
+  width:  16px;
+  height: 16px;
+  color:  var(--color-gold-dark);
+}
+
+.standout-tip__body {
+  font-size:  var(--text-sm);
+  color:      var(--text-secondary);
+  line-height:var(--leading-relaxed);
+}
+
+
+/* ----------------------------------------------------------
+   GENERAL TIPS (SHARED_CONTENT)
+   Tier 3 only — reusable tip block from shared-content.js.
+---------------------------------------------------------- */
+.general-tips {
+  background:    var(--bg-surface-2);
+  border-radius: var(--radius-xl);
+  padding:       var(--space-6);
+  border:        1px solid var(--border-color);
+}
+
+.general-tips__label {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--space-2);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-bold);
+  text-transform:uppercase;
+  letter-spacing:0.08em;
+  color:         var(--text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.general-tips__label svg {
+  width:  16px;
+  height: 16px;
+}
+
+.general-tips__list {
+  display:        flex;
+  flex-direction: column;
+  gap:            var(--space-3);
+}
+
+.general-tips__item {
+  display:    flex;
+  gap:        var(--space-3);
+  font-size:  var(--text-sm);
+  color:      var(--text-secondary);
+  line-height:var(--leading-relaxed);
+}
+
+.general-tips__item::before {
+  content:     "✓";
+  color:       var(--color-success);
+  font-weight: var(--font-bold);
+  flex-shrink: 0;
+  margin-top:  1px;
+}
+
+
+/* ----------------------------------------------------------
+   SHARE BUTTONS
+   Facebook, WhatsApp, Copy Link, Print.
+   All tiers.
+---------------------------------------------------------- */
+.share-bar {
+  display:       flex;
+  flex-wrap:     wrap;
+  align-items:   center;
+  gap:           var(--space-3);
+  padding:       var(--space-5);
+  background:    var(--bg-surface-2);
+  border-radius: var(--radius-xl);
+  border:        1px solid var(--border-color);
+}
+
+.share-bar__label {
+  font-size:   var(--text-sm);
+  font-weight: var(--font-semibold);
+  color:       var(--text-secondary);
+  margin-right:var(--space-1);
+}
+
+.share-btn {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--space-2);
+  padding:       var(--space-2) var(--space-4);
+  border-radius: var(--radius-lg);
+  font-size:     var(--text-sm);
+  font-weight:   var(--font-semibold);
+  cursor:        pointer;
+  border:        none;
+  text-decoration:none;
+  transition:
+    background var(--transition-fast),
+    transform  var(--transition-fast);
+}
+
+.share-btn:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.share-btn:active {
+  transform: translateY(0);
+}
+
+.share-btn svg {
+  width:  18px;
+  height: 18px;
+}
+
+/* Facebook */
+.share-btn--facebook {
+  background: #1877f2;
+  color:      white;
+}
+
+.share-btn--facebook:hover {
+  background: #166fe5;
+  color:      white;
+}
+
+/* WhatsApp */
+.share-btn--whatsapp {
+  background: #25d366;
+  color:      white;
+}
+
+.share-btn--whatsapp:hover {
+  background: #22c55e;
+  color:      white;
+}
+
+/* Copy Link */
+.share-btn--copy {
+  background: var(--bg-surface);
+  color:      var(--text-secondary);
+  border:     1px solid var(--border-color);
+}
+
+.share-btn--copy:hover {
+  background:  var(--bg-surface-3);
+  color:       var(--text-primary);
+}
+
+.share-btn--copy.copied {
+  background: var(--badge-open-bg);
+  color:      var(--badge-open-text);
+  border-color:var(--badge-open-text);
+}
+
+/* Print */
+.share-btn--print {
+  background: var(--bg-surface);
+  color:      var(--text-secondary);
+  border:     1px solid var(--border-color);
+}
+
+.share-btn--print:hover {
+  background: var(--bg-surface-3);
+  color:      var(--text-primary);
+}
+
+/* Hide text on very small screens */
+@media (max-width: 400px) {
+  .share-btn span { display: none; }
+  .share-btn { padding: var(--space-2); }
+}
+
+
+/* ----------------------------------------------------------
+   TOAST NOTIFICATION
+   "Link copied!" feedback.
+---------------------------------------------------------- */
+.toast {
+  position:      fixed;
+  bottom:        var(--space-8);
+  left:          50%;
+  transform:     translateX(-50%) translateY(20px);
+  z-index:       var(--z-toast);
+
+  display:       flex;
+  align-items:   center;
+  gap:           var(--space-2);
+  padding:       var(--space-3) var(--space-5);
+  background:    var(--color-gray-800);
+  color:         white;
+  border-radius: var(--radius-full);
+  font-size:     var(--text-sm);
+  font-weight:   var(--font-medium);
+  box-shadow:    var(--shadow-xl);
+  white-space:   nowrap;
+
+  opacity:        0;
+  pointer-events: none;
+  transition:
+    opacity   var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+html.dark .toast {
+  background: var(--color-gray-100);
+  color:      var(--color-gray-900);
+}
+
+.toast svg {
+  width:  16px;
+  height: 16px;
+  color:  var(--color-success);
+}
+
+.toast.show {
+  opacity:   1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* ----------------------------------------------------------
+   RELATED JOBS SECTION
+   Bottom of every article page.
+   All tiers.
+---------------------------------------------------------- */
+.related-jobs {
+  padding-top:  var(--space-8);
+  border-top:   2px solid var(--border-color);
+}
+
+.related-jobs__header {
+  display:         flex;
+  align-items:     center;
+  justify-content: space-between;
+  margin-bottom:   var(--space-6);
+}
+
+.related-jobs__title {
+  font-size:   var(--text-xl);
+  font-weight: var(--font-bold);
+  color:       var(--text-primary);
+}
+
+.related-jobs__view-all {
+  font-size:  var(--text-sm);
+  color:      var(--color-primary);
+  font-weight:var(--font-medium);
+}
+
+.related-jobs__view-all:hover {
+  text-decoration: underline;
+}
+
+.related-jobs__grid {
+  display:               grid;
+  grid-template-columns: 1fr;
+  gap:                   var(--space-4);
+}
+
+@media (min-width: 640px) {
+  .related-jobs__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+/* ----------------------------------------------------------
+   PRINT STYLES — Article specific
+   Extends base print in base.css.
+   People print the documents list and how-to-apply.
+---------------------------------------------------------- */
+@media print {
+
+  /* Hide everything except core content */
+  #site-header,
+  #site-sidebar,
+  #site-footer,
+  .share-bar,
+  .related-jobs,
+  .breadcrumb-bar,
+  #scroll-top,
+  #reading-progress,
+  .adsense-slot {
+    display: none !important;
+  }
+
+  .article-wrap {
+    gap: 16pt;
+  }
+
+  .meta-bar {
+    grid-template-columns: repeat(3, 1fr);
+    border: 1pt solid #ccc;
+  }
+
+  /* Documents list — checkbox visible for printing */
+  .documents-list__checkbox {
+    display: block;
+    border:  1pt solid black;
+  }
+
+  .apply-cta {
+    display: none;
+  }
+
+  .source-block__link::after {
+    content: " (" attr(href) ")";
+  }
+}

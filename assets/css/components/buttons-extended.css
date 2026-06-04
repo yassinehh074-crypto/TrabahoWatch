@@ -1,0 +1,349 @@
+/* ============================================================
+   BUTTONS-EXTENDED.CSS — All button variants
+   TrabahoWatch v1.0
+   ============================================================ */
+
+/* ── Base Button ────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-lg);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition:
+    background     var(--transition-fast),
+    color          var(--transition-fast),
+    border-color   var(--transition-fast),
+    box-shadow     var(--transition-fast),
+    transform      var(--transition-fast);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn svg {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+/* ── Sizes ───────────────────────────────────────────────────── */
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-xs);
+  border-radius: var(--radius-md);
+  gap: var(--space-1);
+}
+
+.btn--sm svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-7, 1.75rem);
+  font-size: var(--text-base);
+  border-radius: var(--radius-xl);
+  gap: var(--space-3);
+}
+
+.btn--lg svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ── Primary ─────────────────────────────────────────────────── */
+.btn--primary {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark, #0f3172);
+  border-color: var(--color-primary-dark, #0f3172);
+  box-shadow: 0 4px 14px rgba(22,72,150,0.35);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Ghost ───────────────────────────────────────────────────── */
+.btn--ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+.btn--ghost:hover {
+  background: var(--bg-surface-2);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+html.dark .btn--ghost {
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+html.dark .btn--ghost:hover {
+  border-color: var(--text-link);
+  color: var(--text-link);
+  background: rgba(96,165,250,0.08);
+}
+
+/* ── Gold ────────────────────────────────────────────────────── */
+.btn--gold {
+  background: #d97706;
+  color: white;
+  border-color: #d97706;
+}
+
+.btn--gold:hover {
+  background: #b45309;
+  border-color: #b45309;
+  box-shadow: 0 4px 14px rgba(217,119,6,0.35);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.btn--gold:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ── Danger ──────────────────────────────────────────────────── */
+.btn--danger {
+  background: #dc2626;
+  color: white;
+  border-color: #dc2626;
+}
+
+.btn--danger:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+  box-shadow: 0 4px 14px rgba(220,38,38,0.3);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* ── Success ─────────────────────────────────────────────────── */
+.btn--success {
+  background: var(--color-success, #16a34a);
+  color: white;
+  border-color: var(--color-success, #16a34a);
+}
+
+.btn--success:hover {
+  background: #15803d;
+  border-color: #15803d;
+  box-shadow: 0 4px 14px rgba(22,150,89,0.3);
+  transform: translateY(-1px);
+  color: white;
+}
+
+/* ── Pill ────────────────────────────────────────────────────── */
+.btn--pill {
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.btn--pill svg {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--pill-active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn--pill-active:hover {
+  background: var(--color-primary-dark, #0f3172);
+  border-color: var(--color-primary-dark, #0f3172);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn--pill-inactive {
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+.btn--pill-inactive:hover {
+  background: var(--bg-surface-3, #e2e8f0);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+html.dark .btn--pill-inactive {
+  background: var(--bg-surface-2);
+  color: var(--text-secondary);
+  border-color: var(--border-color);
+}
+
+html.dark .btn--pill-inactive:hover {
+  background: rgba(96,165,250,0.08);
+  border-color: var(--text-link);
+  color: var(--text-link);
+}
+
+/* ── Icon-only ──────────────────────────────────────────────── */
+.btn--icon {
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.btn--icon.btn--sm {
+  width: 28px;
+  height: 28px;
+  padding: var(--space-1);
+}
+
+.btn--icon.btn--lg {
+  width: 44px;
+  height: 44px;
+  padding: var(--space-3);
+}
+
+/* ── Load More ──────────────────────────────────────────────── */
+.btn--load-more {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition:
+    background     var(--transition-fast),
+    border-color   var(--transition-fast),
+    color          var(--transition-fast),
+    transform      var(--transition-fast);
+}
+
+.btn--load-more svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.btn--load-more:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn--load-more:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ── Filter Pills Group ─────────────────────────────────────── */
+.filter-pills {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* ── Scroll Top Button ──────────────────────────────────────── */
+#scroll-top-btn {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  width: 44px;
+  height: 44px;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition:
+    opacity     var(--transition-base),
+    visibility  var(--transition-base),
+    transform   var(--transition-base),
+    background  var(--transition-fast);
+  z-index: 500;
+}
+
+#scroll-top-btn.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#scroll-top-btn:hover {
+  background: var(--color-primary-dark, #0f3172);
+  transform: translateY(-2px);
+}
+
+#scroll-top-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .btn--lg {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+  }
+
+  #scroll-top-btn {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ── Print ──────────────────────────────────────────────────── */
+@media print {
+  .btn {
+    display: none !important;
+  }
+}

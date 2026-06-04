@@ -1,0 +1,556 @@
+/* ============================================================
+   FILE: assets/css/components/badges.css
+   PURPOSE: All badge and tag variants — status badges,
+            sector badges, tier badges, salary grade badges,
+            eligibility tags, category tags, verified badge.
+   DEPENDS ON: variables.css
+   RULE: Badges are purely visual labels.
+         They must never overflow their container.
+         All text must remain readable on both
+         light and dark backgrounds.
+   ============================================================ */
+
+
+/* ----------------------------------------------------------
+   BADGE BASE
+   Every badge inherits from this.
+   Never use .badge alone — always add a variant.
+---------------------------------------------------------- */
+.badge {
+  display:        inline-flex;
+  align-items:    center;
+  justify-content:center;
+  gap:            var(--space-1);
+
+  padding:        2px var(--space-3);
+  border-radius:  var(--radius-full);
+
+  font-size:      var(--text-xs);
+  font-weight:    var(--font-semibold);
+  line-height:    1.4;
+  white-space:    nowrap;
+
+  /* Prevent text selection */
+  user-select:    none;
+}
+
+.badge svg {
+  width:       12px;
+  height:      12px;
+  flex-shrink: 0;
+}
+
+/* Slightly larger badge */
+.badge--md {
+  padding:   var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+}
+
+/* Large badge */
+.badge--lg {
+  padding:     var(--space-2) var(--space-4);
+  font-size:   var(--text-sm);
+  font-weight: var(--font-bold);
+}
+
+.badge--lg svg {
+  width:  14px;
+  height: 14px;
+}
+
+/* Square badge — for counts */
+.badge--square {
+  border-radius: var(--radius-md);
+}
+
+
+/* ----------------------------------------------------------
+   STATUS BADGES
+   Job posting status — Open, Closed, Opening Soon.
+   Used on job cards and article pages.
+---------------------------------------------------------- */
+
+/* Open */
+.badge--open {
+  background: var(--badge-open-bg);
+  color:      var(--badge-open-text);
+}
+
+/* Pulse animation — draws attention to open jobs */
+.badge--open::before {
+  content:       '';
+  width:         6px;
+  height:        6px;
+  border-radius: var(--radius-full);
+  background:    var(--badge-open-text);
+  flex-shrink:   0;
+  animation:     badge-pulse 2s ease-in-out infinite;
+}
+
+@keyframes badge-pulse {
+  0%, 100% { opacity: 1;   transform: scale(1);    }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+/* Closed / Archived */
+.badge--closed {
+  background: var(--badge-closed-bg);
+  color:      var(--badge-closed-text);
+}
+
+/* Opening Soon */
+.badge--soon {
+  background: var(--badge-soon-bg);
+  color:      var(--badge-soon-text);
+}
+
+/* Extended — deadline was extended */
+.badge--extended {
+  background: rgba(8, 145, 178, 0.1);
+  color:      var(--sector-ofw-color);
+}
+
+/* Urgent — closing within 7 days */
+.badge--urgent {
+  background: rgba(220, 38, 38, 0.1);
+  color:      var(--color-accent);
+  animation:  badge-urgent-pulse 1.5s ease-in-out infinite;
+}
+
+.badge--urgent::before {
+  content:       '';
+  width:         6px;
+  height:        6px;
+  border-radius: var(--radius-full);
+  background:    var(--color-accent);
+  flex-shrink:   0;
+}
+
+@keyframes badge-urgent-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+
+/* ----------------------------------------------------------
+   TIER BADGES
+   Content depth indicator.
+   Star / Core / Brief.
+---------------------------------------------------------- */
+.badge--tier-1 {
+  background: var(--badge-tier1-bg);
+  color:      var(--badge-tier1-text);
+}
+
+.badge--tier-2 {
+  background: var(--badge-tier2-bg);
+  color:      var(--badge-tier2-text);
+}
+
+.badge--tier-3 {
+  background: var(--badge-tier3-bg);
+  color:      var(--badge-tier3-text);
+}
+
+
+/* ----------------------------------------------------------
+   SECTOR BADGES
+   Government / Private / OFW.
+   Used in breadcrumbs, article headers, search results.
+---------------------------------------------------------- */
+.badge--gov {
+  background: rgba(22, 72, 150, 0.1);
+  color:      var(--color-primary);
+}
+
+html.dark .badge--gov {
+  background: rgba(96, 165, 250, 0.15);
+  color:      var(--text-link);
+}
+
+.badge--private {
+  background: rgba(124, 58, 237, 0.1);
+  color:      #7c3aed;
+}
+
+html.dark .badge--private {
+  background: rgba(167, 139, 250, 0.15);
+  color:      #a78bfa;
+}
+
+.badge--ofw {
+  background: rgba(8, 145, 178, 0.1);
+  color:      var(--sector-ofw-color);
+}
+
+html.dark .badge--ofw {
+  background: rgba(56, 189, 248, 0.15);
+  color:      #38bdf8;
+}
+
+
+/* ----------------------------------------------------------
+   SALARY GRADE BADGE
+   Compact SG indicator.
+   Used on job cards and article meta bar.
+---------------------------------------------------------- */
+.badge--sg {
+  background:  rgba(22, 72, 150, 0.08);
+  color:       var(--color-primary);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.02em;
+}
+
+html.dark .badge--sg {
+  background: rgba(96, 165, 250, 0.12);
+  color:      var(--text-link);
+}
+
+/* SG level color coding */
+.badge--sg-low {
+  /* SG 1-9 — entry level */
+  background: rgba(22, 163, 74, 0.1);
+  color:      var(--color-success);
+}
+
+.badge--sg-mid {
+  /* SG 10-18 — professional */
+  background: rgba(22, 72, 150, 0.1);
+  color:      var(--color-primary);
+}
+
+.badge--sg-high {
+  /* SG 19-33 — senior/executive */
+  background: rgba(234, 179, 8, 0.15);
+  color:      var(--color-gold-dark);
+}
+
+
+/* ----------------------------------------------------------
+   EMPLOYMENT TYPE BADGES
+   Permanent / Casual / Job Order / Co-terminus.
+---------------------------------------------------------- */
+.badge--permanent {
+  background: rgba(22, 163, 74, 0.1);
+  color:      var(--color-success);
+}
+
+.badge--casual {
+  background: rgba(8, 145, 178, 0.1);
+  color:      var(--sector-ofw-color);
+}
+
+.badge--job-order {
+  background: rgba(234, 179, 8, 0.12);
+  color:      var(--color-gold-dark);
+}
+
+.badge--co-terminus {
+  background: rgba(124, 58, 237, 0.1);
+  color:      #7c3aed;
+}
+
+.badge--contractual {
+  background: var(--bg-surface-3);
+  color:      var(--text-secondary);
+}
+
+
+/* ----------------------------------------------------------
+   ELIGIBILITY BADGE
+   CSC eligibility requirement indicator.
+---------------------------------------------------------- */
+.badge--eligibility {
+  background:    var(--bg-surface-2);
+  color:         var(--text-secondary);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  font-size:     var(--text-xs);
+}
+
+/* No eligibility required */
+.badge--no-eligibility {
+  background: rgba(22, 163, 74, 0.08);
+  color:      var(--color-success);
+  border:     1px solid rgba(22, 163, 74, 0.2);
+}
+
+/* CSC Professional passer required */
+.badge--csc-professional {
+  background: rgba(22, 72, 150, 0.08);
+  color:      var(--color-primary);
+  border:     1px solid rgba(22, 72, 150, 0.2);
+}
+
+/* CSC Sub-professional */
+.badge--csc-subpro {
+  background: rgba(8, 145, 178, 0.08);
+  color:      var(--sector-ofw-color);
+  border:     1px solid rgba(8, 145, 178, 0.2);
+}
+
+/* RA 1080 — board passer */
+.badge--ra1080 {
+  background: rgba(234, 179, 8, 0.1);
+  color:      var(--color-gold-dark);
+  border:     1px solid rgba(234, 179, 8, 0.25);
+}
+
+
+/* ----------------------------------------------------------
+   CATEGORY / TAG BADGES
+   Topic tags on job articles.
+   Used in .job-card__tags and article pages.
+---------------------------------------------------------- */
+.tag {
+  display:       inline-flex;
+  align-items:   center;
+  gap:           var(--space-1);
+  padding:       2px var(--space-2);
+  background:    var(--bg-surface-2);
+  color:         var(--text-muted);
+  border-radius: var(--radius-full);
+  font-size:     var(--text-xs);
+  font-weight:   var(--font-medium);
+  white-space:   nowrap;
+  transition:
+    background var(--transition-fast),
+    color      var(--transition-fast);
+  text-decoration: none;
+  border:        1px solid var(--border-color);
+  user-select:   none;
+}
+
+/* Clickable tag */
+a.tag:hover,
+button.tag:hover {
+  background:      var(--color-primary);
+  color:           white;
+  border-color:    var(--color-primary);
+  text-decoration: none;
+}
+
+/* Active / selected tag */
+.tag--active {
+  background:   var(--color-primary);
+  color:        white;
+  border-color: var(--color-primary);
+}
+
+/* Tag with icon */
+.tag svg {
+  width:  10px;
+  height: 10px;
+}
+
+/* Category-specific tag colors */
+.tag--deped    { --tag-color: var(--color-primary); }
+.tag--doh      { --tag-color: #dc2626; }
+.tag--lgu      { --tag-color: #16a34a; }
+.tag--pnp      { --tag-color: #1d4ed8; }
+.tag--bpo      { --tag-color: #7c3aed; }
+.tag--tech     { --tag-color: #0891b2; }
+.tag--ofw      { --tag-color: #d97706; }
+.tag--nurse    { --tag-color: #db2777; }
+.tag--teacher  { --tag-color: var(--color-primary); }
+
+.tag--deped,
+.tag--doh,
+.tag--lgu,
+.tag--pnp,
+.tag--bpo,
+.tag--tech,
+.tag--ofw,
+.tag--nurse,
+.tag--teacher {
+  background:   color-mix(in srgb, var(--tag-color) 10%, transparent);
+  color:        var(--tag-color);
+  border-color: color-mix(in srgb, var(--tag-color) 20%, transparent);
+}
+
+.tag--deped:hover,
+.tag--doh:hover,
+.tag--lgu:hover,
+.tag--pnp:hover,
+.tag--bpo:hover,
+.tag--tech:hover,
+.tag--ofw:hover,
+.tag--nurse:hover,
+.tag--teacher:hover {
+  background:   var(--tag-color);
+  color:        white;
+  border-color: var(--tag-color);
+}
+
+
+/* ----------------------------------------------------------
+   VERIFIED BADGE
+   "Verified ✓" — shown on source block.
+   Trust signal — important for AdSense compliance.
+---------------------------------------------------------- */
+.badge--verified {
+  background:   var(--color-primary);
+  color:        white;
+  padding:      var(--space-1) var(--space-3);
+  border-radius:var(--radius-full);
+  font-size:    var(--text-xs);
+  font-weight:  var(--font-bold);
+}
+
+.badge--verified svg {
+  width:  12px;
+  height: 12px;
+}
+
+/* Outlined version */
+.badge--verified-outline {
+  background:   transparent;
+  color:        var(--color-primary);
+  border:       1.5px solid var(--color-primary);
+}
+
+html.dark .badge--verified-outline {
+  color:        var(--text-link);
+  border-color: var(--text-link);
+}
+
+
+/* ----------------------------------------------------------
+   NEW BADGE
+   "New" label on recently added jobs.
+---------------------------------------------------------- */
+.badge--new {
+  background: var(--color-accent);
+  color:      white;
+  font-size:  10px;
+  padding:    1px var(--space-2);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------
+   FEATURED BADGE
+   Gold star — for tier 1 / highlighted jobs.
+---------------------------------------------------------- */
+.badge--featured {
+  background: var(--badge-tier1-bg);
+  color:      var(--badge-tier1-text);
+}
+
+html.dark .badge--featured {
+  background: rgba(234, 179, 8, 0.15);
+  color:      #fde68a;
+}
+
+
+/* ----------------------------------------------------------
+   REGION BADGE
+   Philippine region indicator on job cards.
+---------------------------------------------------------- */
+.badge--region {
+  background:   var(--bg-surface-2);
+  color:        var(--text-secondary);
+  border:       1px solid var(--border-color);
+  border-radius:var(--radius-md);
+  font-size:    var(--text-xs);
+}
+
+/* NCR — highlighted differently */
+.badge--ncr {
+  background:   rgba(22, 72, 150, 0.08);
+  color:        var(--color-primary);
+  border-color: rgba(22, 72, 150, 0.2);
+}
+
+
+/* ----------------------------------------------------------
+   OFW COUNTRY BADGE
+   Flag emoji + country name on OFW job cards.
+---------------------------------------------------------- */
+.badge--country {
+  background:    var(--bg-surface-2);
+  color:         var(--text-secondary);
+  border:        1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  gap:           var(--space-2);
+  font-size:     var(--text-xs);
+}
+
+.badge--country__flag {
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+/* ----------------------------------------------------------
+   COMING SOON BADGE
+   For sections not yet active — /guides/
+---------------------------------------------------------- */
+.badge--coming-soon {
+  background:    var(--badge-soon-bg);
+  color:         var(--badge-soon-text);
+  border-radius: var(--radius-md);
+  font-size:     10px;
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+}
+
+
+/* ----------------------------------------------------------
+   BADGE GROUPS
+   Multiple badges in a row.
+---------------------------------------------------------- */
+.badge-group {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       var(--space-2);
+  align-items: center;
+}
+
+.badge-group--compact {
+  gap: var(--space-1);
+}
+
+
+/* ----------------------------------------------------------
+   NOTIFICATION DOT
+   Small dot indicator — unread count, alerts.
+   Used on nav items or buttons.
+---------------------------------------------------------- */
+.notif-dot {
+  position:      relative;
+  display:       inline-flex;
+}
+
+.notif-dot::after {
+  content:       '';
+  position:      absolute;
+  top:           -3px;
+  right:         -3px;
+  width:         8px;
+  height:        8px;
+  border-radius: var(--radius-full);
+  background:    var(--color-accent);
+  border:        2px solid var(--bg-surface);
+}
+
+/* With count number */
+.notif-count {
+  position:      absolute;
+  top:           -6px;
+  right:         -6px;
+  min-width:     18px;
+  height:        18px;
+  padding:       0 4px;
+  border-radius: var(--radius-full);
+  background:    var(--color-accent);
+  color:         white;
+  font-size:     10px;
+  font-weight:   var(--font-bold);
+  display:       flex;
+  align-items:   center;
+  justify-content: center;
+  border:        2px solid var(--bg-surface);
+  line-height:   1;
+}
