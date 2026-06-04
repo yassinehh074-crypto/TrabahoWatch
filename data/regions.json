@@ -1,0 +1,371 @@
+{
+  "metadata": {
+    "title": "Philippine Administrative Regions",
+    "source": "Philippine Statistics Authority (PSA) and DILG",
+    "totalRegions": 18,
+    "lastUpdated": "2026",
+    "note": "Includes all 17 administrative regions plus NCR. BARMM included as Region XVII for job filtering purposes."
+  },
+
+  "regions": [
+    {
+      "code": "NCR",
+      "slug": "ncr",
+      "name": "National Capital Region",
+      "localName": "Kalakhang Maynila",
+      "label": "NCR — Metro Manila",
+      "capital": "Manila",
+      "majorCities": [
+        "Manila", "Quezon City", "Makati", "Pasig", "Taguig",
+        "Mandaluyong", "Marikina", "Paranaque", "Las Pinas",
+        "Muntinlupa", "Pasay", "Caloocan", "Malabon",
+        "Navotas", "Valenzuela", "San Juan", "Pateros"
+      ],
+      "island": "Luzon",
+      "population": 13484462,
+      "jobDemand": "very-high",
+      "topSectors": ["government", "bpo", "tech", "finance", "healthcare"],
+      "notes": "Largest job market in the Philippines. Home to BGC, Makati CBD, Ortigas, and major government agencies."
+    },
+    {
+      "code": "CAR",
+      "slug": "car",
+      "name": "Cordillera Administrative Region",
+      "localName": "Rehiyong Administratibo ng Kordilyera",
+      "label": "CAR — Cordillera",
+      "capital": "Baguio City",
+      "majorCities": ["Baguio", "Tabuk", "La Trinidad", "Bangued"],
+      "island": "Luzon",
+      "population": 1797660,
+      "jobDemand": "medium",
+      "topSectors": ["government", "education", "mining"],
+      "notes": "Known for Baguio City, highland agriculture, and tourism. Government and education are major employers."
+    },
+    {
+      "code": "I",
+      "slug": "region-1",
+      "name": "Region I — Ilocos Region",
+      "localName": "Rehiyon I",
+      "label": "Region I — Ilocos",
+      "capital": "San Fernando, La Union",
+      "majorCities": ["Laoag", "Vigan", "San Fernando (LU)", "Dagupan"],
+      "provinces": ["Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan"],
+      "island": "Luzon",
+      "population": 5301139,
+      "jobDemand": "medium",
+      "topSectors": ["government", "education", "agriculture", "ofw"],
+      "notes": "Strong OFW culture. Pangasinan is among the most populous provinces in the Philippines."
+    },
+    {
+      "code": "II",
+      "slug": "region-2",
+      "name": "Region II — Cagayan Valley",
+      "localName": "Rehiyon II",
+      "label": "Region II — Cagayan Valley",
+      "capital": "Tuguegarao City",
+      "majorCities": ["Tuguegarao", "Ilagan", "Santiago"],
+      "provinces": ["Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino"],
+      "island": "Luzon",
+      "population": 3685744,
+      "jobDemand": "medium-low",
+      "topSectors": ["government", "agriculture", "education"],
+      "notes": "Agricultural region with significant government employment. Batanes is the northernmost province."
+    },
+    {
+      "code": "III",
+      "slug": "region-3",
+      "name": "Region III — Central Luzon",
+      "localName": "Rehiyon III / Gitnang Luzon",
+      "label": "Region III — Central Luzon",
+      "capital": "San Fernando, Pampanga",
+      "majorCities": [
+        "San Fernando (Pampanga)", "Angeles", "Olongapo",
+        "Malolos", "Cabanatuan", "San Jose del Monte"
+      ],
+      "provinces": [
+        "Aurora", "Bataan", "Bulacan", "Nueva Ecija",
+        "Pampanga", "Tarlac", "Zambales"
+      ],
+      "island": "Luzon",
+      "population": 12422172,
+      "jobDemand": "high",
+      "topSectors": ["government", "manufacturing", "bpo", "education", "agriculture"],
+      "notes": "Second largest regional economy. Bulacan and Pampanga are major BPO and manufacturing hubs."
+    },
+    {
+      "code": "IVA",
+      "slug": "region-4a",
+      "name": "Region IV-A — CALABARZON",
+      "localName": "Rehiyon IV-A",
+      "label": "Region IV-A — CALABARZON",
+      "capital": "Calamba, Laguna",
+      "majorCities": [
+        "Antipolo", "Calamba", "Bacoor", "Imus",
+        "Dasmariñas", "General Trias", "Lucena"
+      ],
+      "provinces": ["Cavite", "Laguna", "Batangas", "Rizal", "Quezon"],
+      "island": "Luzon",
+      "population": 16195042,
+      "jobDemand": "very-high",
+      "topSectors": ["manufacturing", "bpo", "government", "tech", "logistics"],
+      "notes": "Most populous region outside NCR. Major industrial zones in Cavite, Laguna (LIMA, CEPZA). Fastest growing job market."
+    },
+    {
+      "code": "IVB",
+      "slug": "region-4b",
+      "name": "Region IV-B — MIMAROPA",
+      "localName": "Rehiyon IV-B",
+      "label": "Region IV-B — MIMAROPA",
+      "capital": "Calapan, Oriental Mindoro",
+      "majorCities": ["Puerto Princesa", "Calapan", "Odiongan"],
+      "provinces": [
+        "Marinduque", "Occidental Mindoro", "Oriental Mindoro",
+        "Palawan", "Romblon"
+      ],
+      "island": "Luzon/Visayas Border",
+      "population": 3228558,
+      "jobDemand": "low-medium",
+      "topSectors": ["government", "agriculture", "tourism", "fishing"],
+      "notes": "Palawan is the largest province and major tourism destination. Government is the primary employer."
+    },
+    {
+      "code": "V",
+      "slug": "region-5",
+      "name": "Region V — Bicol Region",
+      "localName": "Rehiyon V / Rehiyon Bikol",
+      "label": "Region V — Bicol",
+      "capital": "Legazpi City",
+      "majorCities": ["Legazpi", "Naga", "Sorsogon", "Iriga", "Masbate"],
+      "provinces": [
+        "Albay", "Camarines Norte", "Camarines Sur",
+        "Catanduanes", "Masbate", "Sorsogon"
+      ],
+      "island": "Luzon",
+      "population": 6082165,
+      "jobDemand": "medium",
+      "topSectors": ["government", "education", "agriculture", "ofw"],
+      "notes": "High OFW deployment rate. Naga City is the regional commercial center. Strong demand for DepEd positions."
+    },
+    {
+      "code": "VI",
+      "slug": "region-6",
+      "name": "Region VI — Western Visayas",
+      "localName": "Rehiyon VI / Kanlurang Kabisayaan",
+      "label": "Region VI — Western Visayas",
+      "capital": "Iloilo City",
+      "majorCities": ["Iloilo City", "Bacolod", "Roxas", "Kalibo"],
+      "provinces": [
+        "Aklan", "Antique", "Capiz", "Guimaras",
+        "Iloilo", "Negros Occidental"
+      ],
+      "island": "Visayas",
+      "population": 7954723,
+      "jobDemand": "medium-high",
+      "topSectors": ["government", "bpo", "sugar", "education", "healthcare"],
+      "notes": "Iloilo City has a growing BPO sector. Bacolod is the sugar capital. Strong healthcare sector."
+    },
+    {
+      "code": "VII",
+      "slug": "region-7",
+      "name": "Region VII — Central Visayas",
+      "localName": "Rehiyon VII / Sentral nga Kabisayaan",
+      "label": "Region VII — Central Visayas",
+      "capital": "Cebu City",
+      "majorCities": ["Cebu City", "Mandaue", "Lapu-Lapu", "Tagbilaran", "Dumaguete"],
+      "provinces": ["Bohol", "Cebu", "Negros Oriental", "Siquijor"],
+      "island": "Visayas",
+      "population": 8081988,
+      "jobDemand": "high",
+      "topSectors": ["bpo", "tourism", "government", "tech", "healthcare"],
+      "notes": "Second largest job market in the Philippines. Cebu City is the Queen City of the South — major BPO and tech hub."
+    },
+    {
+      "code": "VIII",
+      "slug": "region-8",
+      "name": "Region VIII — Eastern Visayas",
+      "localName": "Rehiyon VIII / Silangang Kabisayaan",
+      "label": "Region VIII — Eastern Visayas",
+      "capital": "Tacloban City",
+      "majorCities": ["Tacloban", "Ormoc", "Calbayog", "Catbalogan"],
+      "provinces": [
+        "Biliran", "Eastern Samar", "Leyte", "Northern Samar",
+        "Samar (Western Samar)", "Southern Leyte"
+      ],
+      "island": "Visayas",
+      "population": 4605629,
+      "jobDemand": "medium-low",
+      "topSectors": ["government", "education", "agriculture", "ofw"],
+      "notes": "Government and education are primary employers. High OFW deployment rate. Tacloban is commercial center."
+    },
+    {
+      "code": "IX",
+      "slug": "region-9",
+      "name": "Region IX — Zamboanga Peninsula",
+      "localName": "Rehiyon IX / Tangway ng Zamboanga",
+      "label": "Region IX — Zamboanga Peninsula",
+      "capital": "Pagadian City",
+      "majorCities": ["Zamboanga City", "Pagadian", "Dipolog", "Dapitan"],
+      "provinces": [
+        "Zamboanga del Norte", "Zamboanga del Sur", "Zamboanga Sibugay"
+      ],
+      "island": "Mindanao",
+      "population": 3875576,
+      "jobDemand": "low-medium",
+      "topSectors": ["government", "fishing", "agriculture", "education"],
+      "notes": "Zamboanga City is major sardines and fishing industry hub. Government is the dominant employer."
+    },
+    {
+      "code": "X",
+      "slug": "region-10",
+      "name": "Region X — Northern Mindanao",
+      "localName": "Rehiyon X / Hilagang Mindanao",
+      "label": "Region X — Northern Mindanao",
+      "capital": "Cagayan de Oro City",
+      "majorCities": ["Cagayan de Oro", "Iligan", "Malaybalay", "Valencia", "Ozamis"],
+      "provinces": [
+        "Bukidnon", "Camiguin", "Lanao del Norte",
+        "Misamis Occidental", "Misamis Oriental"
+      ],
+      "island": "Mindanao",
+      "population": 5022756,
+      "jobDemand": "medium-high",
+      "topSectors": ["government", "agriculture", "bpo", "manufacturing", "education"],
+      "notes": "Cagayan de Oro is a growing BPO and commercial hub. Del Monte Philippines operates in Bukidnon."
+    },
+    {
+      "code": "XI",
+      "slug": "region-11",
+      "name": "Region XI — Davao Region",
+      "localName": "Rehiyon XI / Rehiyon ng Dabaw",
+      "label": "Region XI — Davao",
+      "capital": "Davao City",
+      "majorCities": [
+        "Davao City", "Tagum", "Panabo", "Digos", "Mati"
+      ],
+      "provinces": [
+        "Davao de Oro", "Davao del Norte", "Davao del Sur",
+        "Davao Occidental", "Davao Oriental"
+      ],
+      "island": "Mindanao",
+      "population": 5243536,
+      "jobDemand": "medium-high",
+      "topSectors": ["government", "agriculture", "bpo", "tech", "education"],
+      "notes": "Davao City is the largest city in Mindanao and third largest in the Philippines. Growing tech and BPO sector. Durian capital."
+    },
+    {
+      "code": "XII",
+      "slug": "region-12",
+      "name": "Region XII — SOCCSKSARGEN",
+      "localName": "Rehiyon XII",
+      "label": "Region XII — SOCCSKSARGEN",
+      "capital": "Koronadal City",
+      "majorCities": ["Koronadal", "General Santos", "Kidapawan", "Tacurong"],
+      "provinces": [
+        "Cotabato", "Sarangani", "South Cotabato", "Sultan Kudarat"
+      ],
+      "island": "Mindanao",
+      "population": 4901267,
+      "jobDemand": "medium",
+      "topSectors": ["government", "agriculture", "tuna-fishing", "education"],
+      "notes": "General Santos City is the Tuna Capital of the Philippines. Agriculture and government are primary employers."
+    },
+    {
+      "code": "XIII",
+      "slug": "region-13",
+      "name": "Region XIII — CARAGA",
+      "localName": "Rehiyon XIII",
+      "label": "Region XIII — CARAGA",
+      "capital": "Butuan City",
+      "majorCities": ["Butuan", "Surigao", "Bislig", "Bayugan"],
+      "provinces": [
+        "Agusan del Norte", "Agusan del Sur", "Dinagat Islands",
+        "Surigao del Norte", "Surigao del Sur"
+      ],
+      "island": "Mindanao",
+      "population": 2804788,
+      "jobDemand": "low-medium",
+      "topSectors": ["government", "mining", "agriculture", "education"],
+      "notes": "Rich in mineral resources. Government and mining are dominant employers. Dinagat Islands is the smallest province."
+    },
+    {
+      "code": "BARMM",
+      "slug": "barmm",
+      "name": "Bangsamoro Autonomous Region in Muslim Mindanao",
+      "localName": "BARMM",
+      "label": "BARMM — Bangsamoro",
+      "capital": "Cotabato City",
+      "majorCities": ["Cotabato City", "Marawi", "Lamitan", "Jolo"],
+      "provinces": [
+        "Basilan", "Lanao del Sur", "Maguindanao del Norte",
+        "Maguindanao del Sur", "Sulu", "Tawi-Tawi"
+      ],
+      "island": "Mindanao",
+      "population": 4404288,
+      "jobDemand": "low-medium",
+      "topSectors": ["government", "education", "agriculture", "halal-industry"],
+      "notes": "Special autonomous region. Government and DepEd are the largest employers. Growing halal industry."
+    },
+    {
+      "code": "NIR",
+      "slug": "nir",
+      "name": "Negros Island Region",
+      "localName": "NIR",
+      "label": "NIR — Negros Island",
+      "capital": "Bacolod City",
+      "majorCities": ["Bacolod", "Dumaguete", "Kabankalan", "Bago"],
+      "provinces": ["Negros Occidental", "Negros Oriental"],
+      "island": "Visayas",
+      "population": 4414131,
+      "jobDemand": "medium",
+      "topSectors": ["government", "sugar", "education", "tourism", "healthcare"],
+      "notes": "Sugar industry capital of the Philippines. Bacolod (Western) and Dumaguete (Eastern) are major urban centers. NIR status is active as of latest government reorganization.",
+      "status": "active"
+    }
+  ],
+
+  "islands": {
+    "Luzon": {
+      "regions": ["NCR", "CAR", "I", "II", "III", "IVA", "IVB", "V"],
+      "description": "Largest island group. Home to the national capital and majority of BPO/tech jobs."
+    },
+    "Visayas": {
+      "regions": ["VI", "VII", "VIII", "NIR"],
+      "description": "Central island group. Cebu City is the primary commercial hub."
+    },
+    "Mindanao": {
+      "regions": ["IX", "X", "XI", "XII", "XIII", "BARMM"],
+      "description": "Second largest island group. Rich in agriculture and natural resources."
+    }
+  },
+
+  "jobDemandLevels": {
+    "very-high":  { "label": "Very High Demand",  "color": "#16a34a", "description": "Highest concentration of job opportunities. NCR and CALABARZON." },
+    "high":       { "label": "High Demand",        "color": "#0891b2", "description": "Strong job market with diverse sectors." },
+    "medium-high":{ "label": "Medium-High",        "color": "#164896", "description": "Growing job market with good opportunities in specific sectors." },
+    "medium":     { "label": "Medium Demand",      "color": "#d97706", "description": "Standard government employment with limited private sector options." },
+    "medium-low": { "label": "Medium-Low",         "color": "#ea580c", "description": "Predominantly government employment." },
+    "low-medium": { "label": "Low-Medium",         "color": "#dc2626", "description": "Limited private sector. Government is primary employer." }
+  },
+
+  "filterOptions": [
+    { "value": "",       "label": "All Regions" },
+    { "value": "ncr",    "label": "NCR — Metro Manila" },
+    { "value": "car",    "label": "CAR — Cordillera" },
+    { "value": "region-1", "label": "Region I — Ilocos" },
+    { "value": "region-2", "label": "Region II — Cagayan Valley" },
+    { "value": "region-3", "label": "Region III — Central Luzon" },
+    { "value": "region-4a","label": "Region IV-A — CALABARZON" },
+    { "value": "region-4b","label": "Region IV-B — MIMAROPA" },
+    { "value": "region-5", "label": "Region V — Bicol" },
+    { "value": "region-6", "label": "Region VI — Western Visayas" },
+    { "value": "region-7", "label": "Region VII — Central Visayas" },
+    { "value": "region-8", "label": "Region VIII — Eastern Visayas" },
+    { "value": "region-9", "label": "Region IX — Zamboanga Peninsula" },
+    { "value": "region-10","label": "Region X — Northern Mindanao" },
+    { "value": "region-11","label": "Region XI — Davao Region" },
+    { "value": "region-12","label": "Region XII — SOCCSKSARGEN" },
+    { "value": "region-13","label": "Region XIII — CARAGA" },
+    { "value": "barmm",    "label": "BARMM — Bangsamoro" },
+    { "value": "nir",      "label": "NIR — Negros Island" }
+  ]
+}

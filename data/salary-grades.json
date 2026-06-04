@@ -1,0 +1,867 @@
+{
+  "version": "SSL VI Tranche 3",
+  "effectiveDate": "2026-01-01",
+  "source": "Executive Order No. 64 (2024)",
+  "note": "8 steps per grade. Step 1 is entry-level. All amounts in PHP per month.",
+  "grades": [
+    {
+      "sg": 1,
+      "label": "Admin Aide I",
+      "edu": "Elementary Graduate",
+      "steps": [14634, 15073, 15527, 15996, 16484, 16987, 17508, 18049]
+    },
+    {
+      "sg": 2,
+      "label": "Admin Aide II",
+      "edu": "Elementary Graduate",
+      "steps": [15138, 15591, 16060, 16547, 17051, 17573, 18113, 18673]
+    },
+    {
+      "sg": 3,
+      "label": "Admin Aide III",
+      "edu": "High School Graduate",
+      "steps": [15651, 16120, 16605, 17109, 17630, 18169, 18727, 19305]
+    },
+    {
+      "sg": 4,
+      "label": "Admin Aide IV",
+      "edu": "High School Graduate",
+      "steps": [16188, 16674, 17177, 17699, 18239, 18796, 19374, 19972]
+    },
+    {
+      "sg": 5,
+      "label": "Admin Aide V",
+      "edu": "High School Graduate",
+      "steps": [16756, 17258, 17779, 18318, 18877, 19455, 20052, 20671]
+    },
+    {
+      "sg": 6,
+      "label": "Admin Aide VI",
+      "edu": "High School Graduate",
+      "steps": [18998, 19569, 20159, 20768, 21397, 22047, 22718, 23411]
+    },
+    {
+      "sg": 7,
+      "label": "Admin Assistant I",
+      "edu": "High School Graduate",
+      "steps": [20754, 21393, 22051, 22730, 23431, 24154, 24899, 25668]
+    },
+    {
+      "sg": 8,
+      "label": "Admin Assistant II",
+      "edu": "2-year College",
+      "steps": [22938, 23630, 24344, 25081, 25841, 26624, 27431, 28263]
+    },
+    {
+      "sg": 9,
+      "label": "Admin Assistant III",
+      "edu": "2-year College",
+      "steps": [25439, 26200, 26985, 27796, 28630, 29491, 30377, 31290]
+    },
+    {
+      "sg": 10,
+      "label": "Admin Officer I",
+      "edu": "4-year College",
+      "steps": [29668, 30556, 31470, 32411, 33381, 34378, 35405, 36461]
+    },
+    {
+      "sg": 11,
+      "label": "Teacher I / PO1 / FO1",
+      "edu": "4-year College (LET/Board)",
+      "steps": [31705, 32651, 33624, 34628, 35663, 36730, 37829, 38963]
+    },
+    {
+      "sg": 12,
+      "label": "Teacher II",
+      "edu": "4-year College (LET)",
+      "steps": [33947, 34954, 35991, 37059, 38159, 39292, 40458, 41659]
+    },
+    {
+      "sg": 13,
+      "label": "Teacher III",
+      "edu": "4-year College (LET)",
+      "steps": [37024, 38125, 39260, 40431, 41638, 42882, 44164, 45485]
+    },
+    {
+      "sg": 14,
+      "label": "Admin Officer III",
+      "edu": "4-year College",
+      "steps": [39672, 40869, 42103, 43373, 44682, 46031, 47420, 48851]
+    },
+    {
+      "sg": 15,
+      "label": "Nurse I / Teacher IV / Inspector",
+      "edu": "4-year College (Board/License)",
+      "steps": [42178, 43457, 44778, 46141, 47547, 48997, 50491, 52033]
+    },
+    {
+      "sg": 16,
+      "label": "Nurse II / Engineer I",
+      "edu": "4-year College (Board)",
+      "steps": [46725, 48135, 49591, 51096, 52649, 54253, 55908, 57618]
+    },
+    {
+      "sg": 17,
+      "label": "Nurse III / Engineer II",
+      "edu": "4-year College (Board) + exp",
+      "steps": [52480, 54067, 55705, 57395, 59139, 60940, 62797, 64713]
+    },
+    {
+      "sg": 18,
+      "label": "Master Teacher I / Nurse IV",
+      "edu": "MA / Board + exp",
+      "steps": [53818, 55451, 57136, 58876, 60671, 62523, 64435, 66408]
+    },
+    {
+      "sg": 19,
+      "label": "Master Teacher II",
+      "edu": "MA / Board + exp",
+      "steps": [63997, 65964, 67990, 70076, 72224, 74436, 76713, 79057]
+    },
+    {
+      "sg": 20,
+      "label": "Principal I / Admin Officer V",
+      "edu": "MA + exp",
+      "steps": [72680, 74890, 77162, 79499, 81904, 84378, 86923, 89541]
+    },
+    {
+      "sg": 21,
+      "label": "Principal II",
+      "edu": "MA + exp",
+      "steps": [82898, 85410, 87988, 90635, 93353, 96143, 99007, 101948]
+    },
+    {
+      "sg": 22,
+      "label": "Principal III",
+      "edu": "MA + exp",
+      "steps": [92776, 95604, 98505, 101481, 104534, 107665, 110877, 114173]
+    },
+    {
+      "sg": 23,
+      "label": "Principal IV / Dept. Manager A",
+      "edu": "MA + exp",
+      "steps": [102804, 105962, 109199, 112518, 115921, 119410, 122988, 126657]
+    },
+    {
+      "sg": 24,
+      "label": "Director III / Schools Division Supt.",
+      "edu": "PhD or equiv + exp",
+      "steps": [116975, 120537, 124183, 127918, 131743, 135661, 139673, 143783]
+    },
+    {
+      "sg": 25,
+      "label": "Director IV",
+      "edu": "PhD or equiv + exp",
+      "steps": [133050, 137097, 141237, 145474, 149810, 154247, 158789, 163438]
+    },
+    {
+      "sg": 26,
+      "label": "Director V / Regional Director",
+      "edu": "PhD or equiv + exp",
+      "steps": [152587, 157244, 162003, 166867, 171838, 176919, 182113, 187423]
+    },
+    {
+      "sg": 27,
+      "label": "Assistant Secretary",
+      "edu": "PhD or equiv + exp",
+      "steps": [168946, 174090, 179346, 184718, 190209, 195823, 201562, 207430]
+    },
+    {
+      "sg": 28,
+      "label": "Undersecretary",
+      "edu": "As prescribed",
+      "steps": [198614, 204694, 210905, 217250, 223733, 230358, 237128, 244048]
+    },
+    {
+      "sg": 29,
+      "label": "Assistant Secretary (Senior)",
+      "edu": "As prescribed",
+      "steps": [219863, 226598, 233472, 240489, 247651, 254962, 262426, 270047]
+    },
+    {
+      "sg": 30,
+      "label": "Secretary / Agency Head I",
+      "edu": "As prescribed",
+      "steps": [249750, 257325, 265042, 272905, 280916, 289080, 297400, 305881]
+    },
+    {
+      "sg": 31,
+      "label": "Agency Head II",
+      "edu": "As prescribed",
+      "steps": [284703, 293377, 302201, 311181, 320318, 329617, 339081, 348716]
+    },
+    {
+      "sg": 32,
+      "label": "Agency Head III / Chief of Staff AFP",
+      "edu": "As prescribed",
+      "steps": [323688, 333543, 343558, 353738, 364085, 374604, 385297, 396169]
+    },
+    {
+      "sg": 33,
+      "label": "President / Vice President / Chief Justice",
+      "edu": "As prescribed",
+      "steps": [449157, 462750, 476700, 491010, 505686, 520733, 536156, 551961]
+    }
+  ]
+} },
+    {
+      "sg": 11,
+      "step1": 31705,
+      "step2": 32656,
+      "step3": 33636,
+      "step4": 34645,
+      "step5": 35684,
+      "step6": 36754,
+      "step7": 37857,
+      "step8": 38993,
+      "eduLevel": "college",
+      "eduRequirement": "Bachelor's Degree (Education, relevant field)",
+      "examplePosition": "Teacher I",
+      "examplePositions": ["Teacher I", "Administrative Officer II", "Accountant I"],
+      "category": "professional",
+      "notes": "Standard entry-level professional grade. DepEd Teacher I falls here."
+    },
+    {
+      "sg": 12,
+      "step1": 33947,
+      "step2": 34965,
+      "step3": 36014,
+      "step4": 37094,
+      "step5": 38207,
+      "step6": 39353,
+      "step7": 40534,
+      "step8": 41750,
+      "eduLevel": "college",
+      "eduRequirement": "Bachelor's Degree with relevant experience",
+      "examplePosition": "Teacher II",
+      "examplePositions": ["Teacher II", "Administrative Officer III", "Engineer I"],
+      "category": "professional",
+      "notes": "Second step in professional track. Requires some service experience."
+    },
+    {
+      "sg": 13,
+      "step1": 37024,
+      "step2": 38135,
+      "step3": 39279,
+      "step4": 40457,
+      "step5": 41671,
+      "step6": 42921,
+      "step7": 44209,
+      "step8": 45535,
+      "eduLevel": "college",
+      "eduRequirement": "Bachelor's Degree with relevant experience",
+      "examplePosition": "Teacher III",
+      "examplePositions": ["Teacher III", "Engineer II", "Accountant II"],
+      "category": "professional",
+      "notes": "Mid-level professional. Requires established performance and experience."
+    },
+    {
+      "sg": 14,
+      "step1": 39906,
+      "step2": 41103,
+      "step3": 42336,
+      "step4": 43606,
+      "step5": 44914,
+      "step6": 46261,
+      "step7": 47649,
+      "step8": 49078,
+      "eduLevel": "college",
+      "eduRequirement": "Bachelor's Degree with relevant experience, some graduate units preferred",
+      "examplePosition": "Head Teacher I / Administrative Officer V",
+      "examplePositions": ["Head Teacher I", "Administrative Officer V", "Engineer III"],
+      "category": "professional",
+      "notes": "Senior professional track. Leadership responsibility begins at this level."
+    },
+    {
+      "sg": 15,
+      "step1": 42178,
+      "step2": 43443,
+      "step3": 44746,
+      "step4": 46088,
+      "step5": 47471,
+      "step6": 48895,
+      "step7": 50362,
+      "step8": 51873,
+      "eduLevel": "college-licensed",
+      "eduRequirement": "Bachelor's Degree + Board/Bar Licensure",
+      "examplePosition": "Nurse I",
+      "examplePositions": ["Nurse I", "Engineer IV", "Lawyer I", "Teacher (Special Science)"],
+      "category": "professional-licensed",
+      "notes": "Licensed professional grade. PRC board passers qualify. DOH Nurse I falls here."
+    },
+    {
+      "sg": 16,
+      "step1": 45694,
+      "step2": 47065,
+      "step3": 48477,
+      "step4": 49931,
+      "step5": 51429,
+      "step6": 52972,
+      "step7": 54561,
+      "step8": 56198,
+      "eduLevel": "college-licensed",
+      "eduRequirement": "Bachelor's Degree + Board/Bar Licensure + Experience",
+      "examplePosition": "Nurse II",
+      "examplePositions": ["Nurse II", "Engineer V", "Lawyer II"],
+      "category": "professional-licensed",
+      "notes": "Senior licensed professional. Requires post-licensure experience."
+    },
+    {
+      "sg": 17,
+      "step1": 48427,
+      "step2": 49880,
+      "step3": 51376,
+      "step4": 52917,
+      "step5": 54505,
+      "step6": 56140,
+      "step7": 57824,
+      "step8": 59559,
+      "eduLevel": "college-licensed",
+      "eduRequirement": "Bachelor's Degree + Licensure + Significant Experience",
+      "examplePosition": "Dentist I / Medical Officer I",
+      "examplePositions": ["Dentist I", "Medical Officer I", "Engineer VI"],
+      "category": "professional-licensed",
+      "notes": "Specialized professional requiring both licensure and substantial experience."
+    },
+    {
+      "sg": 18,
+      "step1": 53818,
+      "step2": 55432,
+      "step3": 57095,
+      "step4": 58808,
+      "step5": 60572,
+      "step6": 62389,
+      "step7": 64261,
+      "step8": 66189,
+      "eduLevel": "college-licensed-graduate",
+      "eduRequirement": "Bachelor's Degree + Licensure + Graduate Units or Experience",
+      "examplePosition": "Master Teacher I / Nurse III",
+      "examplePositions": ["Master Teacher I", "Nurse III", "Medical Officer II"],
+      "category": "supervisory",
+      "notes": "Senior technical/teaching professional. DepEd Master Teacher I falls here."
+    },
+    {
+      "sg": 19,
+      "step1": 57012,
+      "step2": 58722,
+      "step3": 60484,
+      "step4": 62298,
+      "step5": 64167,
+      "step6": 66092,
+      "step7": 68075,
+      "step8": 70117,
+      "eduLevel": "college-licensed-graduate",
+      "eduRequirement": "Bachelor's Degree + Licensure + Graduate Degree preferred",
+      "examplePosition": "Master Teacher II / Nurse IV",
+      "examplePositions": ["Master Teacher II", "Nurse IV", "Department Manager A"],
+      "category": "supervisory",
+      "notes": "Advanced senior professional. Management responsibilities begin at this level."
+    },
+    {
+      "sg": 20,
+      "step1": 63997,
+      "step2": 65917,
+      "step3": 67894,
+      "step4": 69931,
+      "step5": 72029,
+      "step6": 74190,
+      "step7": 76416,
+      "step8": 78708,
+      "eduLevel": "college-licensed-graduate",
+      "eduRequirement": "Master's Degree or equivalent; Board Licensed",
+      "examplePosition": "Master Teacher III / Department Head",
+      "examplePositions": ["Master Teacher III", "Department Manager B", "Administrative Officer VI"],
+      "category": "supervisory",
+      "notes": "Division/section head level. Graduate degree typically required."
+    },
+    {
+      "sg": 21,
+      "step1": 69805,
+      "step2": 71899,
+      "step3": 74056,
+      "step4": 76278,
+      "step5": 78566,
+      "step6": 80923,
+      "step7": 83351,
+      "step8": 85852,
+      "eduLevel": "graduate",
+      "eduRequirement": "Master's Degree; Relevant Licensure; Significant Management Experience",
+      "examplePosition": "Master Teacher IV / Division Chief",
+      "examplePositions": ["Master Teacher IV", "Division Chief", "Department Manager C"],
+      "category": "managerial",
+      "notes": "Senior management level. Significant organizational leadership required."
+    },
+    {
+      "sg": 22,
+      "step1": 81796,
+      "step2": 84250,
+      "step3": 86777,
+      "step4": 89380,
+      "step5": 92062,
+      "step6": 94824,
+      "step7": 97669,
+      "step8": 100599,
+      "eduLevel": "graduate",
+      "eduRequirement": "Master's Degree (preferably PhD); Extensive Management Experience",
+      "examplePosition": "Chief Nurse / School Principal IV",
+      "examplePositions": ["Chief Nurse", "School Principal IV", "Assistant Director"],
+      "category": "managerial",
+      "notes": "Senior managerial grade. Division director level in many agencies."
+    },
+    {
+      "sg": 23,
+      "step1": 88410,
+      "step2": 91062,
+      "step3": 93794,
+      "step4": 96608,
+      "step5": 99506,
+      "step6": 102491,
+      "step7": 105566,
+      "step8": 108733,
+      "eduLevel": "graduate",
+      "eduRequirement": "Master's or PhD Degree; Senior Executive Experience",
+      "examplePosition": "Director I / Schools Division Superintendent (Asst.)",
+      "examplePositions": ["Director I", "Assistant SDS", "Bureau Director (Asst.)"],
+      "category": "executive",
+      "notes": "Executive level entry. Department director or bureau positions."
+    },
+    {
+      "sg": 24,
+      "step1": 97226,
+      "step2": 100143,
+      "step3": 103147,
+      "step4": 106241,
+      "step5": 109428,
+      "step6": 112711,
+      "step7": 116092,
+      "step8": 119575,
+      "eduLevel": "graduate",
+      "eduRequirement": "Master's Degree required; PhD preferred; Executive Experience",
+      "examplePosition": "Director II / Schools Division Superintendent",
+      "examplePositions": ["Director II", "Schools Division Superintendent", "Bureau Director"],
+      "category": "executive",
+      "notes": "Senior executive. Heads bureaus and large divisions."
+    },
+    {
+      "sg": 25,
+      "step1": 116643,
+      "step2": 120142,
+      "step3": 123746,
+      "step4": 127459,
+      "step5": 131283,
+      "step6": 135221,
+      "step7": 139278,
+      "step8": 143456,
+      "eduLevel": "graduate",
+      "eduRequirement": "Master's or PhD Degree; Senior Executive Leadership",
+      "examplePosition": "Director III / Regional Director",
+      "examplePositions": ["Director III", "Regional Director", "Undersecretary (Asst.)"],
+      "category": "executive",
+      "notes": "Senior executive grade. Regional director and equivalent positions."
+    },
+    {
+      "sg": 26,
+      "step1": 130742,
+      "step2": 134664,
+      "step3": 138704,
+      "step4": 142865,
+      "step5": 147151,
+      "step6": 151566,
+      "step7": 156113,
+      "step8": 160796,
+      "eduLevel": "graduate",
+      "eduRequirement": "PhD preferred; Extensive Executive Leadership Experience",
+      "examplePosition": "Director IV / Assistant Secretary",
+      "examplePositions": ["Director IV", "Assistant Secretary", "Deputy Director General"],
+      "category": "executive",
+      "notes": "High executive grade. Senior department leadership."
+    },
+    {
+      "sg": 27,
+      "step1": 148267,
+      "step2": 152715,
+      "step3": 157296,
+      "step4": 162015,
+      "step5": 166875,
+      "step6": 171881,
+      "step7": 177037,
+      "step8": 182348,
+      "eduLevel": "graduate",
+      "eduRequirement": "PhD or equivalent; Top-level Executive Leadership",
+      "examplePosition": "Director V / Undersecretary",
+      "examplePositions": ["Director V", "Undersecretary", "Director General (Deputy)"],
+      "category": "top-executive",
+      "notes": "Undersecretary level. Top executive in major government agencies."
+    },
+    {
+      "sg": 28,
+      "step1": 170970,
+      "step2": 176099,
+      "step3": 181382,
+      "step4": 186824,
+      "step5": 192428,
+      "step6": 198201,
+      "step7": 204147,
+      "step8": 210271,
+      "eduLevel": "graduate",
+      "eduRequirement": "Advanced Graduate Degree; Distinguished Public Service Record",
+      "examplePosition": "Undersecretary (Senior) / Secretary General",
+      "examplePositions": ["Senior Undersecretary", "Secretary General"],
+      "category": "top-executive",
+      "notes": "Senior undersecretary and equivalent positions."
+    },
+    {
+      "sg": 29,
+      "step1": 192875,
+      "step2": 198661,
+      "step3": 204620,
+      "step4": 210759,
+      "step5": 217082,
+      "step6": 223594,
+      "step7": 230302,
+      "step8": 237211,
+      "eduLevel": "graduate",
+      "eduRequirement": "Advanced Degree; Distinguished Service at Cabinet Level",
+      "examplePosition": "Department Secretary (Asst. Level) / Constitutional Commission Chair",
+      "examplePositions": ["Assistant Secretary (Senior)", "Constitutional Commissioner"],
+      "category": "top-executive",
+      "notes": "Near-Cabinet level executive positions."
+    },
+    {
+      "sg": 30,
+      "step1": 246879,
+      "step2": 254285,
+      "step3": 261914,
+      "step4": 269771,
+      "step5": 277864,
+      "step6": 286200,
+      "step7": 294786,
+      "step8": 303630,
+      "eduLevel": "graduate",
+      "eduRequirement": "Appointed by the President; Distinguished Professional Background",
+      "examplePosition": "Department Secretary / Head of Constitutional Commission",
+      "examplePositions": ["Department Secretary", "COMELEC Chair", "COA Chair", "CSC Chair"],
+      "category": "cabinet",
+      "notes": "Cabinet Secretary level. Presidential appointees."
+    },
+    {
+      "sg": 31,
+      "step1": 280000,
+      "step2": 288400,
+      "step3": 297052,
+      "step4": 305964,
+      "step5": 315143,
+      "step6": 324597,
+      "step7": 334335,
+      "step8": 344365,
+      "eduLevel": "graduate",
+      "eduRequirement": "Presidential Appointment; Distinguished National Service",
+      "examplePosition": "Chief Justice (Associate) / Ombudsman",
+      "examplePositions": ["SC Associate Justice", "Ombudsman", "Solicitor General"],
+      "category": "constitutional",
+      "notes": "Constitutional office holders and senior judicial officers."
+    },
+    {
+      "sg": 32,
+      "step1": 360000,
+      "step2": 370800,
+      "step3": 381924,
+      "step4": 393382,
+      "step5": 405183,
+      "step6": 417339,
+      "step7": 429859,
+      "step8": 442755,
+      "eduLevel": "graduate",
+      "eduRequirement": "Presidential Appointment; Highest Constitutional Office",
+      "examplePosition": "Chief Justice of the Supreme Court / Senate President / Speaker",
+      "examplePositions": ["Chief Justice", "Senate President", "House Speaker", "Vice President"],
+      "category": "constitutional",
+      "notes": "Highest constitutional offices. Second in national leadership."
+    },
+    {
+      "sg": 33,
+      "step1": 449157,
+      "step2": null,
+      "step3": null,
+      "step4": null,
+      "step5": null,
+      "step6": null,
+      "step7": null,
+      "step8": null,
+      "eduLevel": "graduate",
+      "eduRequirement": "Elected by the Filipino people",
+      "examplePosition": "President of the Philippines",
+      "examplePositions": ["President of the Philippines"],
+      "category": "constitutional",
+      "notes": "Highest salary grade in the Philippine government. Assigned exclusively to the President. No step increments — single rate."
+    }
+  ],
+
+  "positions": [
+    { "title": "Utility Worker I",               "sg": 1  },
+    { "title": "Utility Worker II",              "sg": 2  },
+    { "title": "Laborer I",                      "sg": 1  },
+    { "title": "Laborer II",                     "sg": 2  },
+    { "title": "Messenger",                      "sg": 3  },
+    { "title": "Clerk I",                        "sg": 3  },
+    { "title": "Clerk II",                       "sg": 4  },
+    { "title": "Clerk III",                      "sg": 6  },
+    { "title": "Administrative Aide I",          "sg": 3  },
+    { "title": "Administrative Aide II",         "sg": 4  },
+    { "title": "Administrative Aide III",        "sg": 5  },
+    { "title": "Administrative Aide IV",         "sg": 6  },
+    { "title": "Administrative Aide V",          "sg": 7  },
+    { "title": "Administrative Aide VI",         "sg": 8  },
+    { "title": "Administrative Assistant I",     "sg": 9  },
+    { "title": "Administrative Assistant II",    "sg": 10 },
+    { "title": "Administrative Assistant III",   "sg": 11 },
+    { "title": "Administrative Officer I",       "sg": 10 },
+    { "title": "Administrative Officer II",      "sg": 11 },
+    { "title": "Administrative Officer III",     "sg": 14 },
+    { "title": "Administrative Officer IV",      "sg": 15 },
+    { "title": "Administrative Officer V",       "sg": 18 },
+    { "title": "Administrative Officer VI",      "sg": 20 },
+    { "title": "Driver I",                       "sg": 4  },
+    { "title": "Driver II",                      "sg": 6  },
+    { "title": "Computer Operator I",            "sg": 8  },
+    { "title": "Computer Operator II",           "sg": 10 },
+    { "title": "Computer Operator III",          "sg": 11 },
+    { "title": "Teacher I",                      "sg": 11 },
+    { "title": "Teacher II",                     "sg": 12 },
+    { "title": "Teacher III",                    "sg": 13 },
+    { "title": "Master Teacher I",               "sg": 18 },
+    { "title": "Master Teacher II",              "sg": 19 },
+    { "title": "Master Teacher III",             "sg": 20 },
+    { "title": "Master Teacher IV",              "sg": 21 },
+    { "title": "Head Teacher I",                 "sg": 14 },
+    { "title": "Head Teacher II",                "sg": 15 },
+    { "title": "Head Teacher III",               "sg": 16 },
+    { "title": "Head Teacher IV",                "sg": 17 },
+    { "title": "Head Teacher V",                 "sg": 18 },
+    { "title": "Head Teacher VI",                "sg": 19 },
+    { "title": "School Principal I",             "sg": 19 },
+    { "title": "School Principal II",            "sg": 20 },
+    { "title": "School Principal III",           "sg": 21 },
+    { "title": "School Principal IV",            "sg": 22 },
+    { "title": "Schools Division Superintendent","sg": 24 },
+    { "title": "Nurse Aide",                     "sg": 5  },
+    { "title": "Nurse I",                        "sg": 15 },
+    { "title": "Nurse II",                       "sg": 16 },
+    { "title": "Nurse III",                      "sg": 19 },
+    { "title": "Nurse IV",                       "sg": 20 },
+    { "title": "Nurse V",                        "sg": 22 },
+    { "title": "Chief Nurse",                    "sg": 24 },
+    { "title": "Midwife I",                      "sg": 9  },
+    { "title": "Midwife II",                     "sg": 11 },
+    { "title": "Midwife III",                    "sg": 12 },
+    { "title": "Medical Officer I",              "sg": 17 },
+    { "title": "Medical Officer II",             "sg": 18 },
+    { "title": "Medical Officer III",            "sg": 21 },
+    { "title": "Medical Officer IV",             "sg": 22 },
+    { "title": "Dentist I",                      "sg": 17 },
+    { "title": "Dentist II",                     "sg": 18 },
+    { "title": "Dentist III",                    "sg": 21 },
+    { "title": "Pharmacist I",                   "sg": 15 },
+    { "title": "Pharmacist II",                  "sg": 16 },
+    { "title": "Pharmacist III",                 "sg": 18 },
+    { "title": "Medical Technologist I",         "sg": 12 },
+    { "title": "Medical Technologist II",        "sg": 14 },
+    { "title": "Medical Technologist III",       "sg": 16 },
+    { "title": "Radiologic Technologist I",      "sg": 12 },
+    { "title": "Radiologic Technologist II",     "sg": 14 },
+    { "title": "Physical Therapist I",           "sg": 12 },
+    { "title": "Physical Therapist II",          "sg": 14 },
+    { "title": "Social Welfare Officer I",       "sg": 11 },
+    { "title": "Social Welfare Officer II",      "sg": 14 },
+    { "title": "Social Welfare Officer III",     "sg": 15 },
+    { "title": "Social Welfare Officer IV",      "sg": 18 },
+    { "title": "Engineer I",                     "sg": 11 },
+    { "title": "Engineer II",                    "sg": 14 },
+    { "title": "Engineer III",                   "sg": 16 },
+    { "title": "Engineer IV",                    "sg": 18 },
+    { "title": "Engineer V",                     "sg": 20 },
+    { "title": "Accountant I",                   "sg": 11 },
+    { "title": "Accountant II",                  "sg": 14 },
+    { "title": "Accountant III",                 "sg": 16 },
+    { "title": "Accountant IV",                  "sg": 18 },
+    { "title": "Accountant V",                   "sg": 20 },
+    { "title": "Lawyer I",                       "sg": 15 },
+    { "title": "Lawyer II",                      "sg": 16 },
+    { "title": "Lawyer III",                     "sg": 18 },
+    { "title": "Lawyer IV",                      "sg": 20 },
+    { "title": "Agriculturist I",                "sg": 11 },
+    { "title": "Agriculturist II",               "sg": 14 },
+    { "title": "Agriculturist III",              "sg": 18 },
+    { "title": "Information Officer I",          "sg": 11 },
+    { "title": "Information Officer II",         "sg": 14 },
+    { "title": "Information Officer III",        "sg": 18 },
+    { "title": "Information Officer IV",         "sg": 21 },
+    { "title": "Information Officer V",          "sg": 24 },
+    { "title": "Project Development Officer I",  "sg": 11 },
+    { "title": "Project Development Officer II", "sg": 14 },
+    { "title": "Project Development Officer III","sg": 18 },
+    { "title": "Police Officer 1 (PO1)",         "sg": 10 },
+    { "title": "Police Officer 2 (PO2)",         "sg": 11 },
+    { "title": "Police Officer 3 (PO3)",         "sg": 12 },
+    { "title": "Corporal (PCpl)",                "sg": 13 },
+    { "title": "Staff Sergeant (PSSg)",          "sg": 14 },
+    { "title": "Master Sergeant (PMSg)",         "sg": 15 },
+    { "title": "Senior Master Sergeant (PEnp)",  "sg": 16 },
+    { "title": "Chief Master Sergeant (PEMS)",   "sg": 17 },
+    { "title": "Senior Inspector",               "sg": 16 },
+    { "title": "Inspector",                      "sg": 14 },
+    { "title": "Fire Officer 1 (FO1)",           "sg": 10 },
+    { "title": "Fire Officer 2 (FO2)",           "sg": 11 },
+    { "title": "Fire Officer 3 (FO3)",           "sg": 12 },
+    { "title": "Fire Corporal (FCpl)",           "sg": 13 },
+    { "title": "Fire Staff Sergeant (FSSg)",     "sg": 14 },
+    { "title": "Special Investigator",           "sg": 15 },
+    { "title": "Senior Special Investigator",    "sg": 18 },
+    { "title": "NBI Director",                   "sg": 28 },
+    { "title": "Bureau Director",                "sg": 26 },
+    { "title": "Regional Director",              "sg": 25 },
+    { "title": "Assistant Regional Director",    "sg": 24 },
+    { "title": "Division Chief",                 "sg": 22 },
+    { "title": "Section Chief",                  "sg": 20 },
+    { "title": "Undersecretary",                 "sg": 27 },
+    { "title": "Assistant Secretary",            "sg": 26 },
+    { "title": "Department Secretary",           "sg": 30 },
+    { "title": "President of the Philippines",   "sg": 33 },
+    { "title": "Vice President",                 "sg": 32 },
+    { "title": "Senate President",               "sg": 32 },
+    { "title": "Chief Justice",                  "sg": 32 }
+  ],
+
+  "allowances": {
+    "note": "These allowances are provided ON TOP of basic salary for all permanent government employees.",
+    "items": [
+      {
+        "name": "Personnel Economic Relief Allowance (PERA)",
+        "amount": 2000,
+        "frequency": "monthly",
+        "description": "Standard monthly allowance for all government employees."
+      },
+      {
+        "name": "Representation and Transportation Allowance (RATA)",
+        "applicableTo": "SG 24 and above (and certain positions below)",
+        "frequency": "monthly",
+        "description": "For officials with official representation and transportation duties."
+      },
+      {
+        "name": "Clothing Allowance",
+        "amount": 6000,
+        "frequency": "annual",
+        "description": "Annual allowance for uniform and clothing. Usually released in first semester."
+      },
+      {
+        "name": "Mid-Year Bonus",
+        "amount": "1 month basic salary",
+        "frequency": "annual",
+        "releaseMonth": "May",
+        "description": "Released in May to eligible employees with at least 4 months of service."
+      },
+      {
+        "name": "Year-End Bonus",
+        "amount": "1 month basic salary",
+        "frequency": "annual",
+        "releaseMonth": "November",
+        "description": "Released in November. Requires complete service for the year."
+      },
+      {
+        "name": "13th Month Pay",
+        "amount": "1 month basic salary",
+        "frequency": "annual",
+        "releaseMonth": "December",
+        "description": "Constitutionally mandated. All permanent employees receive this."
+      },
+      {
+        "name": "Productivity Enhancement Incentive (PEI)",
+        "amount": 5000,
+        "frequency": "annual",
+        "releaseMonth": "December",
+        "description": "Performance-based incentive released in December."
+      },
+      {
+        "name": "Cash Gift",
+        "amount": 5000,
+        "frequency": "annual",
+        "releaseMonth": "November",
+        "description": "Annual cash gift released alongside Year-End Bonus."
+      },
+      {
+        "name": "Loyalty Cash Award",
+        "frequency": "every 5 years",
+        "description": "Awarded every 5 years of continuous government service. Amount varies."
+      },
+      {
+        "name": "Night Shift Differential",
+        "applicableTo": "Employees working 10:00 PM – 6:00 AM",
+        "description": "Additional 10-20% of hourly rate for nighttime work. Relevant for nurses, security, etc."
+      }
+    ]
+  },
+
+  "deductions": {
+    "note": "Mandatory monthly deductions from basic salary for all permanent employees.",
+    "items": [
+      {
+        "name": "GSIS Premium",
+        "rate": 0.09,
+        "basis": "basic salary",
+        "description": "Government Service Insurance System. Covers life insurance, retirement, and loans."
+      },
+      {
+        "name": "Pag-IBIG (HDMF)",
+        "amount": 100,
+        "description": "Fixed ₱100/month for employees. Government counterpart is ₱100. For housing fund."
+      },
+      {
+        "name": "PhilHealth",
+        "rate": 0.025,
+        "basis": "basic salary",
+        "cap": 2500,
+        "description": "National health insurance. 2.5% of basic salary (employee share = half of total 5%)."
+      },
+      {
+        "name": "Withholding Tax",
+        "basis": "taxable income",
+        "description": "Based on BIR graduated tax table. Many SG 1-10 employees pay zero tax."
+      }
+    ]
+  },
+
+  "stepIncrements": {
+    "description": "Employees advance one step every 3 years of satisfactory service.",
+    "ratePerStep": 0.03,
+    "maxSteps": 8,
+    "note": "Step 8 is the maximum within each salary grade. Promotion to the next SG resets to Step 1 of the new grade (unless across-the-board salary standardization adjustments apply)."
+  },
+
+  "educationLevels": {
+    "elementary":          { "label": "Elementary Graduate",                    "sgRange": [1, 2]  },
+    "highschool":          { "label": "High School Graduate",                   "sgRange": [3, 6]  },
+    "vocational":          { "label": "Vocational / TESDA NC I or NC II",       "sgRange": [6, 9]  },
+    "college-partial":     { "label": "2 Years College or Equivalent",          "sgRange": [8, 10] },
+    "college":             { "label": "Bachelor's Degree",                      "sgRange": [10, 14] },
+    "college-licensed":    { "label": "Bachelor's Degree + Board/Bar License",  "sgRange": [15, 17] },
+    "college-licensed-graduate": { "label": "Licensed + Graduate Units/Degree","sgRange": [18, 21] },
+    "graduate":            { "label": "Master's or PhD Degree",                 "sgRange": [22, 33] }
+  },
+
+  "sslHistory": [
+    { "law": "RA 6758",  "year": 1989, "name": "Salary Standardization Law I"   },
+    { "law": "RA 7430",  "year": 1992, "name": "Amendments to SSL I"            },
+    { "law": "RA 9145",  "year": 2001, "name": "SSL II"                         },
+    { "law": "RA 10149", "year": 2011, "name": "GOCC Governance Act"            },
+    { "law": "RA 10912", "year": 2016, "name": "SSL III (Continuing Education)" },
+    { "law": "EO 201",   "year": 2016, "name": "SSL V — 4-Tranche (Aquino)"    },
+    { "law": "EO 64",    "year": 2024, "name": "SSL VI — 4-Tranche (Marcos Jr.)",
+      "tranches": [
+        { "tranche": 1, "effectiveDate": "January 1, 2024" },
+        { "tranche": 2, "effectiveDate": "January 1, 2025" },
+        { "tranche": 3, "effectiveDate": "January 1, 2026" },
+        { "tranche": 4, "effectiveDate": "January 1, 2027" }
+      ]
+    }
+  ]
+}

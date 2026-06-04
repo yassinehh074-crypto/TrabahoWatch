@@ -1,0 +1,488 @@
+{
+  "metadata": {
+    "title": "TrabahoWatch Job Categories",
+    "description": "Category and sector definitions used across the site for filtering, navigation, and display.",
+    "lastUpdated": "2026",
+    "note": "status: active = visible to users. coming-soon = hidden until content is ready."
+  },
+
+  "sectors": [
+    {
+      "id": "government",
+      "slug": "government",
+      "label": "Government",
+      "tagline": "Stable. Permanent. With benefits for life.",
+      "description": "Philippine civil service positions across national agencies, local government units, and uniformed services. Salary grades SG1–SG33.",
+      "url": "/government/",
+      "status": "active",
+      "iconColor": "#164896",
+      "iconBg": "rgba(22,72,150,0.1)",
+      "badgeClass": "badge--gov",
+      "color": "#164896",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>",
+      "stats": {
+        "totalJobs": 8,
+        "openJobs": 7,
+        "featured": 3
+      },
+      "highlights": [
+        "Permanent tenure after probation",
+        "GSIS retirement and life insurance",
+        "13th month + mid-year bonus",
+        "Career growth through step increments",
+        "PhilHealth and Pag-IBIG coverage"
+      ]
+    },
+    {
+      "id": "private",
+      "slug": "private",
+      "label": "Private Sector",
+      "tagline": "Higher pay. Faster growth. More options.",
+      "description": "Private company jobs across BPO, technology, healthcare, finance, education, retail, and skilled trades.",
+      "url": "/private/",
+      "status": "active",
+      "iconColor": "#7c3aed",
+      "iconBg": "rgba(124,58,237,0.1)",
+      "badgeClass": "badge--private",
+      "color": "#7c3aed",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><rect x='2' y='7' width='20' height='14' rx='2'/><path d='M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2'/></svg>",
+      "stats": {
+        "totalJobs": 6,
+        "openJobs": 6,
+        "featured": 2
+      },
+      "highlights": [
+        "Competitive salaries with performance bonuses",
+        "HMO coverage for employee and dependents",
+        "Faster promotion cycles",
+        "Remote and hybrid work options",
+        "Skills-based career growth"
+      ]
+    },
+    {
+      "id": "ofw",
+      "slug": "ofw",
+      "label": "OFW Opportunities",
+      "tagline": "Work abroad. Build your family's future.",
+      "description": "Overseas Filipino Worker jobs in the Middle East, Asia Pacific, Europe, and the Americas. Verified through DMW/POEA-accredited channels.",
+      "url": "/ofw/",
+      "status": "active",
+      "iconColor": "#0891b2",
+      "iconBg": "rgba(8,145,178,0.1)",
+      "badgeClass": "badge--ofw",
+      "color": "#0891b2",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><line x1='2' y1='12' x2='22' y2='12'/><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/></svg>",
+      "stats": {
+        "totalJobs": 4,
+        "openJobs": 4,
+        "featured": 3
+      },
+      "highlights": [
+        "Tax-free or low-tax salaries in most destinations",
+        "Housing and transportation often provided",
+        "Annual airfare back to the Philippines",
+        "Pathway to permanent residency (Japan, Canada)",
+        "Free PDOS at DMW before departure"
+      ]
+    }
+  ],
+
+  "categories": [
+
+    {
+      "id": "deped",
+      "slug": "deped",
+      "label": "DepEd",
+      "fullLabel": "Department of Education",
+      "sector": "government",
+      "url": "/government/deped-jobs.html",
+      "status": "active",
+      "color": "#164896",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg>",
+      "description": "Teacher I, Master Teacher, Principal, and administrative positions across public schools nationwide.",
+      "keyPositions": ["Teacher I", "Teacher II", "Teacher III", "Master Teacher I", "Head Teacher", "School Principal"],
+      "salaryRange": "SG 11–SG 24",
+      "eligibility": "RA 1080 (Licensed Professional Teacher)",
+      "hiringCycle": "Annual (SY-based, usually Q1-Q2)",
+      "tags": ["teacher", "education", "deped", "school"],
+      "relatedCategories": ["doh", "lgu"]
+    },
+    {
+      "id": "doh",
+      "slug": "doh",
+      "label": "DOH",
+      "fullLabel": "Department of Health",
+      "sector": "government",
+      "url": "/government/doh-jobs.html",
+      "status": "active",
+      "color": "#dc2626",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M22 12h-4l-3 9L9 3l-3 9H2'/></svg>",
+      "description": "Nurses, midwives, medical officers, dentists, and health workers in government hospitals and health centers.",
+      "keyPositions": ["Nurse I", "Nurse II", "Medical Officer I", "Dentist I", "Midwife", "Medical Technologist"],
+      "salaryRange": "SG 9–SG 22",
+      "eligibility": "RA 1080 (varies by position — Nurse, Dentist, MD)",
+      "hiringCycle": "Year-round (as vacancies arise)",
+      "tags": ["nurse", "health", "doh", "hospital", "medical"],
+      "relatedCategories": ["lgu", "deped"]
+    },
+    {
+      "id": "lgu",
+      "slug": "lgu",
+      "label": "LGU",
+      "fullLabel": "Local Government Units",
+      "sector": "government",
+      "url": "/government/lgu-jobs.html",
+      "status": "active",
+      "color": "#16a34a",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/><polyline points='9 22 9 12 15 12 15 22'/></svg>",
+      "description": "City hall and municipal jobs — admin aides, clerks, engineers, social workers, health workers, and more.",
+      "keyPositions": ["Administrative Aide III", "Social Welfare Officer", "Engineer I", "BHW Coordinator", "Revenue Officer"],
+      "salaryRange": "SG 3–SG 24",
+      "eligibility": "CSC Sub-Professional or Professional (varies)",
+      "hiringCycle": "Year-round (as vacancies arise)",
+      "tags": ["lgu", "city hall", "municipal", "local government", "admin"],
+      "relatedCategories": ["deped", "doh"]
+    },
+    {
+      "id": "pnp",
+      "slug": "pnp",
+      "label": "PNP / AFP / BFP / NBI",
+      "fullLabel": "Uniformed Services",
+      "sector": "government",
+      "url": "/government/nbi-pnp-afp.html",
+      "status": "active",
+      "color": "#1d4ed8",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>",
+      "description": "Philippine National Police, Armed Forces, Bureau of Fire Protection, and NBI entrance positions.",
+      "keyPositions": ["PNP PO1", "BFP FO1", "NBI Special Investigator", "AFP Enlisted"],
+      "salaryRange": "SG 10–SG 18",
+      "eligibility": "Entrance exam + physical/medical requirements",
+      "hiringCycle": "Annual or bi-annual recruitment drives",
+      "tags": ["pnp", "police", "bfp", "fire", "nbi", "afp", "military", "uniformed"],
+      "relatedCategories": ["lgu", "doh"]
+    },
+    {
+      "id": "nbi",
+      "slug": "nbi",
+      "label": "NBI",
+      "fullLabel": "National Bureau of Investigation",
+      "sector": "government",
+      "url": "/government/nbi-pnp-afp.html",
+      "status": "active",
+      "color": "#1d4ed8",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><circle cx='11' cy='11' r='8'/><path d='m21 21-4.35-4.35'/></svg>",
+      "description": "NBI investigator and support positions for law enforcement and legal careers.",
+      "keyPositions": ["Special Investigator", "NBI Agent", "Support Staff"],
+      "salaryRange": "SG 10–SG 22",
+      "eligibility": "CSC Professional + Background Investigation",
+      "hiringCycle": "As vacancies arise",
+      "tags": ["nbi", "investigator", "law enforcement"],
+      "relatedCategories": ["pnp", "lgu"]
+    },
+    {
+      "id": "bfp",
+      "slug": "bfp",
+      "label": "BFP",
+      "fullLabel": "Bureau of Fire Protection",
+      "sector": "government",
+      "url": "/government/nbi-pnp-afp.html",
+      "status": "active",
+      "color": "#ea580c",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z'/></svg>",
+      "description": "Fire Officer positions in the Bureau of Fire Protection.",
+      "keyPositions": ["Fire Officer I (FO1)", "Fire Officer II", "Fire Inspector"],
+      "salaryRange": "SG 10–SG 18",
+      "eligibility": "BFP Entrance Exam + Physical Fitness",
+      "hiringCycle": "Annual or bi-annual",
+      "tags": ["bfp", "fire", "uniformed", "public safety"],
+      "relatedCategories": ["pnp", "lgu"]
+    },
+
+    {
+      "id": "bpo",
+      "slug": "bpo",
+      "label": "BPO / Call Center",
+      "fullLabel": "Business Process Outsourcing",
+      "sector": "private",
+      "url": "/private/bpo-jobs.html",
+      "status": "active",
+      "color": "#7c3aed",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.92 14 19.79 19.79 0 0 1 1.85 5.352a2 2 0 0 1 1.992-2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 10.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z'/></svg>",
+      "description": "Customer service, technical support, communications trainers, team leaders, and operations managers in contact centers.",
+      "keyPositions": ["CSR", "TSR", "Communications Trainer", "Team Leader", "Quality Analyst"],
+      "salaryRange": "₱18,000–₱80,000/month",
+      "eligibility": "None required for CSR (entry-level)",
+      "hiringCycle": "Year-round (continuous hiring)",
+      "tags": ["bpo", "call center", "csr", "voice", "chat", "customer service"],
+      "relatedCategories": ["tech", "finance"]
+    },
+    {
+      "id": "tech",
+      "slug": "tech",
+      "label": "Tech / IT",
+      "fullLabel": "Technology and Information Systems",
+      "sector": "private",
+      "url": "/private/tech-jobs.html",
+      "status": "active",
+      "color": "#0891b2",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><polyline points='16 18 22 12 16 6'/><polyline points='8 6 2 12 8 18'/></svg>",
+      "description": "Software developers, data analysts, UI/UX designers, DevOps engineers, and IT support roles in Philippine tech companies.",
+      "keyPositions": ["Junior Developer", "Mid-Level Developer", "QA Engineer", "DevOps Engineer", "Data Analyst"],
+      "salaryRange": "₱30,000–₱150,000/month",
+      "eligibility": "CS/IT degree preferred; portfolio-based for some roles",
+      "hiringCycle": "Year-round",
+      "tags": ["software", "developer", "IT", "coding", "data", "devops", "tech"],
+      "relatedCategories": ["bpo", "finance"]
+    },
+    {
+      "id": "healthcare",
+      "slug": "healthcare",
+      "label": "Healthcare (Private)",
+      "fullLabel": "Private Hospital and Clinic Healthcare",
+      "sector": "private",
+      "url": "/private/healthcare-jobs.html",
+      "status": "active",
+      "color": "#db2777",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z'/></svg>",
+      "description": "Staff nurses, medical officers, therapists, and allied health workers in private hospitals and clinics.",
+      "keyPositions": ["Staff Nurse", "Senior Nurse", "Physical Therapist", "Medical Technologist", "Radiologic Tech"],
+      "salaryRange": "₱25,000–₱70,000/month",
+      "eligibility": "RA 1080 (varies by position)",
+      "hiringCycle": "Year-round",
+      "tags": ["nurse", "private hospital", "healthcare", "allied health"],
+      "relatedCategories": ["doh", "education"]
+    },
+    {
+      "id": "finance",
+      "slug": "finance",
+      "label": "Finance / Banking",
+      "fullLabel": "Financial Services and Banking",
+      "sector": "private",
+      "url": "/private/finance-jobs.html",
+      "status": "active",
+      "color": "#0d9488",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><line x1='12' y1='1' x2='12' y2='23'/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>",
+      "description": "Financial analysts, accountants, bank tellers, credit officers, and compliance specialists in banks and financial institutions.",
+      "keyPositions": ["Financial Analyst", "Accountant", "Bank Teller", "Credit Officer", "Compliance Officer"],
+      "salaryRange": "₱20,000–₱100,000/month",
+      "eligibility": "CPA preferred for senior roles; none for entry-level banking",
+      "hiringCycle": "Year-round",
+      "tags": ["finance", "banking", "accountant", "CPA", "analyst"],
+      "relatedCategories": ["tech", "bpo"]
+    },
+    {
+      "id": "education",
+      "slug": "education",
+      "label": "Education (Private)",
+      "fullLabel": "Private Schools and Universities",
+      "sector": "private",
+      "url": "/private/education-jobs.html",
+      "status": "active",
+      "color": "#ca8a04",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/><path d='M6 12v5c3 3 9 3 12 0v-5'/></svg>",
+      "description": "Teachers, professors, academic coordinators, and school administrators in private schools, colleges, and universities.",
+      "keyPositions": ["Teacher (Private)", "Faculty Member", "Academic Coordinator", "Registrar"],
+      "salaryRange": "₱18,000–₱60,000/month",
+      "eligibility": "PRC License preferred; master's degree for college faculty",
+      "hiringCycle": "Annual (SY-based)",
+      "tags": ["teacher", "private school", "college", "university", "professor"],
+      "relatedCategories": ["deped", "healthcare"]
+    },
+    {
+      "id": "retail",
+      "slug": "retail",
+      "label": "Retail / Hospitality",
+      "fullLabel": "Retail, F&B, and Hospitality",
+      "sector": "private",
+      "url": "/private/retail-hospitality.html",
+      "status": "active",
+      "color": "#9333ea",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7'/><path d='M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8'/><path d='M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4'/><path d='M2 7h20'/><path d='M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7'/></svg>",
+      "description": "Retail associates, store supervisors, mall operations staff, hotel and restaurant workers.",
+      "keyPositions": ["Store Supervisor", "Retail Associate", "Hotel Front Desk", "F&B Staff", "Mall Operations"],
+      "salaryRange": "₱16,000–₱40,000/month",
+      "eligibility": "None required",
+      "hiringCycle": "Year-round (high volume)",
+      "tags": ["retail", "mall", "hotel", "restaurant", "hospitality", "supervisor"],
+      "relatedCategories": ["bpo", "finance"]
+    },
+    {
+      "id": "trades",
+      "slug": "trades",
+      "label": "Skilled Trades",
+      "fullLabel": "Technical and Skilled Trades",
+      "sector": "private",
+      "url": "/private/skilled-trades.html",
+      "status": "active",
+      "color": "#b45309",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/></svg>",
+      "description": "Electricians, welders, plumbers, mechanics, and construction workers — TESDA-certified trades for domestic and OFW markets.",
+      "keyPositions": ["Electrician", "Welder", "Plumber", "HVAC Technician", "Automotive Mechanic"],
+      "salaryRange": "₱18,000–₱45,000/month (domestic) — Higher for OFW",
+      "eligibility": "TESDA NC II or NC III preferred",
+      "hiringCycle": "Year-round",
+      "tags": ["trades", "electrician", "welder", "tesda", "technical", "construction"],
+      "relatedCategories": ["bpo", "retail"]
+    },
+
+    {
+      "id": "middle-east",
+      "slug": "middle-east",
+      "label": "Middle East",
+      "fullLabel": "Middle East — Gulf States",
+      "sector": "ofw",
+      "url": "/ofw/middle-east.html",
+      "status": "active",
+      "color": "#d97706",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 8v4l3 3'/></svg>",
+      "description": "Nurses, engineers, construction workers, domestic helpers, and professionals in Saudi Arabia, UAE, Qatar, Kuwait, and Bahrain.",
+      "keyPositions": ["Registered Nurse", "Heavy Equipment Operator", "Civil Engineer", "Domestic Helper", "Electrician"],
+      "destinations": [
+        { "country": "Saudi Arabia", "flag": "🇸🇦", "currency": "SAR", "taxFree": true  },
+        { "country": "UAE (Dubai/Abu Dhabi)", "flag": "🇦🇪", "currency": "AED", "taxFree": true  },
+        { "country": "Qatar",        "flag": "🇶🇦", "currency": "QAR", "taxFree": true  },
+        { "country": "Kuwait",       "flag": "🇰🇼", "currency": "KWD", "taxFree": true  },
+        { "country": "Bahrain",      "flag": "🇧🇭", "currency": "BHD", "taxFree": true  },
+        { "country": "Oman",         "flag": "🇴🇲", "currency": "OMR", "taxFree": true  }
+      ],
+      "salaryRange": "₱35,000–₱120,000/month (tax-free)",
+      "eligibility": "Prometric/HAAD licensing for healthcare; TESDA NC II for trades",
+      "dmwVerified": true,
+      "tags": ["saudi", "uae", "dubai", "qatar", "gulf", "middle east", "ofw"],
+      "relatedCategories": ["asia-pacific", "europe-americas"]
+    },
+    {
+      "id": "asia-pacific",
+      "slug": "asia-pacific",
+      "label": "Asia Pacific",
+      "fullLabel": "Asia and Pacific Region",
+      "sector": "ofw",
+      "url": "/ofw/asia-pacific.html",
+      "status": "active",
+      "color": "#0891b2",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><line x1='2' y1='12' x2='22' y2='12'/><path d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/></svg>",
+      "description": "Care workers, nurses, and skilled workers in Japan, South Korea, Singapore, Hong Kong, Taiwan, and Australia.",
+      "keyPositions": ["Care Worker (Kaigo)", "Registered Nurse", "Domestic Helper", "Factory Worker (Korea EPS)", "Construction Worker"],
+      "destinations": [
+        { "country": "Japan",       "flag": "🇯🇵", "currency": "JPY", "taxFree": false, "pathway": "SSW / TITP" },
+        { "country": "South Korea", "flag": "🇰🇷", "currency": "KRW", "taxFree": false, "pathway": "EPS (G2G)" },
+        { "country": "Singapore",   "flag": "🇸🇬", "currency": "SGD", "taxFree": false, "pathway": "Work Permit" },
+        { "country": "Hong Kong",   "flag": "🇭🇰", "currency": "HKD", "taxFree": false, "pathway": "FDWCS" },
+        { "country": "Taiwan",      "flag": "🇹🇼", "currency": "TWD", "taxFree": false, "pathway": "Work Permit" },
+        { "country": "Australia",   "flag": "🇦🇺", "currency": "AUD", "taxFree": false, "pathway": "WHV / Skilled Visa" }
+      ],
+      "salaryRange": "₱60,000–₱150,000/month (after local taxes)",
+      "eligibility": "JLPT N4+ for Japan; TESDA/PRC for trades and healthcare",
+      "dmwVerified": true,
+      "tags": ["japan", "korea", "singapore", "australia", "ofw", "care worker", "kaigo"],
+      "relatedCategories": ["middle-east", "europe-americas"]
+    },
+    {
+      "id": "europe-americas",
+      "slug": "europe-americas",
+      "label": "Europe & Americas",
+      "fullLabel": "Europe, North America, and Latin America",
+      "sector": "ofw",
+      "url": "/ofw/europe-americas.html",
+      "status": "active",
+      "color": "#4f46e5",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='1.5'><path d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/></svg>",
+      "description": "Registered nurses, caregivers, and skilled professionals in Canada, USA, UK, Germany, and other Western countries.",
+      "keyPositions": ["Registered Nurse (NCLEX)", "Caregiver", "Software Engineer", "Seaman / Seafarer", "Physical Therapist"],
+      "destinations": [
+        { "country": "Canada",        "flag": "🇨🇦", "currency": "CAD", "taxFree": false, "pathway": "Express Entry / PNP" },
+        { "country": "United States", "flag": "🇺🇸", "currency": "USD", "taxFree": false, "pathway": "EB-3 / H-2B" },
+        { "country": "United Kingdom","flag": "🇬🇧", "currency": "GBP", "taxFree": false, "pathway": "Skilled Worker Visa (NHS)" },
+        { "country": "Germany",       "flag": "🇩🇪", "currency": "EUR", "taxFree": false, "pathway": "Triple Win / Skilled Immigration Act" },
+        { "country": "Italy",         "flag": "🇮🇹", "currency": "EUR", "taxFree": false, "pathway": "Seasonal Work / Care Worker" },
+        { "country": "New Zealand",   "flag": "🇳🇿", "currency": "NZD", "taxFree": false, "pathway": "Skilled Migrant Category" }
+      ],
+      "salaryRange": "₱100,000–₱250,000+/month equivalent",
+      "eligibility": "NCLEX-RN for nurses (US/Canada); IELTS 7.0+; Credential recognition required",
+      "dmwVerified": true,
+      "tags": ["canada", "usa", "uk", "germany", "nurse", "nclex", "ofw", "permanent residency"],
+      "relatedCategories": ["asia-pacific", "middle-east"]
+    }
+  ],
+
+  "quickLinks": [
+    {
+      "label": "CSC Exam Guide",
+      "url": "/government/csc-exams.html",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><path d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/><polyline points='14 2 14 8 20 8'/><line x1='16' y1='13' x2='8' y2='13'/><line x1='16' y1='17' x2='8' y2='17'/></svg>",
+      "description": "Exam schedules, coverage, and tips"
+    },
+    {
+      "label": "Salary Guide 2026",
+      "url": "/government/salary-guide-2026.html",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><line x1='12' y1='1' x2='12' y2='23'/><path d='M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'/></svg>",
+      "description": "Complete SG table + calculator"
+    },
+    {
+      "label": "DepEd Jobs",
+      "url": "/government/deped-jobs.html",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><path d='M22 10v6M2 10l10-5 10 5-10 5z'/></svg>",
+      "description": "Teacher I and more"
+    },
+    {
+      "label": "LGU Jobs",
+      "url": "/government/lgu-jobs.html",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><path d='m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/></svg>",
+      "description": "City and municipal positions"
+    },
+    {
+      "label": "OFW Guide",
+      "url": "/ofw/",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><circle cx='12' cy='12' r='10'/><line x1='2' y1='12' x2='22' y2='12'/></svg>",
+      "description": "Safe deployment tips + DMW info"
+    },
+    {
+      "label": "BPO Jobs",
+      "url": "/private/bpo-jobs.html",
+      "icon": "<svg viewBox='0 0 24 24' stroke='currentColor' fill='none' stroke-width='2' width='14' height='14'><path d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07'/></svg>",
+      "description": "Call center and CSR positions"
+    }
+  ],
+
+  "comingSoon": [
+    {
+      "id": "csc-reviewer",
+      "label": "CSC Exam Reviewer",
+      "url": "/guides/csc-reviewer.html",
+      "status": "coming-soon",
+      "description": "Complete CSC Professional and Sub-Professional exam reviewer"
+    },
+    {
+      "id": "scholarships",
+      "label": "Scholarships",
+      "url": "/guides/scholarships.html",
+      "status": "coming-soon",
+      "description": "Government and private scholarships for Filipinos"
+    }
+  ],
+
+  "employmentTypes": [
+    { "value": "",               "label": "All Types"       },
+    { "value": "permanent",      "label": "Permanent"       },
+    { "value": "casual",         "label": "Casual"          },
+    { "value": "job-order",      "label": "Job Order"       },
+    { "value": "co-terminus",    "label": "Co-terminus"     },
+    { "value": "contractual",    "label": "Contractual"     },
+    { "value": "full-time",      "label": "Full-time"       },
+    { "value": "part-time",      "label": "Part-time"       }
+  ],
+
+  "eligibilityTypes": [
+    { "value": "",                   "label": "All Eligibility"              },
+    { "value": "none",               "label": "No Eligibility Required"      },
+    { "value": "csc-subpro",         "label": "CSC Sub-Professional"         },
+    { "value": "csc-professional",   "label": "CSC Professional"             },
+    { "value": "ra1080",             "label": "RA 1080 (Board Passer)"       },
+    { "value": "ra1080-teacher",     "label": "LET (Licensed Teacher)"       },
+    { "value": "ra1080-nurse",       "label": "NLE (Registered Nurse)"       },
+    { "value": "ra1080-engineer",    "label": "PRC (Licensed Engineer)"      },
+    { "value": "ra1080-cpa",         "label": "CPA (Certified Public Accountant)" },
+    { "value": "pnp-entrance",       "label": "PNP Entrance Exam"            },
+    { "value": "bfp-entrance",       "label": "BFP Entrance Exam"            }
+  ]
+}
