@@ -1,0 +1,92 @@
+# ==============================================================
+# robots.txt — TrabahoWatch
+# https://trabahowatch.com/robots.txt
+# Last updated: 2026-05-12
+# ==============================================================
+
+# Allow all crawlers full access by default
+User-agent: *
+Allow: /
+
+# Disallow internal/utility paths
+Disallow: /assets/
+Disallow: /data/
+Disallow: /automation/
+Disallow: /components/
+
+# Disallow template / shell pages (no real content)
+Disallow: /jobs/article.html
+
+# Disallow 404 page
+Disallow: /pages/404.html
+
+# Disallow any future admin or staging paths
+Disallow: /admin/
+Disallow: /staging/
+Disallow: /draft/
+Disallow: /_preview/
+
+# Allow CSS and JS for rendering (Google requirement)
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Crawl-delay for well-behaved bots (optional, ignored by Google)
+Crawl-delay: 2
+
+# ==============================================================
+# Sitemap
+# ==============================================================
+Sitemap: https://trabahowatch.com/sitemap.xml
+
+# ==============================================================
+# Specific bot rules
+# ==============================================================
+
+# Allow Googlebot full access
+User-agent: Googlebot
+Allow: /
+Disallow: /assets/
+Disallow: /data/
+Disallow: /automation/
+Disallow: /components/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Allow Bingbot full access
+User-agent: Bingbot
+Allow: /
+Disallow: /assets/
+Disallow: /data/
+Disallow: /automation/
+Disallow: /components/
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Block AI training crawlers (optional — remove if unwanted)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+# Block aggressive scrapers
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

@@ -1,0 +1,165 @@
+{
+  "name": "TrabahoWatch — Philippine Job Listings",
+  "short_name": "TrabahoWatch",
+  "description": "Free, verified job information for every Filipino — government, private sector, and OFW opportunities.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#164896",
+  "lang": "en-PH",
+  "categories": ["jobs", "education", "productivity"],
+  "dir": "ltr",
+
+  "icons": [
+    {
+      "src": "/assets/img/pwa/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/pwa/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/img/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/img/pwa/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+
+  "screenshots": [
+    {
+      "src": "/assets/img/pwa/screenshot-mobile-home.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "TrabahoWatch Home — Philippine Job Listings"
+    },
+    {
+      "src": "/assets/img/pwa/screenshot-mobile-search.png",
+      "sizes": "390x844",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Search All Jobs — Filter by Sector and Region"
+    },
+    {
+      "src": "/assets/img/pwa/screenshot-desktop-home.png",
+      "sizes": "1280x800",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "TrabahoWatch Desktop View"
+    }
+  ],
+
+  "shortcuts": [
+    {
+      "name": "Government Jobs",
+      "short_name": "Gov Jobs",
+      "description": "DepEd, DOH, LGU, PNP job openings",
+      "url": "/government/",
+      "icons": [
+        {
+          "src": "/assets/img/pwa/shortcut-gov.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Salary Grade Table",
+      "short_name": "Salary Grade",
+      "description": "SG1–SG33 table with calculator",
+      "url": "/government/salary-grade.html",
+      "icons": [
+        {
+          "src": "/assets/img/pwa/shortcut-salary.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "OFW Jobs",
+      "short_name": "OFW",
+      "description": "Saudi, Japan, Canada opportunities",
+      "url": "/ofw/",
+      "icons": [
+        {
+          "src": "/assets/img/pwa/shortcut-ofw.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Search Jobs",
+      "short_name": "Search",
+      "description": "Search all job listings",
+      "url": "/jobs/job-map.html",
+      "icons": [
+        {
+          "src": "/assets/img/pwa/shortcut-search.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+
+  "related_applications": [],
+  "prefer_related_applications": false
+}
