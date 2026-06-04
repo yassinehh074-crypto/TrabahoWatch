@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>404 — Page Not Found | TrabahoWatch</title>
+
+  <meta name="description"
+        content="The page you're looking for doesn't exist or has been moved. Find government, private, and OFW job listings on TrabahoWatch.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="author" content="TrabahoWatch">
+  <meta name="theme-color" content="#164896">
+
+  <!-- Canonical — no canonical on 404 -->
+
+  <!-- PWA -->
+  <link rel="manifest"         href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/img/pwa/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="/assets/img/pwa/icon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/components/header.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/components/cards.css">
+  <link rel="stylesheet" href="/assets/css/components/buttons.css">
+  <link rel="stylesheet" href="/assets/css/components/forms.css">
+  <link rel="stylesheet" href="/assets/css/components/badges.css">
+  <link rel="stylesheet" href="/assets/css/components/toast.css">
+  <!-- Extended Components CSS -->
+  <link rel="stylesheet" href="/assets/css/components/hub.css">
+  <link rel="stylesheet" href="/assets/css/components/article-extended.css">
+  <link rel="stylesheet" href="/assets/css/components/cards-extended.css">
+  <link rel="stylesheet" href="/assets/css/components/badges-extended.css">
+  <link rel="stylesheet" href="/assets/css/components/buttons-extended.css">
+
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <!-- Theme — blocking -->
+  <script src="/assets/js/core/theme.js"></script>
+
+  <style>
+    /* ============================================================
+       404 PAGE STYLES
+       ============================================================ */
+
+    .not-found-wrap {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-16) var(--space-4);
+    }
+
+    .not-found-code {
+      font-size: clamp(80px, 20vw, 160px);
+      font-weight: var(--font-bold);
+      line-height: 1;
+      background: linear-gradient(
+        135deg,
+        var(--color-primary) 0%,
+        #0891b2 50%,
+        var(--color-primary-dark) 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: var(--space-4);
+      user-select: none;
+    }
+
+    html.dark .not-found-code {
+      background: linear-gradient(
+        135deg,
+        var(--text-link) 0%,
+        #38bdf8 50%,
+        var(--text-link) 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .not-found-icon {
+      margin-bottom: var(--space-6);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+
+    .not-found-title {
+      font-size: clamp(var(--text-xl), 4vw, var(--text-3xl));
+      font-weight: var(--font-bold);
+      color: var(--text-primary);
+      margin-bottom: var(--space-3);
+    }
+
+    .not-found-subtitle {
+      font-size: var(--text-base);
+      color: var(--text-secondary);
+      max-width: 480px;
+      margin: 0 auto var(--space-8);
+      line-height: 1.7;
+    }
+
+    .not-found-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: var(--space-12);
+    }
+
+    /* Search bar */
+    .not-found-search {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto var(--space-10);
+      position: relative;
+    }
+
+    .not-found-search input {
+      padding-left: 48px;
+      padding-right: var(--space-4);
+    }
+
+    .not-found-search-icon {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+
+    /* Popular links */
+    .popular-links {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .popular-links__title {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-4);
+    }
+
+    .popular-links__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+    }
+
+    .popular-link-card {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: var(--bg-surface-2);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      text-decoration: none;
+      color: var(--text-primary);
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+    }
+
+    .popular-link-card:hover {
+      background: var(--bg-surface-3);
+      border-color: var(--color-primary);
+      transform: translateY(-2px);
+      color: var(--color-primary);
+    }
+
+    html.dark .popular-link-card:hover {
+      color: var(--text-link);
+      border-color: var(--text-link);
+    }
+
+    .popular-link-card__icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 18px;
+    }
+
+    .popular-link-card__text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .popular-link-card__label {
+      font-weight: var(--font-semibold);
+    }
+
+    .popular-link-card__sub {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-weight: var(--font-normal);
+    }
+
+    /* Divider */
+    .not-found-divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-primary), #0891b2);
+      border-radius: 99px;
+      margin: 0 auto var(--space-8);
+    }
+
+    @media (max-width: 480px) {
+      .popular-links__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .not-found-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .not-found-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+      }
+    }
+  </style>
+
+</head>
+
+<body data-page="404">
+
+  <!-- Header -->
+  <header id="site-header" data-loading role="banner"></header>
+
+  <div class="page-wrapper no-sidebar">
+    <main id="main-content" tabindex="-1"
+          aria-label="Page not found">
+
+      <div class="container">
+        <div class="not-found-wrap">
+
+          <!-- ====================================================
+               ANIMATED ICON
+               ==================================================== -->
+          <div class="not-found-icon" aria-hidden="true">
+            <svg viewBox="0 0 120 120"
+                 width="120" height="120"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <!-- Document -->
+              <rect x="20" y="10" width="64" height="84"
+                    rx="6"
+                    fill="var(--bg-surface-2)"
+                    stroke="var(--border-color)"
+                    stroke-width="2"/>
+              <!-- Lines -->
+              <rect x="32" y="28" width="40" height="4"
+                    rx="2" fill="var(--border-color)"/>
+              <rect x="32" y="38" width="32" height="4"
+                    rx="2" fill="var(--border-color)"/>
+              <rect x="32" y="48" width="36" height="4"
+                    rx="2" fill="var(--border-color)"/>
+              <!-- Question mark -->
+              <circle cx="84" cy="82" r="22"
+                      fill="var(--color-primary)" opacity="0.15"/>
+              <circle cx="84" cy="82" r="22"
+                      stroke="var(--color-primary)"
+                      stroke-width="2.5" fill="none"/>
+              <text x="84" y="90"
+                    text-anchor="middle"
+                    font-size="26"
+                    font-weight="700"
+                    fill="var(--color-primary)"
+                    font-family="Inter, sans-serif">?</text>
+            </svg>
+          </div>
+
+          <!-- ====================================================
+               404 NUMBER
+               ==================================================== -->
+          <div class="not-found-code" aria-hidden="true">404</div>
+
+          <div class="not-found-divider" aria-hidden="true"></div>
+
+          <!-- ====================================================
+               HEADING
+               ==================================================== -->
+          <h1 class="not-found-title">
+            Page Not Found
+          </h1>
+
+          <p class="not-found-subtitle">
+            Oops! The page you're looking for doesn't exist,
+            has been moved, or the URL might have a typo.
+            Let's get you back to finding your next job.
+          </p>
+
+          <!-- ====================================================
+               PRIMARY ACTIONS
+               ==================================================== -->
+          <div class="not-found-actions">
+            <a href="/" class="btn btn--primary btn--lg">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="18" height="18" aria-hidden="true">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+              Go to Home
+            </a>
+            <button type="button"
+                    class="btn btn--ghost btn--lg"
+                    onclick="window.history.back()"
+                    aria-label="Go back to previous page">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="18" height="18" aria-hidden="true">
+                <line x1="19" y1="12" x2="5" y2="12"/>
+                <polyline points="12 19 5 12 12 5"/>
+              </svg>
+              Go Back
+            </button>
+          </div>
+
+          <!-- ====================================================
+               SEARCH
+               ==================================================== -->
+          <div class="not-found-search"
+               role="search" aria-label="Search for jobs">
+            <svg class="not-found-search-icon"
+                 viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                 stroke-width="2" width="18" height="18" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="search"
+                   id="not-found-search"
+                   class="form-input"
+                   placeholder="Search jobs… e.g. Teacher I, Nurse, BPO"
+                   aria-label="Search job listings"
+                   autocomplete="off"
+                   spellcheck="false">
+          </div>
+
+          <!-- ====================================================
+               POPULAR LINKS
+               ==================================================== -->
+          <div class="popular-links">
+
+            <p class="popular-links__title">
+              Popular Destinations
+            </p>
+
+            <div class="popular-links__grid">
+
+              <a href="/government/"
+                 class="popular-link-card reveal">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(22,72,150,0.1);">
+                  🏛️
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    Government Jobs
+                  </span>
+                  <span class="popular-link-card__sub">
+                    DepEd, DOH, LGU, PNP
+                  </span>
+                </div>
+              </a>
+
+              <a href="/private/"
+                 class="popular-link-card reveal"
+                 style="--reveal-delay:75ms;">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(124,58,237,0.1);">
+                  💼
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    Private Sector Jobs
+                  </span>
+                  <span class="popular-link-card__sub">
+                    BPO, tech, healthcare
+                  </span>
+                </div>
+              </a>
+
+              <a href="/ofw/"
+                 class="popular-link-card reveal"
+                 style="--reveal-delay:150ms;">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(8,145,178,0.1);">
+                  🌏
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    OFW Opportunities
+                  </span>
+                  <span class="popular-link-card__sub">
+                    Saudi, Japan, Canada
+                  </span>
+                </div>
+              </a>
+
+              <a href="/government/salary-grade.html"
+                 class="popular-link-card reveal"
+                 style="--reveal-delay:225ms;">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(22,150,89,0.1);">
+                  💰
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    Salary Grade Table
+                  </span>
+                  <span class="popular-link-card__sub">
+                    SG1–SG33 + Calculator
+                  </span>
+                </div>
+              </a>
+
+              <a href="/government/csc-exams.html"
+                 class="popular-link-card reveal"
+                 style="--reveal-delay:300ms;">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(22,72,150,0.1);">
+                  📝
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    CSC Exam Guide
+                  </span>
+                  <span class="popular-link-card__sub">
+                    Schedule, tips, coverage
+                  </span>
+                </div>
+              </a>
+
+              <a href="/jobs/job-map.html"
+                 class="popular-link-card reveal"
+                 style="--reveal-delay:375ms;">
+                <div class="popular-link-card__icon"
+                     style="background:rgba(217,119,6,0.1);">
+                  🔍
+                </div>
+                <div class="popular-link-card__text">
+                  <span class="popular-link-card__label">
+                    Search All Jobs
+                  </span>
+                  <span class="popular-link-card__sub">
+                    Filter by sector and region
+                  </span>
+                </div>
+              </a>
+
+            </div>
+
+          </div>
+
+          <!-- ====================================================
+               REPORT BROKEN LINK
+               ==================================================== -->
+          <p style="margin-top:var(--space-10);
+                    font-size:var(--text-sm);
+                    color:var(--text-muted);">
+            Found a broken link?
+            <a href="/pages/contact.html"
+               style="color:var(--color-primary);">
+              Let us know →
+            </a>
+          </p>
+
+        </div><!-- end not-found-wrap -->
+      </div><!-- end container -->
+    </main>
+  </div><!-- end page-wrapper -->
+
+  <!-- Footer -->
+  <footer id="site-footer" data-loading role="contentinfo"></footer>
+
+  <!-- Toast -->
+  <div id="toast-container" role="region" aria-live="polite"
+       aria-label="Notifications"></div>
+
+  <!-- ============================================================
+       SCRIPTS
+       ============================================================ -->
+  <script src="/assets/js/utils/string.js"   defer></script>
+  <script src="/assets/js/utils/date.js"     defer></script>
+  <script src="/assets/js/utils/dom.js"      defer></script>
+
+  <script src="/data/jobs/gov-jobs.js"        defer></script>
+  <script src="/data/jobs/private-jobs.js"    defer></script>
+  <script src="/data/jobs/ofw-jobs.js"        defer></script>
+  <script src="/data/jobs/index.js"           defer></script>
+
+  <script src="/assets/js/core/app.js"       defer></script>
+  <script src="/assets/js/core/router.js"    defer></script>
+
+  <script src="/assets/js/ui/scroll-top.js"  defer></script>
+
+  <!-- Search redirect -->
+  <script defer>
+    (function () {
+      'use strict';
+
+      var input = document.getElementById('not-found-search');
+      if (!input) return;
+
+      /* Focus search on page load after a short delay */
+      setTimeout(function () {
+        input.focus({ preventScroll: true });
+      }, 600);
+
+      input.addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter') return;
+        var q = input.value.trim();
+        if (!q) return;
+        /* Redirect to job-map with pre-filled query */
+        window.location.href =
+          '/jobs/job-map.html?q=' + encodeURIComponent(q);
+      });
+
+    }());
+  </script>
+
+  <!-- Log 404 for analytics (non-blocking) -->
+  <script>
+    if (typeof gtag === 'function') {
+      gtag('event', 'page_not_found', {
+        page_path: window.location.pathname,
+        page_referrer: document.referrer || '(direct)'
+      });
+    }
+  </script>
+
+</body>
+</html>
