@@ -1,0 +1,390 @@
+<!-- TABLE OF CONTENTS WIDGET (article pages only) -->
+<div class="widget toc-widget" id="toc-widget"
+     style="display:none;"
+     aria-label="Table of contents">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <line x1="8"  y1="6"  x2="21" y2="6"/>
+        <line x1="8"  y1="12" x2="21" y2="12"/>
+        <line x1="8"  y1="18" x2="21" y2="18"/>
+        <line x1="3"  y1="6"  x2="3.01" y2="6"/>
+        <line x1="3"  y1="12" x2="3.01" y2="12"/>
+        <line x1="3"  y1="18" x2="3.01" y2="18"/>
+      </svg>
+      In This Article
+    </h2>
+  </div>
+  <div class="widget__body">
+    <!-- Built dynamically by sidebar.js after article:rendered event -->
+  </div>
+</div>
+
+<!-- CSC EXAM COUNTDOWN WIDGET -->
+<div class="widget csc-countdown-widget"
+     aria-label="CSC exam countdown">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      Next CSC Exam
+    </h2>
+  </div>
+  <div class="widget__body">
+    <p class="csc-countdown__label">Days until the next exam</p>
+    <p class="csc-countdown__date" id="csc-exam-date">Loading...</p>
+
+    <!-- Countdown boxes — filled by countdown.js -->
+    <div class="csc-countdown__boxes"
+         data-countdown="2026-08-16T08:00:00"
+         data-countdown-format="dhms"
+         data-countdown-label="CSC PPT Exam"
+         data-expired-text="Exam day is here! Good luck! 🍀"
+         aria-label="CSC exam countdown timer">
+      <div class="csc-countdown__box">
+        <div class="csc-countdown__number" data-countdown-days>
+          <span data-countdown-number>--</span>
+        </div>
+        <span class="csc-countdown__unit">Days</span>
+      </div>
+      <span class="csc-countdown__sep" aria-hidden="true">:</span>
+      <div class="csc-countdown__box">
+        <div class="csc-countdown__number" data-countdown-hours>
+          <span data-countdown-number>--</span>
+        </div>
+        <span class="csc-countdown__unit">Hours</span>
+      </div>
+      <span class="csc-countdown__sep" aria-hidden="true">:</span>
+      <div class="csc-countdown__box">
+        <div class="csc-countdown__number" data-countdown-minutes>
+          <span data-countdown-number>--</span>
+        </div>
+        <span class="csc-countdown__unit">Min</span>
+      </div>
+      <span class="csc-countdown__sep" aria-hidden="true">:</span>
+      <div class="csc-countdown__box">
+        <div class="csc-countdown__number" data-countdown-seconds>
+          <span data-countdown-number>--</span>
+        </div>
+        <span class="csc-countdown__unit">Sec</span>
+      </div>
+      <span data-countdown-expired style="display:none;color:var(--color-success);font-weight:var(--font-bold);text-align:center;">
+        Exam day! Good luck! 🍀
+      </span>
+    </div>
+
+    <p class="csc-countdown__note">
+      August 16, 2026 · Professional &amp; Sub-Professional
+    </p>
+  </div>
+  <div class="widget__footer">
+    <a href="/government/csc-exams.html">View full exam schedule →</a>
+  </div>
+</div>
+
+<!-- LATEST JOBS WIDGET -->
+<div class="widget" aria-label="Latest jobs">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="12 6 12 12 16 14"/>
+      </svg>
+      Latest Jobs
+    </h2>
+    <a href="/jobs/job-map.html" class="widget__action">See all</a>
+  </div>
+
+  <!-- Skeleton while loading -->
+  <div class="latest-jobs-list" id="sidebar-latest-jobs">
+    <div class="latest-job-item">
+      <div class="latest-job-item__image skeleton-wave"
+           style="width:44px;height:44px;border-radius:8px;flex-shrink:0;"></div>
+      <div class="latest-job-item__body"
+           style="display:flex;flex-direction:column;gap:6px;">
+        <div class="skeleton-wave" style="height:12px;width:100%;border-radius:4px;"></div>
+        <div class="skeleton-wave" style="height:10px;width:70%;border-radius:4px;"></div>
+      </div>
+    </div>
+    <div class="latest-job-item">
+      <div class="latest-job-item__image skeleton-wave"
+           style="width:44px;height:44px;border-radius:8px;flex-shrink:0;"></div>
+      <div class="latest-job-item__body"
+           style="display:flex;flex-direction:column;gap:6px;">
+        <div class="skeleton-wave" style="height:12px;width:100%;border-radius:4px;"></div>
+        <div class="skeleton-wave" style="height:10px;width:60%;border-radius:4px;"></div>
+      </div>
+    </div>
+    <div class="latest-job-item">
+      <div class="latest-job-item__image skeleton-wave"
+           style="width:44px;height:44px;border-radius:8px;flex-shrink:0;"></div>
+      <div class="latest-job-item__body"
+           style="display:flex;flex-direction:column;gap:6px;">
+        <div class="skeleton-wave" style="height:12px;width:100%;border-radius:4px;"></div>
+        <div class="skeleton-wave" style="height:10px;width:80%;border-radius:4px;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Filled by sidebar.js -->
+
+  <div class="widget__footer">
+    <a href="/jobs/job-map.html">Browse all jobs →</a>
+  </div>
+</div>
+
+<!-- SALARY GRADE QUICK REFERENCE -->
+<div class="widget" aria-label="Salary grade quick reference">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <line x1="12" y1="1" x2="12" y2="23"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      </svg>
+      Salary Grade
+    </h2>
+    <a href="/government/salary-grade.html" class="widget__action">Full table</a>
+  </div>
+
+  <!-- Filled by sidebar.js from salary-grades.json -->
+  <div class="sg-quick-ref" id="sidebar-sg-ref">
+    <!-- Skeleton -->
+    <div class="sg-quick-ref__item" style="pointer-events:none;">
+      <span class="sg-quick-ref__grade skeleton-wave" style="width:40px;height:12px;border-radius:4px;display:block;"></span>
+      <span class="sg-quick-ref__title skeleton-wave" style="flex:1;height:12px;border-radius:4px;display:block;margin:0 8px;"></span>
+      <span class="sg-quick-ref__salary skeleton-wave" style="width:50px;height:12px;border-radius:4px;display:block;"></span>
+    </div>
+    <div class="sg-quick-ref__item" style="pointer-events:none;">
+      <span class="sg-quick-ref__grade skeleton-wave" style="width:40px;height:12px;border-radius:4px;display:block;"></span>
+      <span class="sg-quick-ref__title skeleton-wave" style="flex:1;height:12px;border-radius:4px;display:block;margin:0 8px;"></span>
+      <span class="sg-quick-ref__salary skeleton-wave" style="width:50px;height:12px;border-radius:4px;display:block;"></span>
+    </div>
+    <div class="sg-quick-ref__item" style="pointer-events:none;">
+      <span class="sg-quick-ref__grade skeleton-wave" style="width:40px;height:12px;border-radius:4px;display:block;"></span>
+      <span class="sg-quick-ref__title skeleton-wave" style="flex:1;height:12px;border-radius:4px;display:block;margin:0 8px;"></span>
+      <span class="sg-quick-ref__salary skeleton-wave" style="width:50px;height:12px;border-radius:4px;display:block;"></span>
+    </div>
+  </div>
+
+  <div class="widget__footer">
+    <a href="/government/salary-grade.html">Open calculator →</a>
+  </div>
+</div>
+
+<!-- ADSENSE SLOT 1 -->
+<div class="widget" style="padding:0;border-style:dashed;">
+  <p class="adsense-label">Advertisement</p>
+  <div class="adsense-slot adsense-slot--300x250">
+    <div class="adsense-slot__placeholder">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="1" width="32" height="32" style="opacity:.3;margin:0 auto 8px;">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      <p style="font-size:11px;">Advertisement</p>
+    </div>
+    <!-- AdSense code goes here -->
+  </div>
+</div>
+
+<!-- SHARE WIDGET (article pages) -->
+<div class="widget share-widget" id="sidebar-share"
+     aria-label="Share this article">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="18" cy="5" r="3"/>
+        <circle cx="6"  cy="12" r="3"/>
+        <circle cx="18" cy="19" r="3"/>
+        <line x1="8.59"  y1="13.51" x2="15.42" y2="17.49"/>
+        <line x1="15.41" y1="6.51"  x2="8.59"  y2="10.49"/>
+      </svg>
+      Share This Job
+    </h2>
+  </div>
+  <div class="widget__body">
+    <div class="share-widget__buttons">
+      <a href="#" class="share-widget__btn share-widget__btn--facebook"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Share on Facebook">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="20" height="20" aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        Share on Facebook
+      </a>
+      <a href="#" class="share-widget__btn share-widget__btn--whatsapp"
+         target="_blank" rel="noopener noreferrer"
+         aria-label="Share on WhatsApp">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="20" height="20" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        Share on WhatsApp
+      </a>
+      <button class="share-widget__btn share-widget__btn--copy"
+              aria-label="Copy link to clipboard">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="20" height="20" aria-hidden="true">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        Copy Link
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK LINKS WIDGET -->
+<div class="widget quick-links-widget"
+     aria-label="Quick links">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+      </svg>
+      Quick Links
+    </h2>
+  </div>
+  <div class="widget__body" style="padding:0;">
+    <a href="/government/csc-exams.html" class="quick-link-item">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+      </svg>
+      <span class="quick-link-item__label">CSC Exam Guide</span>
+      <svg class="quick-link-item__arrow" viewBox="0 0 24 24"
+           stroke="currentColor" fill="none" stroke-width="2"
+           aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </a>
+    <a href="/government/salary-grade.html" class="quick-link-item">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <line x1="12" y1="1" x2="12" y2="23"/>
+        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+      </svg>
+      <span class="quick-link-item__label">Salary Grade Calculator</span>
+      <svg class="quick-link-item__arrow" viewBox="0 0 24 24"
+           stroke="currentColor" fill="none" stroke-width="2"
+           aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </a>
+    <a href="/ofw/poea-guide.html" class="quick-link-item">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span class="quick-link-item__label">DMW / POEA Guide</span>
+      <svg class="quick-link-item__arrow" viewBox="0 0 24 24"
+           stroke="currentColor" fill="none" stroke-width="2"
+           aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </a>
+    <a href="/pages/submit-job.html" class="quick-link-item">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="16"/>
+        <line x1="8"  y1="12" x2="16" y2="12"/>
+      </svg>
+      <span class="quick-link-item__label">Submit a Job</span>
+      <svg class="quick-link-item__arrow" viewBox="0 0 24 24"
+           stroke="currentColor" fill="none" stroke-width="2"
+           aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </a>
+    <a href="/pages/about.html" class="quick-link-item">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="16" x2="12" y2="12"/>
+        <line x1="12" y1="8"  x2="12.01" y2="8"/>
+      </svg>
+      <span class="quick-link-item__label">About TrabahoWatch</span>
+      <svg class="quick-link-item__arrow" viewBox="0 0 24 24"
+           stroke="currentColor" fill="none" stroke-width="2"
+           aria-hidden="true">
+        <path d="m9 18 6-6-6-6"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<!-- ABOUT WIDGET (trust signal for AdSense) -->
+<div class="widget about-widget"
+     aria-label="About this site">
+  <div class="widget__header">
+    <h2 class="widget__title">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="2" width="16" height="16" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="16" x2="12" y2="12"/>
+        <line x1="12" y1="8"  x2="12.01" y2="8"/>
+      </svg>
+      About This Site
+    </h2>
+  </div>
+  <div class="widget__body">
+    <p class="about-widget__text">
+      TrabahoWatch provides free, verified job information for every Filipino.
+      We source all listings from official government and company announcements.
+      We do not process applications or charge any fees.
+    </p>
+    <div class="about-widget__links">
+      <a href="/pages/methodology.html" class="about-widget__link">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="14" height="14" aria-hidden="true">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+        How we verify jobs
+      </a>
+      <a href="/pages/privacy-policy.html" class="about-widget__link">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="14" height="14" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        Privacy Policy
+      </a>
+      <a href="/pages/contact.html" class="about-widget__link">
+        <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+             stroke-width="2" width="14" height="14" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Contact us
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ADSENSE SLOT 2 -->
+<div class="widget" style="padding:0;border-style:dashed;">
+  <p class="adsense-label">Advertisement</p>
+  <div class="adsense-slot adsense-slot--300x250">
+    <div class="adsense-slot__placeholder">
+      <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+           stroke-width="1" width="32" height="32" style="opacity:.3;margin:0 auto 8px;">
+        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+        <line x1="8" y1="21" x2="16" y2="21"/>
+        <line x1="12" y1="17" x2="12" y2="21"/>
+      </svg>
+      <p style="font-size:11px;">Advertisement</p>
+    </div>
+    <!-- AdSense code goes here -->
+  </div>
+</div>
