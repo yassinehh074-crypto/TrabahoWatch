@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!-- ============================================================
+       META — Updated dynamically by job-map.js
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Search Jobs — TrabahoWatch Philippines</title>
+
+  <meta name="description"
+        content="Search all Philippine job listings — government, private sector, and OFW opportunities. Filter by sector, region, and employment type.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="TrabahoWatch">
+
+  <!-- OG -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="TrabahoWatch">
+  <meta property="og:locale"      content="en_PH">
+  <meta property="og:title"       content="Search Jobs — TrabahoWatch Philippines">
+  <meta property="og:description"
+        content="Search all Philippine job listings. Government, private sector, and OFW.">
+  <meta property="og:image"
+        content="https://trabahowatch.com/assets/img/og-default.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"  content="summary_large_image">
+  <meta name="twitter:site"  content="@trabahowatch">
+  <meta name="twitter:title" content="Search Jobs — TrabahoWatch">
+
+  <!-- Canonical — updated by job-map.js -->
+  <link rel="canonical" href="https://trabahowatch.com/jobs/job-map.html">
+
+  <!-- PWA -->
+  <link rel="manifest"         href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/img/pwa/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="/assets/img/pwa/icon-192.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+  <!-- ============================================================
+       CSS
+       ============================================================ -->
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/components/header.css">
+  <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/components/cards.css">
+  <link rel="stylesheet" href="/assets/css/components/buttons.css">
+  <link rel="stylesheet" href="/assets/css/components/forms.css">
+  <link rel="stylesheet" href="/assets/css/components/badges.css">
+  <link rel="stylesheet" href="/assets/css/components/toast.css">
+<!-- Extended Components CSS -->
+<link rel="stylesheet" href="/assets/css/components/hub.css">
+<link rel="stylesheet" href="/assets/css/components/article-extended.css">
+<link rel="stylesheet" href="/assets/css/components/cards-extended.css">
+<link rel="stylesheet" href="/assets/css/components/badges-extended.css">
+<link rel="stylesheet" href="/assets/css/components/buttons-extended.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+
+  <!-- Theme — blocking -->
+  <script src="/assets/js/core/theme.js"></script>
+
+  <!-- Schema.org — SearchResultsPage, updated by job-map.js -->
+  <script type="application/ld+json" id="search-schema">
+  {
+    "@context": "https://schema.org",
+    "@type": "SearchResultsPage",
+    "name": "Search Jobs — TrabahoWatch Philippines",
+    "url": "https://trabahowatch.com/jobs/job-map.html",
+    "description": "Search all Philippine job listings on TrabahoWatch."
+  }
+  </script>
+
+</head>
+
+<body data-page="job-map">
+
+  <!-- ============================================================
+       HEADER — injected by app.js
+       ============================================================ -->
+  <header id="site-header" data-loading role="banner"></header>
+
+  <!-- ============================================================
+       BREADCRUMB BAR
+       ============================================================ -->
+  <div class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="You are here">
+        <span class="breadcrumb__item">
+          <a href="/">Home</a>
+        </span>
+        <span class="breadcrumb__separator" aria-hidden="true">›</span>
+        <span class="breadcrumb__item breadcrumb__item--current"
+              aria-current="page">
+          Search Jobs
+        </span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       PAGE HERO — compact
+       ============================================================ -->
+  <section class="page-hero page-hero--compact" aria-label="Search hero">
+    <div class="container">
+
+      <h1 class="page-hero__title" data-query-display="Browse All Jobs">
+        Browse All Jobs
+      </h1>
+
+      <p class="page-hero__subtitle">
+        Showing results for
+        <strong data-query-display="all sectors">all sectors</strong>
+      </p>
+
+      <!-- MAIN SEARCH BAR -->
+      <div class="hero-search hero-search--compact" role="search"
+           aria-label="Job search">
+        <svg class="hero-search__icon" viewBox="0 0 24 24"
+             stroke="currentColor" fill="none" stroke-width="2"
+             aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="search"
+               class="hero-search__input"
+               data-filter="search"
+               placeholder="Search jobs — Teacher I, Nurse, BPO, OFW..."
+               aria-label="Search all jobs"
+               autocomplete="off"
+               spellcheck="false">
+        <button class="hero-search__clear" type="button"
+                aria-label="Clear search">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+               stroke-width="2.5" width="16" height="16" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6"  y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <button class="hero-search__btn" type="button"
+                aria-label="Search">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+               stroke-width="2.5" width="18" height="18" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="m21 21-4.35-4.35"/>
+          </svg>
+          <span>Search</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MAIN LAYOUT — no sidebar on search page
+       ============================================================ -->
+  <div class="page-wrapper no-sidebar">
+    <main id="main-content" tabindex="-1" aria-label="Search results">
+      <div class="container">
+
+        <!-- ==================================================
+             FILTER BAR
+             ================================================== -->
+        <div class="filter-bar" role="search"
+             aria-label="Filter job listings">
+
+          <!-- Sector Pills -->
+          <div class="filter-bar__pills" role="group"
+               aria-label="Filter by sector">
+            <button class="btn btn--pill btn--pill-active"
+                    data-filter-pill="sector"
+                    data-value=""
+                    aria-pressed="true">
+              All Sectors
+            </button>
+            <button class="btn btn--pill btn--pill-inactive"
+                    data-filter-pill="sector"
+                    data-value="government"
+                    aria-pressed="false">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="14" height="14" aria-hidden="true">
+                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+              </svg>
+              Government
+            </button>
+            <button class="btn btn--pill btn--pill-inactive"
+                    data-filter-pill="sector"
+                    data-value="private"
+                    aria-pressed="false">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="14" height="14" aria-hidden="true">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              </svg>
+              Private
+            </button>
+            <button class="btn btn--pill btn--pill-inactive"
+                    data-filter-pill="sector"
+                    data-value="ofw"
+                    aria-pressed="false">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="14" height="14" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+              </svg>
+              OFW
+            </button>
+          </div>
+
+          <!-- Dropdowns -->
+          <div class="filter-bar__dropdowns">
+
+            <!-- Category -->
+            <div class="filter-bar__group">
+              <label for="filter-category"
+                     class="filter-bar__label">Category</label>
+              <div class="form-select-wrap">
+                <select id="filter-category"
+                        class="form-select"
+                        data-filter="category"
+                        aria-label="Filter by category">
+                  <option value="">All Categories</option>
+                  <optgroup label="Government">
+                    <option value="deped">DepEd / Education</option>
+                    <option value="doh">DOH / Healthcare</option>
+                    <option value="lgu">LGU Positions</option>
+                    <option value="pnp">PNP / NBI / BFP</option>
+                  </optgroup>
+                  <optgroup label="Private Sector">
+                    <option value="bpo">BPO / Call Center</option>
+                    <option value="tech">Tech / IT</option>
+                    <option value="healthcare">Healthcare (Private)</option>
+                    <option value="finance">Finance / Banking</option>
+                    <option value="retail">Retail / Hospitality</option>
+                    <option value="trades">Skilled Trades</option>
+                  </optgroup>
+                  <optgroup label="OFW">
+                    <option value="middle-east">Middle East</option>
+                    <option value="asia-pacific">Asia Pacific</option>
+                    <option value="europe-americas">Europe &amp; Americas</option>
+                  </optgroup>
+                </select>
+                <svg class="form-select-arrow" viewBox="0 0 24 24"
+                     stroke="currentColor" fill="none" stroke-width="2.5"
+                     aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Region -->
+            <div class="filter-bar__group">
+              <label for="filter-region"
+                     class="filter-bar__label">Region</label>
+              <div class="form-select-wrap">
+                <select id="filter-region"
+                        class="form-select"
+                        data-filter="region"
+                        aria-label="Filter by region">
+                  <option value="">All Regions</option>
+                  <option value="ncr">NCR — Metro Manila</option>
+                  <option value="car">CAR — Cordillera</option>
+                  <option value="region-1">Region I — Ilocos</option>
+                  <option value="region-2">Region II — Cagayan Valley</option>
+                  <option value="region-3">Region III — Central Luzon</option>
+                  <option value="region-4a">Region IV-A — CALABARZON</option>
+                  <option value="region-4b">Region IV-B — MIMAROPA</option>
+                  <option value="region-5">Region V — Bicol</option>
+                  <option value="region-6">Region VI — Western Visayas</option>
+                  <option value="region-7">Region VII — Central Visayas</option>
+                  <option value="region-8">Region VIII — Eastern Visayas</option>
+                  <option value="region-9">Region IX — Zamboanga Peninsula</option>
+                  <option value="region-10">Region X — Northern Mindanao</option>
+                  <option value="region-11">Region XI — Davao</option>
+                  <option value="region-12">Region XII — SOCCSKSARGEN</option>
+                  <option value="region-13">Region XIII — CARAGA</option>
+                  <option value="barmm">BARMM — Bangsamoro</option>
+                  <option value="nir">NIR — Negros Island</option>
+                  <option value="middle-east">Middle East</option>
+                  <option value="asia-pacific">Asia Pacific</option>
+                  <option value="europe-americas">Europe &amp; Americas</option>
+                </select>
+                <svg class="form-select-arrow" viewBox="0 0 24 24"
+                     stroke="currentColor" fill="none" stroke-width="2.5"
+                     aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Employment Type -->
+            <div class="filter-bar__group">
+              <label for="filter-type"
+                     class="filter-bar__label">Type</label>
+              <div class="form-select-wrap">
+                <select id="filter-type"
+                        class="form-select"
+                        data-filter="type"
+                        aria-label="Filter by employment type">
+                  <option value="">All Types</option>
+                  <option value="permanent">Permanent</option>
+                  <option value="casual">Casual</option>
+                  <option value="job-order">Job Order</option>
+                  <option value="contractual">Contractual</option>
+                  <option value="full-time">Full-time</option>
+                  <option value="part-time">Part-time</option>
+                </select>
+                <svg class="form-select-arrow" viewBox="0 0 24 24"
+                     stroke="currentColor" fill="none" stroke-width="2.5"
+                     aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Sort -->
+            <div class="filter-bar__group">
+              <label for="filter-sort"
+                     class="filter-bar__label">Sort by</label>
+              <div class="form-select-wrap">
+                <select id="filter-sort"
+                        class="form-select"
+                        data-filter="sort"
+                        aria-label="Sort results">
+                  <option value="published">Newest First</option>
+                  <option value="deadline">Deadline Soon</option>
+                  <option value="urgency">Most Urgent</option>
+                </select>
+                <svg class="form-select-arrow" viewBox="0 0 24 24"
+                     stroke="currentColor" fill="none" stroke-width="2.5"
+                     aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </div>
+            </div>
+
+          </div><!-- end filter-bar__dropdowns -->
+
+        </div><!-- end filter-bar -->
+
+        <!-- ==================================================
+             ACTIVE FILTER TAGS
+             Built by job-map.js — shows dismissible badges
+             ================================================== -->
+        <div data-active-filters
+             style="display:none;"
+             aria-label="Active filters">
+          <!-- Built by job-map.js -->
+        </div>
+
+        <!-- ==================================================
+             RESULTS HEADER
+             ================================================== -->
+        <div class="results-header" aria-live="polite" aria-atomic="true">
+          <p class="results-header__count">
+            <span data-results-count>Loading jobs...</span>
+          </p>
+          <div class="results-header__view-toggle"
+               role="group" aria-label="View mode">
+            <button class="view-toggle-btn view-toggle-btn--active"
+                    data-view="grid"
+                    aria-pressed="true"
+                    aria-label="Grid view">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="16" height="16" aria-hidden="true">
+                <rect x="3"  y="3"  width="7" height="7"/>
+                <rect x="14" y="3"  width="7" height="7"/>
+                <rect x="14" y="14" width="7" height="7"/>
+                <rect x="3"  y="14" width="7" height="7"/>
+              </svg>
+            </button>
+            <button class="view-toggle-btn"
+                    data-view="list"
+                    aria-pressed="false"
+                    aria-label="List view">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" width="16" height="16" aria-hidden="true">
+                <line x1="8"  y1="6"  x2="21" y2="6"/>
+                <line x1="8"  y1="12" x2="21" y2="12"/>
+                <line x1="8"  y1="18" x2="21" y2="18"/>
+                <line x1="3"  y1="6"  x2="3.01" y2="6"/>
+                <line x1="3"  y1="12" x2="3.01" y2="12"/>
+                <line x1="3"  y1="18" x2="3.01" y2="18"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================================================
+             POPULAR SEARCHES
+             Shown when no query — built by job-map.js
+             ================================================== -->
+        <div data-popular-searches
+             aria-label="Popular job searches">
+          <!-- Built by job-map.js -->
+        </div>
+
+        <!-- ==================================================
+             JOB CARDS GRID
+             Populated by filters.js via job-map.js
+             ================================================== -->
+        <div class="card-grid" id="jobs-grid"
+             data-view="grid"
+             aria-label="Job listings"
+             aria-live="polite"
+             aria-busy="true">
+
+          <!-- Skeleton placeholders while loading -->
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+          <div class="card job-card skeleton-wave"
+               style="min-height:260px;" aria-hidden="true"></div>
+
+        </div>
+
+        <!-- ==================================================
+             EMPTY STATE
+             Shown by filters.js when 0 results
+             ================================================== -->
+        <div id="filter-empty-state" class="empty-state"
+             style="display:none;"
+             role="status"
+             aria-live="polite">
+          <div class="empty-state__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                 stroke-width="1.5">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="m21 21-4.35-4.35"/>
+              <line x1="8" y1="11" x2="14" y2="11"/>
+            </svg>
+          </div>
+          <h2 class="empty-state__title">No jobs found</h2>
+          <p class="empty-state__message">
+            Try adjusting your filters or search with a different keyword.
+          </p>
+          <div style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap;margin-top:var(--space-5);">
+            <button class="btn btn--primary"
+                    id="clear-filters-btn"
+                    type="button">
+              Clear All Filters
+            </button>
+            <a href="/" class="btn btn--ghost">← Back to Home</a>
+          </div>
+          <!-- Related searches injected here by job-map.js -->
+        </div>
+
+        <!-- ==================================================
+             LOAD MORE
+             Managed by load-more.js
+             ================================================== -->
+        <div class="load-more-container" id="load-more-container"
+             style="display:none;">
+          <button class="btn btn--load-more" id="load-more-btn"
+                  type="button"
+                  aria-label="Load more job listings">
+            <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                 stroke-width="2" width="18" height="18" aria-hidden="true">
+              <polyline points="1 4 1 10 7 10"/>
+              <path d="M3.51 15a9 9 0 1 0 .49-3.52"/>
+            </svg>
+            Load More Jobs
+          </button>
+          <p class="load-more-status" id="load-more-status"
+             aria-live="polite" aria-atomic="true">
+          </p>
+        </div>
+
+        <!-- ==================================================
+             ADSENSE — BOTTOM OF RESULTS
+             ================================================== -->
+        <div class="adsense-slot" style="margin-top:var(--space-10);"
+             aria-label="Advertisement">
+          <p class="adsense-label">Advertisement</p>
+          <div class="adsense-slot__placeholder">
+            <p style="font-size:11px;color:var(--text-muted);">
+              Advertisement
+            </p>
+          </div>
+          <!-- AdSense code goes here -->
+        </div>
+
+        <!-- ==================================================
+             INFO BOX — SEO content + trust signal
+             ================================================== -->
+        <div class="info-box" style="margin-top:var(--space-10);"
+             role="note" aria-label="About TrabahoWatch">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+               stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>
+            <strong>About TrabahoWatch:</strong>
+            All job listings are sourced from official government portals,
+            CSC Job Portal, and company career pages. Salary data is based
+            on DBM/CSC official tables (SSL VI Tranche 3, 2026).
+            We do not process applications or charge any fees.
+            <a href="/pages/methodology.html">Learn how we verify jobs →</a>
+          </span>
+        </div>
+
+        <!-- RELATED SEARCH CATEGORIES -->
+        <section class="section"
+                 style="padding-top:var(--space-10);"
+                 aria-labelledby="browse-heading">
+          <div class="section__header">
+            <h2 class="section__title" id="browse-heading">
+              Browse by Category
+            </h2>
+          </div>
+          <div class="card-grid card-grid--4">
+
+            <a href="/government/deped-jobs.html"
+               class="card category-card category-card--sm reveal"
+               aria-label="Browse DepEd teacher jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">DepEd Jobs</h3>
+                <p class="category-card__count">Teachers, principals</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/government/doh-jobs.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:50ms;"
+               aria-label="Browse DOH healthcare jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">DOH Jobs</h3>
+                <p class="category-card__count">Nurses, medical officers</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/private/bpo-jobs.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:100ms;"
+               aria-label="Browse BPO and call center jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">BPO Jobs</h3>
+                <p class="category-card__count">CSR, trainers, team leads</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/private/tech-jobs.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:150ms;"
+               aria-label="Browse tech and IT jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">Tech / IT</h3>
+                <p class="category-card__count">Developers, QA, DevOps</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/ofw/middle-east.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:200ms;"
+               aria-label="Browse Middle East OFW jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">🇸🇦 Middle East</h3>
+                <p class="category-card__count">Saudi, UAE, Qatar</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/ofw/asia-pacific.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:250ms;"
+               aria-label="Browse Asia Pacific OFW jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">🇯🇵 Asia Pacific</h3>
+                <p class="category-card__count">Japan, Korea, Singapore</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/government/lgu-jobs.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:300ms;"
+               aria-label="Browse LGU local government jobs">
+              <div class="category-card__body">
+                <h3 class="category-card__title">LGU Jobs</h3>
+                <p class="category-card__count">City and municipal</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+            <a href="/government/salary-grade.html"
+               class="card category-card category-card--sm reveal"
+               style="--reveal-delay:350ms;"
+               aria-label="View salary grade table">
+              <div class="category-card__body">
+                <h3 class="category-card__title">Salary Guide</h3>
+                <p class="category-card__count">SG1–SG33 + calculator</p>
+              </div>
+              <svg class="category-card__arrow" viewBox="0 0 24 24"
+                   stroke="currentColor" fill="none" stroke-width="2"
+                   aria-hidden="true">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </a>
+
+          </div>
+        </section>
+
+      </div><!-- end container -->
+    </main>
+  </div><!-- end page-wrapper -->
+
+  <!-- ============================================================
+       FOOTER — injected by app.js
+       ============================================================ -->
+  <footer id="site-footer" data-loading role="contentinfo"></footer>
+
+  <!-- Toast Container -->
+  <div id="toast-container"
+       role="region"
+       aria-live="polite"
+       aria-label="Notifications">
+  </div>
+
+  <!-- ============================================================
+       NOSCRIPT
+       ============================================================ -->
+  <noscript>
+    <div style="padding:32px;text-align:center;max-width:600px;margin:0 auto;">
+      <h1>Browse Jobs — TrabahoWatch</h1>
+      <p style="margin:16px 0;">
+        This page requires JavaScript to display job listings.
+        Please enable JavaScript in your browser.
+      </p>
+      <a href="/" style="color:#164896;">← Back to Home</a>
+    </div>
+  </noscript>
+
+  <!-- ============================================================
+       SCRIPTS — Load order critical
+       ============================================================ -->
+
+  <!-- Utils -->
+  <script src="/assets/js/utils/string.js"       defer></script>
+  <script src="/assets/js/utils/date.js"         defer></script>
+  <script src="/assets/js/utils/dom.js"          defer></script>
+
+  <!-- Data — sector files before index -->
+  <script src="/data/jobs/gov-jobs.js"            defer></script>
+  <script src="/data/jobs/private-jobs.js"        defer></script>
+  <script src="/data/jobs/ofw-jobs.js"            defer></script>
+  <script src="/data/jobs/index.js"               defer></script>
+
+  <!-- Core -->
+  <script src="/assets/js/core/app.js"            defer></script>
+  <script src="/assets/js/core/router.js"         defer></script>
+
+  <!-- UI -->
+  <script src="/assets/js/ui/filters.js"          defer></script>
+  <script src="/assets/js/ui/search.js"           defer></script>
+  <script src="/assets/js/ui/load-more.js"        defer></script>
+  <script src="/assets/js/ui/scroll-top.js"       defer></script>
+
+  <!-- Page -->
+  <script src="/assets/js/pages/job-map.js"       defer></script>
+
+  <!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
+
+</body>
+</html>
