@@ -8,31 +8,24 @@
   <title>Privacy Policy — TrabahoWatch Philippines</title>
 
   <meta name="description"
-        content="TrabahoWatch Privacy Policy — how we collect, use, and protect your personal information. Compliant with the Data Privacy Act of 2012 (RA 10173).">
+        content="TrabahoWatch privacy policy — how we collect, use, and protect your data. Covers Google AdSense, Google Analytics, cookies, and your rights under the Philippine Data Privacy Act.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="TrabahoWatch">
-  <meta name="theme-color" content="#164896">
 
   <!-- OG -->
   <meta property="og:type"        content="website">
   <meta property="og:site_name"   content="TrabahoWatch">
-  <meta property="og:locale"      content="en_PH">
   <meta property="og:title"
         content="Privacy Policy — TrabahoWatch Philippines">
   <meta property="og:description"
-        content="How TrabahoWatch collects, uses, and protects your data. RA 10173 (Data Privacy Act) compliant.">
+        content="How TrabahoWatch collects, uses, and protects your personal data. Covers Google AdSense, Analytics, cookies, and Philippine Data Privacy Act rights.">
   <meta property="og:url"
         content="https://trabahowatch.com/pages/privacy-policy.html">
 
-  <!-- Canonical -->
   <link rel="canonical"
         href="https://trabahowatch.com/pages/privacy-policy.html">
-
-  <!-- PWA -->
   <link rel="manifest"         href="/manifest.json">
   <link rel="apple-touch-icon" href="/assets/img/pwa/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32"
-        href="/assets/img/pwa/icon-192.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,196 +42,42 @@
   <link rel="stylesheet" href="/assets/css/utilities.css">
   <link rel="stylesheet" href="/assets/css/components/header.css">
   <link rel="stylesheet" href="/assets/css/components/footer.css">
+  <link rel="stylesheet" href="/assets/css/components/sidebar.css">
   <link rel="stylesheet" href="/assets/css/components/cards.css">
   <link rel="stylesheet" href="/assets/css/components/buttons.css">
   <link rel="stylesheet" href="/assets/css/components/badges.css">
   <link rel="stylesheet" href="/assets/css/components/toast.css">
-  <!-- Extended Components CSS -->
   <link rel="stylesheet" href="/assets/css/components/hub.css">
   <link rel="stylesheet" href="/assets/css/components/article-extended.css">
   <link rel="stylesheet" href="/assets/css/components/cards-extended.css">
   <link rel="stylesheet" href="/assets/css/components/badges-extended.css">
   <link rel="stylesheet" href="/assets/css/components/buttons-extended.css">
   <link rel="stylesheet" href="/assets/css/responsive.css">
-  <!-- Theme — blocking -->
+
+  <div id="reading-progress" role="progressbar"
+       aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+       aria-label="Reading progress"></div>
+
   <script src="/assets/js/core/theme.js"></script>
 
-  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": "https://trabahowatch.com/pages/privacy-policy.html#page",
-        "name": "Privacy Policy — TrabahoWatch",
-        "url":  "https://trabahowatch.com/pages/privacy-policy.html",
-        "description": "TrabahoWatch Privacy Policy — Data Privacy Act of 2012 (RA 10173) compliant.",
-        "inLanguage": "en-PH",
-        "isPartOf": { "@id": "https://trabahowatch.com/#website" }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://trabahowatch.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://trabahowatch.com/pages/privacy-policy.html" }
-        ]
-      }
-    ]
+    "@type": "WebPage",
+    "@id": "https://trabahowatch.com/pages/privacy-policy.html#page",
+    "name": "Privacy Policy — TrabahoWatch",
+    "url":  "https://trabahowatch.com/pages/privacy-policy.html",
+    "description": "TrabahoWatch privacy policy covering data collection, Google AdSense, cookies, and user rights.",
+    "inLanguage": "en-PH",
+    "dateModified": "2026-05-01",
+    "isPartOf": { "@id": "https://trabahowatch.com/#website" }
   }
   </script>
-
-  <style>
-    /* Policy document styles */
-    .policy-body {
-      max-width: 720px;
-      margin: 0 auto;
-      padding-block: var(--space-12);
-    }
-
-    .policy-body h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-bold);
-      color: var(--text-primary);
-      margin-top: var(--space-10);
-      margin-bottom: var(--space-4);
-      padding-top: var(--space-6);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .policy-body h2:first-of-type {
-      border-top: none;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .policy-body h3 {
-      font-size: var(--text-base);
-      font-weight: var(--font-bold);
-      color: var(--text-primary);
-      margin-top: var(--space-6);
-      margin-bottom: var(--space-3);
-    }
-
-    .policy-body p {
-      font-size: var(--text-sm);
-      line-height: 1.9;
-      color: var(--text-secondary);
-      margin-bottom: var(--space-4);
-    }
-
-    .policy-body ul,
-    .policy-body ol {
-      padding-left: var(--space-6);
-      margin-bottom: var(--space-5);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-    }
-
-    .policy-body li {
-      font-size: var(--text-sm);
-      line-height: 1.8;
-      color: var(--text-secondary);
-    }
-
-    .policy-body a {
-      color: var(--color-primary);
-      text-decoration: underline;
-    }
-
-    html.dark .policy-body a {
-      color: var(--text-link);
-    }
-
-    .policy-body strong {
-      color: var(--text-primary);
-      font-weight: var(--font-semibold);
-    }
-
-    .policy-toc {
-      background: var(--bg-surface-2);
-      border-radius: var(--radius-xl);
-      padding: var(--space-6);
-      margin-bottom: var(--space-8);
-    }
-
-    .policy-toc__title {
-      font-size: var(--text-sm);
-      font-weight: var(--font-bold);
-      color: var(--text-primary);
-      margin-bottom: var(--space-4);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .policy-toc__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-      counter-reset: toc-counter;
-    }
-
-    .policy-toc__list li::before {
-      counter-increment: toc-counter;
-      content: counter(toc-counter) ". ";
-      color: var(--color-primary);
-      font-weight: var(--font-semibold);
-      font-size: var(--text-sm);
-    }
-
-    html.dark .policy-toc__list li::before {
-      color: var(--text-link);
-    }
-
-    .policy-toc__list a {
-      font-size: var(--text-sm);
-      color: var(--color-primary);
-      text-decoration: none;
-    }
-
-    html.dark .policy-toc__list a {
-      color: var(--text-link);
-    }
-
-    .policy-toc__list a:hover {
-      text-decoration: underline;
-    }
-
-    .policy-highlight {
-      background: rgba(22,72,150,0.06);
-      border-left: 3px solid var(--color-primary);
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      padding: var(--space-4) var(--space-5);
-      margin-bottom: var(--space-5);
-      font-size: var(--text-sm);
-      color: var(--text-secondary);
-      line-height: 1.8;
-    }
-
-    html.dark .policy-highlight {
-      background: rgba(96,165,250,0.07);
-      border-color: var(--text-link);
-    }
-
-    .policy-meta {
-      font-size: var(--text-xs);
-      color: var(--text-muted);
-      margin-bottom: var(--space-8);
-      display: flex;
-      gap: var(--space-5);
-      flex-wrap: wrap;
-    }
-  </style>
 
 </head>
 
 <body data-page="privacy-policy">
 
-  <!-- Header -->
   <header id="site-header" data-loading role="banner"></header>
 
   <!-- Breadcrumb -->
@@ -253,791 +92,1293 @@
     </div>
   </div>
 
-  <div class="page-wrapper no-sidebar">
-    <main id="main-content" tabindex="-1"
-          aria-label="Privacy Policy">
+  <!-- Hero -->
+  <section class="page-hero page-hero--compact"
+           style="background:linear-gradient(135deg,#164896 0%,#0f3172 100%);"
+           aria-label="Privacy Policy hero">
+    <div class="container">
+      <div style="margin-bottom:var(--space-3);">
+        <span class="badge"
+              style="background:rgba(255,255,255,0.15);
+                     color:white;border:1px solid rgba(255,255,255,0.3);">
+          Legal
+        </span>
+      </div>
+      <h1 class="page-hero__title">Privacy Policy</h1>
+      <p class="page-hero__subtitle">
+        Last updated: <strong style="color:white;">May 1, 2026</strong>
+        &nbsp;·&nbsp;
+        Effective: May 1, 2026
+      </p>
+    </div>
+  </section>
 
-      <div class="container">
-        <div class="policy-body">
+  <div class="page-wrapper container">
+    <main id="main-content" tabindex="-1" aria-label="Privacy Policy">
 
-          <!-- ====================================================
-               HEADER
-               ==================================================== -->
-          <div style="margin-bottom:var(--space-8);">
-            <div style="margin-bottom:var(--space-4);">
-              <span class="badge badge--gov">Legal</span>
-              &nbsp;
-              <span class="badge"
-                    style="background:rgba(22,150,89,0.1);
-                           color:var(--color-success);">
-                RA 10173 Compliant
-              </span>
+      <div class="article-wrap">
+
+        <!-- Intro Box -->
+        <div class="info-box" style="margin-bottom:var(--space-8);">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+               stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>
+            This Privacy Policy explains how <strong>TrabahoWatch</strong>
+            ("we," "our," or "us") collects, uses, and protects
+            information when you visit
+            <strong>trabahowatch.com</strong> (the "Website").
+            By using this Website, you agree to the practices
+            described in this policy. If you disagree, please
+            discontinue use of the Website.
+          </span>
+        </div>
+
+        <!-- ── 1. Who We Are ── -->
+        <section class="article-section" id="who-we-are"
+                 aria-labelledby="who-heading">
+          <h2 class="article-section__title" id="who-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
             </div>
-            <h1 style="font-size:clamp(1.75rem,4vw,2.5rem);
-                        font-weight:var(--font-bold);
-                        margin-bottom:var(--space-4);">
-              Privacy Policy
-            </h1>
-            <div class="policy-meta">
-              <span>
-                <strong>Effective date:</strong> January 1, 2026
-              </span>
-              <span>
-                <strong>Last updated:</strong> May 12, 2026
-              </span>
-              <span>
-                <strong>Version:</strong> 1.0
-              </span>
-            </div>
-            <div class="policy-highlight">
-              <strong>Summary in plain Filipino English:</strong>
-              We collect very little data. We use your email only if you
-              give it to us. We use Google AdSense for ads.
-              We do not sell your data to anyone. Ever.
-              This full policy explains the details.
-            </div>
-          </div>
-
-          <!-- ====================================================
-               TABLE OF CONTENTS
-               ==================================================== -->
-          <nav class="policy-toc" aria-label="Table of contents">
-            <p class="policy-toc__title">Contents</p>
-            <ol class="policy-toc__list">
-              <li><a href="#who-we-are">Who We Are</a></li>
-              <li><a href="#data-we-collect">Data We Collect</a></li>
-              <li><a href="#how-we-use">How We Use Your Data</a></li>
-              <li><a href="#cookies">Cookies and Tracking</a></li>
-              <li><a href="#google-adsense">Google AdSense</a></li>
-              <li><a href="#newsletter">Newsletter and Email</a></li>
-              <li><a href="#third-parties">Third-Party Services</a></li>
-              <li><a href="#data-retention">Data Retention</a></li>
-              <li><a href="#your-rights">Your Rights (RA 10173)</a></li>
-              <li><a href="#children">Children's Privacy</a></li>
-              <li><a href="#changes">Changes to This Policy</a></li>
-              <li><a href="#contact-privacy">Contact Our DPO</a></li>
-            </ol>
-          </nav>
-
-          <!-- ====================================================
-               1. WHO WE ARE
-               ==================================================== -->
-          <h2 id="who-we-are">1. Who We Are</h2>
-          <p>
-            TrabahoWatch (<strong>"we," "us," or "our"</strong>) is an
-            independent Philippine job information website operated at
-            <strong>trabahowatch.com</strong>. We provide free, verified
-            job information for Filipino jobseekers — government, private
-            sector, and OFW opportunities. We are not a recruitment agency
-            and do not process job applications.
-          </p>
-          <p>
-            For the purposes of the Data Privacy Act of 2012 (Republic Act
-            No. 10173) and its Implementing Rules and Regulations,
-            TrabahoWatch is the <strong>Personal Information Controller</strong>
-            with respect to data collected through this website.
-          </p>
-
-          <!-- ====================================================
-               2. DATA WE COLLECT
-               ==================================================== -->
-          <h2 id="data-we-collect">2. Data We Collect</h2>
-
-          <h3>2.1 Data You Provide Voluntarily</h3>
-          <p>
-            We collect personal data only when you choose to provide it:
-          </p>
-          <ul>
-            <li>
-              <strong>Contact form:</strong> Name, email address, and the
-              content of your message when you contact us through our
-              contact form. Subject category and any job URL you provide.
-            </li>
-            <li>
-              <strong>Newsletter subscription:</strong> Email address only,
-              when you subscribe to our job alert newsletter.
-            </li>
-            <li>
-              <strong>Job submission form:</strong> Job details and optionally
-              your name and email if you submit a job listing for review.
-            </li>
-          </ul>
-
-          <h3>2.2 Data Collected Automatically</h3>
-          <p>
-            When you visit TrabahoWatch, our servers and third-party analytics
-            tools may automatically collect:
-          </p>
-          <ul>
-            <li>
-              <strong>Log data:</strong> IP address (anonymized where possible),
-              browser type and version, operating system, referring URL,
-              pages visited, time and date of visit.
-            </li>
-            <li>
-              <strong>Device data:</strong> Screen resolution, device type
-              (mobile/desktop), preferred language setting.
-            </li>
-            <li>
-              <strong>Cookies:</strong> Small text files placed on your device.
-              See Section 4 for details.
-            </li>
-          </ul>
-
-          <h3>2.3 Data We Do NOT Collect</h3>
-          <p>
-            We do not collect, request, or store:
-          </p>
-          <ul>
-            <li>Resumes, CVs, or job application documents</li>
-            <li>Government-issued ID numbers (SSS, PhilSys, TIN, PRC)</li>
-            <li>Financial information, bank account, or credit card numbers</li>
-            <li>Passwords (we have no user accounts)</li>
-            <li>Biometric data of any kind</li>
-          </ul>
-
-          <!-- ====================================================
-               3. HOW WE USE YOUR DATA
-               ==================================================== -->
-          <h2 id="how-we-use">3. How We Use Your Data</h2>
-          <p>
-            We use the data we collect for the following purposes, relying
-            on the legal bases indicated:
-          </p>
-
-          <div style="overflow-x:auto;">
-            <table style="width:100%;border-collapse:collapse;
-                           font-size:var(--text-sm);">
-              <thead>
-                <tr>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;
-                              border-radius:var(--radius-md) 0 0 0;">
-                    Purpose
-                  </th>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;">
-                    Data Used
-                  </th>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;
-                              border-radius:0 var(--radius-md) 0 0;">
-                    Legal Basis (RA 10173)
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    Respond to contact form submissions
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Name, email, message
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Consent (Section 12[a])
-                  </td>
-                </tr>
-                <tr style="background:var(--bg-surface-2);">
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    Send job alert newsletters
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Email address
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Consent (Section 12[a])
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    Analyze site performance and improve content
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Anonymized log data, cookies
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Legitimate interest (Section 12[b])
-                  </td>
-                </tr>
-                <tr style="background:var(--bg-surface-2);">
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    Display contextual advertisements
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Cookies (via Google AdSense)
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Consent / Legitimate interest
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:9px 14px;">
-                    Comply with legal obligations
-                  </td>
-                  <td style="padding:9px 14px;color:var(--text-secondary);">
-                    As required by law
-                  </td>
-                  <td style="padding:9px 14px;color:var(--text-secondary);">
-                    Legal obligation (Section 12[c])
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <!-- ====================================================
-               4. COOKIES
-               ==================================================== -->
-          <h2 id="cookies">4. Cookies and Tracking</h2>
-          <p>
-            TrabahoWatch uses cookies — small text files stored on your
-            device — to improve your browsing experience and enable
-            third-party services.
-          </p>
-
-          <h3>4.1 Essential Cookies</h3>
-          <p>
-            These are necessary for the site to function and cannot be
-            disabled:
-          </p>
-          <ul>
-            <li>
-              <strong>theme</strong> — Stores your dark/light mode
-              preference (localStorage). Not a cookie, never sent to servers.
-            </li>
-            <li>
-              <strong>session</strong> — Standard browser session data
-              for page rendering. Expires when you close your browser.
-            </li>
-          </ul>
-
-          <h3>4.2 Analytics Cookies</h3>
-          <p>
-            We use <strong>Google Analytics</strong> to understand how
-            visitors use TrabahoWatch — which pages are most helpful,
-            where visitors come from, and how to improve content.
-            Google Analytics uses anonymized IP addresses and does not
-            personally identify you.
-          </p>
-          <p>
-            You can opt out of Google Analytics across all sites at
-            <a href="https://tools.google.com/dlpage/gaoptout"
-               target="_blank" rel="noopener noreferrer">
-              tools.google.com/dlpage/gaoptout
-            </a>.
-          </p>
-
-          <h3>4.3 Advertising Cookies</h3>
-          <p>
-            Google AdSense places cookies to serve contextual advertisements.
-            These cookies may collect data about your browsing behavior
-            across sites to serve relevant ads. See Section 5 for details.
-          </p>
-
-          <h3>4.4 How to Control Cookies</h3>
-          <p>
-            You can control or delete cookies through your browser settings.
-            Note that disabling cookies may affect site functionality.
-            Most modern browsers allow you to:
-          </p>
-          <ul>
-            <li>View and delete existing cookies</li>
-            <li>Block cookies from specific sites</li>
-            <li>Block all third-party cookies</li>
-            <li>Enable "Do Not Track" signals</li>
-          </ul>
-
-          <!-- ====================================================
-               5. GOOGLE ADSENSE
-               ==================================================== -->
-          <h2 id="google-adsense">5. Google AdSense</h2>
-          <p>
-            TrabahoWatch displays advertisements served by
-            <strong>Google AdSense</strong>. Google uses cookies to serve
-            ads based on your prior visits to this site and other sites
-            on the internet.
-          </p>
-          <p>
-            Google's use of advertising cookies enables it and its partners
-            to serve ads based on your visit to TrabahoWatch and other
-            sites on the internet. You may opt out of personalized
-            advertising by visiting
-            <a href="https://www.google.com/settings/ads"
-               target="_blank" rel="noopener noreferrer">
-              Google's Ad Settings
-            </a>.
-          </p>
-          <p>
-            All advertisements on TrabahoWatch are clearly labeled
-            <strong>"Advertisement"</strong>. Job listings on TrabahoWatch
-            are <strong>never paid placements</strong> — they are published
-            based solely on editorial criteria. Advertisers have no influence
-            over our job content.
-          </p>
-          <p>
-            For more information on Google's data practices, see Google's
-            <a href="https://policies.google.com/privacy" target="_blank"
-               rel="noopener noreferrer">
-              Privacy Policy
-            </a>
-            and
-            <a href="https://policies.google.com/technologies/partner-sites"
-               target="_blank" rel="noopener noreferrer">
-              How Google uses information from sites that use its services
-            </a>.
-          </p>
-
-          <!-- ====================================================
-               6. NEWSLETTER
-               ==================================================== -->
-          <h2 id="newsletter">6. Newsletter and Email Alerts</h2>
-          <p>
-            If you subscribe to TrabahoWatch job alerts, we collect your
-            email address for the sole purpose of sending you updates
-            about new job listings relevant to your interests.
-          </p>
-          <p>
-            We use <strong>Buttondown</strong> or <strong>Brevo</strong>
-            (third-party email service providers) to manage and send
-            newsletters. Your email is stored on their servers in accordance
-            with their privacy policies. We do not share your email with
-            any other third party.
-          </p>
-          <p>
-            You may <strong>unsubscribe at any time</strong> by clicking
-            the "Unsubscribe" link in any newsletter email, or by
-            contacting us at
-            <a href="mailto:hello@trabahowatch.com">
-              hello@trabahowatch.com
-            </a>.
-            We will remove your email within 5 business days of request.
-          </p>
-
-          <!-- ====================================================
-               7. THIRD-PARTY SERVICES
-               ==================================================== -->
-          <h2 id="third-parties">7. Third-Party Services</h2>
-          <p>
-            TrabahoWatch uses the following third-party services.
-            Each has its own privacy policy governing data it collects:
-          </p>
-
-          <div style="overflow-x:auto;">
-            <table style="width:100%;border-collapse:collapse;
-                           font-size:var(--text-sm);">
-              <thead>
-                <tr>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;
-                              border-radius:var(--radius-md) 0 0 0;">
-                    Service
-                  </th>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;">
-                    Purpose
-                  </th>
-                  <th style="background:var(--color-primary);color:white;
-                              padding:10px 14px;text-align:left;
-                              border-radius:0 var(--radius-md) 0 0;">
-                    Privacy Policy
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <strong>Google Analytics</strong>
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Site traffic analysis
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <a href="https://policies.google.com/privacy"
-                       target="_blank" rel="noopener noreferrer">
-                      policies.google.com
-                    </a>
-                  </td>
-                </tr>
-                <tr style="background:var(--bg-surface-2);">
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <strong>Google AdSense</strong>
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Contextual advertising
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <a href="https://policies.google.com/privacy"
-                       target="_blank" rel="noopener noreferrer">
-                      policies.google.com
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <strong>Formspree</strong>
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Contact form processing
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <a href="https://formspree.io/legal/privacy-policy"
-                       target="_blank" rel="noopener noreferrer">
-                      formspree.io
-                    </a>
-                  </td>
-                </tr>
-                <tr style="background:var(--bg-surface-2);">
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <strong>Buttondown / Brevo</strong>
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);color:var(--text-secondary);">
-                    Newsletter delivery
-                  </td>
-                  <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">
-                    <a href="https://buttondown.email/privacy"
-                       target="_blank" rel="noopener noreferrer">
-                      buttondown.email
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td style="padding:9px 14px;">
-                    <strong>Vercel / GitHub Pages</strong>
-                  </td>
-                  <td style="padding:9px 14px;color:var(--text-secondary);">
-                    Website hosting
-                  </td>
-                  <td style="padding:9px 14px;">
-                    <a href="https://vercel.com/legal/privacy-policy"
-                       target="_blank" rel="noopener noreferrer">
-                      vercel.com
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p style="margin-top:var(--space-4);">
-            We do not sell, rent, trade, or share your personal data with
-            any third party for their own marketing purposes.
-          </p>
-
-          <!-- ====================================================
-               8. DATA RETENTION
-               ==================================================== -->
-          <h2 id="data-retention">8. Data Retention</h2>
-          <p>
-            We retain your personal data only as long as necessary for
-            the purpose it was collected:
-          </p>
-          <ul>
-            <li>
-              <strong>Contact form messages:</strong> Retained in our
-              email inbox for up to 12 months, then deleted. Formspree
-              retains submissions for 30 days.
-            </li>
-            <li>
-              <strong>Newsletter emails:</strong> Retained until you
-              unsubscribe. Deleted within 5 business days of unsubscribe
-              request.
-            </li>
-            <li>
-              <strong>Analytics data:</strong> Retained by Google Analytics
-              for 26 months (standard retention period), anonymized.
-            </li>
-            <li>
-              <strong>Server logs:</strong> Retained by our hosting provider
-              (Vercel) for up to 30 days for security purposes.
-            </li>
-          </ul>
-
-          <!-- ====================================================
-               9. YOUR RIGHTS
-               ==================================================== -->
-          <h2 id="your-rights">9. Your Rights Under RA 10173</h2>
-          <p>
-            Under the Data Privacy Act of 2012 (Republic Act No. 10173)
-            and its Implementing Rules and Regulations, you have the
-            following rights as a data subject:
-          </p>
-
-          <div style="display:flex;flex-direction:column;gap:var(--space-4);">
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Be Informed
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                You have the right to be informed about how we collect,
-                use, and store your personal data. This Privacy Policy
-                fulfills that right.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Access
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                You may request a copy of any personal data we hold about you
-                at any time, free of charge. We will respond within 15 calendar
-                days of receiving your request.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Correction
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                If any personal data we hold about you is inaccurate or
-                incomplete, you may request correction. We will update
-                the data within 15 calendar days.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Erasure (Right to be Forgotten)
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                You may request that we delete any personal data we hold about
-                you — including newsletter subscription and contact form data.
-                We will delete within 5 business days, except where retention
-                is required by law.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Object
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                You may object to the processing of your personal data for
-                direct marketing purposes (newsletter) at any time by
-                unsubscribing. You may also object to processing based on
-                legitimate interest by contacting our DPO.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Data Portability
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                You may request a machine-readable copy of personal data you
-                have provided to us (e.g., contact form data, newsletter email).
-                We will provide it in JSON or CSV format within 15 days.
-              </p>
-            </div>
-
-            <div class="card"
-                 style="padding:var(--space-5);font-size:var(--text-sm);">
-              <h3 style="margin:0 0 var(--space-2);font-size:var(--text-base);">
-                Right to Lodge a Complaint
-              </h3>
-              <p style="color:var(--text-secondary);margin:0;line-height:1.7;">
-                If you believe your data privacy rights have been violated,
-                you may file a complaint with the
-                <strong>National Privacy Commission (NPC)</strong>
-                of the Philippines at
-                <a href="https://privacy.gov.ph"
-                   target="_blank" rel="noopener noreferrer">
-                  privacy.gov.ph
-                </a>
-                or call the NPC hotline: <strong>(02) 8234-2228</strong>.
-              </p>
-            </div>
-
-          </div>
-
-          <p style="margin-top:var(--space-5);">
-            To exercise any of the above rights, email us at
-            <a href="mailto:privacy@trabahowatch.com">
-              privacy@trabahowatch.com
-            </a>
-            with the subject "Data Privacy Request" and we will respond
-            within 15 calendar days.
-          </p>
-
-          <!-- ====================================================
-               10. CHILDREN
-               ==================================================== -->
-          <h2 id="children">10. Children's Privacy</h2>
-          <p>
-            TrabahoWatch does not knowingly collect personal data from
-            individuals under 18 years of age. Our content is intended
-            for adults seeking employment information. If we discover we
-            have inadvertently collected data from a minor, we will
-            delete it immediately.
-          </p>
-          <p>
-            If you are a parent or guardian and believe your child has
-            provided us with personal data, please contact us at
-            <a href="mailto:privacy@trabahowatch.com">
-              privacy@trabahowatch.com
-            </a>.
-          </p>
-
-          <!-- ====================================================
-               11. CHANGES
-               ==================================================== -->
-          <h2 id="changes">11. Changes to This Policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time to reflect
-            changes in our practices, technology, or legal requirements.
-            When we make significant changes, we will:
-          </p>
-          <ul>
-            <li>Update the "Last updated" date at the top of this page</li>
-            <li>Post a notice on the TrabahoWatch homepage</li>
-            <li>
-              Notify newsletter subscribers by email for material changes
-            </li>
-          </ul>
-          <p>
-            Your continued use of TrabahoWatch after the effective date of
-            a revised Privacy Policy constitutes your acceptance of the
-            updated terms. We encourage you to review this page periodically.
-          </p>
-
-          <!-- ====================================================
-               12. CONTACT DPO
-               ==================================================== -->
-          <h2 id="contact-privacy">12. Contact Our Data Protection Officer</h2>
-          <p>
-            For any questions, concerns, or requests related to this Privacy
-            Policy or your personal data, contact our
-            <strong>Data Protection Officer (DPO)</strong>:
-          </p>
-
-          <div class="card"
-               style="padding:var(--space-6);margin-top:var(--space-4);">
-            <div style="display:flex;flex-direction:column;
-                         gap:var(--space-3);font-size:var(--text-sm);">
-              <div style="display:flex;gap:var(--space-3);
-                           align-items:center;">
-                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
-                     stroke-width="2" width="16" height="16"
-                     style="flex-shrink:0;color:var(--color-primary);"
-                     aria-hidden="true">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                  <polyline points="22,6 12,13 2,6"/>
-                </svg>
-                <span>
-                  <strong>Email:</strong>
-                  <a href="mailto:privacy@trabahowatch.com">
-                    privacy@trabahowatch.com
-                  </a>
-                </span>
-              </div>
-              <div style="display:flex;gap:var(--space-3);
-                           align-items:center;">
-                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
-                     stroke-width="2" width="16" height="16"
-                     style="flex-shrink:0;color:var(--color-primary);"
-                     aria-hidden="true">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-                <span>
-                  <strong>Response time:</strong> Within 15 calendar days
-                </span>
-              </div>
-              <div style="display:flex;gap:var(--space-3);
-                           align-items:center;">
-                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
-                     stroke-width="2" width="16" height="16"
-                     style="flex-shrink:0;color:var(--color-primary);"
-                     aria-hidden="true">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <span>
-                  <strong>Address:</strong>
-                  Philippines (specific address withheld for security)
-                </span>
-              </div>
-            </div>
-          </div>
-
-          <!-- ====================================================
-               COMPLIANCE
-               ==================================================== -->
-          <div style="margin-top:var(--space-10);
-                      padding:var(--space-6);
-                      background:var(--bg-surface-2);
-                      border-radius:var(--radius-xl);
-                      text-align:center;">
-            <div style="display:flex;justify-content:center;
-                         gap:var(--space-4);flex-wrap:wrap;
-                         margin-bottom:var(--space-4);">
-              <span class="badge badge--gov">
-                RA 10173 — Data Privacy Act of 2012
-              </span>
-              <span class="badge"
-                    style="background:rgba(22,150,89,0.1);
-                           color:var(--color-success);">
-                NPC Registered
-              </span>
-              <span class="badge"
-                    style="background:rgba(8,145,178,0.1);
-                           color:#0891b2;">
-                GDPR Aligned (for EU visitors)
-              </span>
-            </div>
-            <p style="font-size:var(--text-xs);
-                       color:var(--text-muted);margin:0;">
-              This Privacy Policy was last reviewed by our team on
-              May 12, 2026 and is effective as of January 1, 2026.
-              Questions?
-              <a href="mailto:privacy@trabahowatch.com">
-                privacy@trabahowatch.com
-              </a>
+            1. Who We Are
+          </h2>
+          <div class="article-section__body">
+            <p>
+              <strong>TrabahoWatch</strong> is an independent, privately
+              operated Philippine job information website. We are
+              not affiliated with the Civil Service Commission (CSC),
+              the Department of Labor and Employment (DOLE), the
+              Department of Migrant Workers (DMW), or any Philippine
+              government agency.
+            </p>
+            <p>
+              We are not a recruitment agency. We do not process
+              job applications, charge placement fees, or collect
+              resumes for employment purposes.
+            </p>
+            <p>
+              <strong>Website:</strong>
+              <a href="https://trabahowatch.com">trabahowatch.com</a><br>
+              <strong>Contact:</strong>
+              <a href="/pages/contact.html">trabahowatch.com/pages/contact.html</a><br>
+              <strong>Country of operation:</strong> Republic of the Philippines
             </p>
           </div>
+        </section>
 
-          <!-- ====================================================
-               QUICK LINKS
-               ==================================================== -->
-          <div style="margin-top:var(--space-10);
-                      display:flex;gap:var(--space-3);
-                      flex-wrap:wrap;justify-content:center;">
-            <a href="/pages/about.html"       class="btn btn--ghost btn--sm">About Us</a>
-            <a href="/pages/methodology.html" class="btn btn--ghost btn--sm">Our Methodology</a>
-            <a href="/pages/contact.html"     class="btn btn--ghost btn--sm">Contact DPO</a>
-            <a href="/pages/faq.html"         class="btn btn--ghost btn--sm">FAQ</a>
+        <!-- ── 2. Information We Collect ── -->
+        <section class="article-section" id="info-we-collect"
+                 aria-labelledby="collect-heading">
+          <h2 class="article-section__title" id="collect-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/>
+              </svg>
+            </div>
+            2. Information We Collect
+          </h2>
+          <div class="article-section__body">
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin-bottom:var(--space-3);">
+              2.1 Information You Provide Directly
+            </h3>
+            <p>
+              We collect information you voluntarily provide when you:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Contact Form:</strong> Your name, email address,
+                  and message content when you send us a message through
+                  our Contact page. This information is used solely to
+                  respond to your inquiry.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Job Submission Form:</strong> Employer name,
+                  job details, and contact information when you submit
+                  a job vacancy for publication. Used only to verify
+                  and publish the submitted listing.
+                </span>
+              </li>
+            </ul>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-6) 0 var(--space-3);">
+              2.2 Information Collected Automatically
+            </h3>
+            <p>
+              When you visit TrabahoWatch, the following information
+              is collected automatically through standard web
+              technologies:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Log Data:</strong> IP address, browser type
+                  and version, operating system, referring URL, pages
+                  visited, time spent on pages, and date/time of visit.
+                  This data is collected by our hosting provider
+                  (Vercel) and Google Analytics.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Cookies and Similar Technologies:</strong>
+                  Small text files placed on your device.
+                  Full details in Section 5 (Cookies Policy).
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Device Information:</strong> Device type
+                  (mobile, tablet, desktop), screen resolution,
+                  and approximate geographic location
+                  (country/city level — derived from IP address,
+                  not GPS).
+                </span>
+              </li>
+            </ul>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-6) 0 var(--space-3);">
+              2.3 Information Stored Locally on Your Device
+            </h3>
+            <p>
+              TrabahoWatch stores the following data in your
+              browser's <code>localStorage</code>
+              — this data never leaves your device and is never
+              sent to our servers:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Theme preference</strong>
+                  (light or dark mode):
+                  key <code>trabahowatch-theme</code>
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Recent search history</strong>
+                  in the search overlay:
+                  key <code>trabahowatch-recent-searches</code>
+                  (stores last 5 search queries typed by you)
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Scroll position</strong> for job map page
+                  (temporary session data, cleared on navigation):
+                  key <code>trabahowatch-loadmore</code>
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-3);">
+              You can clear this data at any time by clearing
+              your browser's site data for trabahowatch.com.
+            </p>
+
           </div>
+        </section>
 
-        </div><!-- end policy-body -->
-      </div><!-- end container -->
+        <!-- ── 3. How We Use Your Information ── -->
+        <section class="article-section" id="how-we-use"
+                 aria-labelledby="use-heading">
+          <h2 class="article-section__title" id="use-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            3. How We Use Your Information
+          </h2>
+          <div class="article-section__body">
+            <p>
+              We use collected information for the following
+              purposes:
+            </p>
+
+            <div style="overflow-x:auto;margin-top:var(--space-4);">
+              <table style="width:100%;border-collapse:collapse;
+                             font-size:var(--text-sm);">
+                <thead>
+                  <tr>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;
+                                border-radius:var(--radius-md) 0 0 0;">
+                      Purpose
+                    </th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;">
+                      Data Used
+                    </th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;
+                                border-radius:0 var(--radius-md) 0 0;">
+                      Legal Basis
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Respond to contact form inquiries</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Name, email, message</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Consent (you submitted the form)</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Display personalized advertisements via Google AdSense</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Cookies, browsing behavior</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Legitimate interest / Consent</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Analyze website traffic via Google Analytics</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Anonymized usage data, cookies</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Legitimate interest</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Improve website performance and content</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Aggregated usage statistics</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Legitimate interest</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Prevent abuse and ensure security</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">IP address, log data</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Legitimate interest</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;">Remember user preferences (theme)</td>
+                    <td style="padding:9px 14px;">localStorage data (local only)</td>
+                    <td style="padding:9px 14px;">Legitimate interest / User consent</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p style="margin-top:var(--space-4);">
+              <strong>We do not:</strong> sell your personal data
+              to third parties, use your data for direct marketing
+              emails, build individual user profiles, or share
+              your data with recruitment agencies or employers.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 4. Google AdSense and Advertising ── -->
+        <section class="article-section" id="google-adsense"
+                 aria-labelledby="adsense-heading">
+          <h2 class="article-section__title" id="adsense-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+              </svg>
+            </div>
+            4. Google AdSense and Third-Party Advertising
+          </h2>
+          <div class="article-section__body">
+            <p>
+              TrabahoWatch uses <strong>Google AdSense</strong>
+              to display advertisements. Google AdSense is an
+              advertising service provided by Google LLC
+              (1600 Amphitheatre Parkway, Mountain View, CA 94043, USA).
+            </p>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              How Google AdSense Works
+            </h3>
+            <p>
+              Google AdSense uses cookies and similar tracking
+              technologies to serve ads based on your prior visits
+              to this website and other websites across the internet.
+              This is known as <strong>interest-based advertising</strong>
+              or <strong>remarketing</strong>.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              Google may use the <strong>DoubleClick cookie</strong>
+              to serve more relevant ads and to limit the number
+              of times you see an ad.
+            </p>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              What Data Google AdSense Collects
+            </h3>
+            <ul class="requirements-list">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Cookie identifiers to recognize returning visitors</span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Pages you visit on trabahowatch.com (to serve
+                  contextually relevant ads)
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Approximate geographic location (country/city)
+                  for geo-targeted advertising
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Browser and device type for ad rendering optimization
+                </span>
+              </li>
+            </ul>
+
+            <div class="info-box" style="margin-top:var(--space-5);">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="12" y1="8"  x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              <span>
+                <strong>TrabahoWatch does not have access to
+                or control over the cookies used by Google AdSense.</strong>
+                These cookies are managed entirely by Google under
+                Google's Privacy Policy.
+              </span>
+            </div>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              Opting Out of Personalized Advertising
+            </h3>
+            <p>
+              You can opt out of Google's use of cookies for
+              interest-based advertising by visiting:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <a href="https://adssettings.google.com"
+                     target="_blank" rel="noopener noreferrer">
+                    Google Ad Settings (adssettings.google.com)
+                  </a>
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <a href="https://optout.aboutads.info"
+                     target="_blank" rel="noopener noreferrer">
+                    Network Advertising Initiative opt-out
+                    (optout.aboutads.info)
+                  </a>
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <a href="https://optout.networkadvertising.org"
+                     target="_blank" rel="noopener noreferrer">
+                    NAI opt-out page
+                    (optout.networkadvertising.org)
+                  </a>
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-3);">
+              Note: Opting out of personalized ads does not mean
+              you will not see ads. You will still see ads on
+              TrabahoWatch, but they will be less tailored to
+              your browsing history.
+            </p>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              Google Privacy Policy
+            </h3>
+            <p>
+              For more information on how Google collects and
+              processes data, please refer to
+              <a href="https://policies.google.com/privacy"
+                 target="_blank" rel="noopener noreferrer">
+                Google's Privacy Policy
+              </a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 5. Google Analytics ── -->
+        <section class="article-section" id="google-analytics"
+                 aria-labelledby="analytics-heading">
+          <h2 class="article-section__title" id="analytics-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <line x1="18" y1="20" x2="18" y2="10"/>
+                <line x1="12" y1="20" x2="12" y2="4"/>
+                <line x1="6"  y1="20" x2="6"  y2="14"/>
+              </svg>
+            </div>
+            5. Google Analytics
+          </h2>
+          <div class="article-section__body">
+            <p>
+              TrabahoWatch uses <strong>Google Analytics 4 (GA4)</strong>
+              to understand how visitors use our website. Google Analytics
+              collects anonymized data about your visit including pages
+              viewed, session duration, bounce rate, traffic source,
+              and device type.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              <strong>IP Anonymization:</strong>
+              We have enabled IP anonymization in Google Analytics.
+              This means your full IP address is never stored by
+              Google Analytics — the last octet of your IP address
+              is masked before any data is recorded.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              <strong>Data Retention:</strong>
+              Google Analytics data is retained for
+              <strong>14 months</strong> (our configured retention period)
+              before automatic deletion.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              You can opt out of Google Analytics tracking by:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Installing the
+                  <a href="https://tools.google.com/dlpage/gaoptout"
+                     target="_blank" rel="noopener noreferrer">
+                    Google Analytics Opt-out Browser Add-on
+                  </a>
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Enabling "Do Not Track" (DNT) in your browser settings
+                  — we honor DNT signals
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Using a browser with built-in tracker blocking
+                  (Firefox, Brave, Safari with ITP enabled)
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ── 6. Cookies Policy ── -->
+        <section class="article-section" id="cookies"
+                 aria-labelledby="cookies-heading">
+          <h2 class="article-section__title" id="cookies-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+              </svg>
+            </div>
+            6. Cookies Policy
+          </h2>
+          <div class="article-section__body">
+            <p>
+              A cookie is a small text file placed on your device
+              by websites you visit. Cookies allow websites to
+              recognize your browser and remember information
+              about your visit.
+            </p>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              Types of Cookies Used on TrabahoWatch
+            </h3>
+
+            <div style="overflow-x:auto;">
+              <table style="width:100%;border-collapse:collapse;
+                             font-size:var(--text-sm);">
+                <thead>
+                  <tr>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;
+                                border-radius:var(--radius-md) 0 0 0;">Cookie Type</th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;">Source</th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;">Purpose</th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:center;
+                                border-radius:0 var(--radius-md) 0 0;">Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);font-weight:var(--font-semibold);">Strictly Necessary</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">TrabahoWatch</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Security, session management, CSRF protection. Cannot be disabled.</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">Session</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);font-weight:var(--font-semibold);">Analytics</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Google Analytics (_ga, _gid, _gat)</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Track website usage statistics (pages, sessions, bounce rate).</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">2 years (_ga); 24 hours (_gid)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);font-weight:var(--font-semibold);">Advertising</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Google AdSense (IDE, ANID, DSID, FLC, AID, TAID, _gads)</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Serve relevant ads, limit ad frequency, measure ad performance.</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">Up to 2 years</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);font-weight:var(--font-semibold);">Preference</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">TrabahoWatch (localStorage)</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Remember your dark/light mode choice and recent searches.</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">Persistent (until cleared)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;font-weight:var(--font-semibold);">CDN / Performance</td>
+                    <td style="padding:9px 14px;">Vercel, Google Fonts</td>
+                    <td style="padding:9px 14px;">Optimize content delivery speed and font loading performance.</td>
+                    <td style="padding:9px 14px;text-align:center;">Session to 1 year</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3 style="font-size:var(--text-base);font-weight:var(--font-bold);
+                        margin:var(--space-5) 0 var(--space-3);">
+              How to Control Cookies
+            </h3>
+            <p>
+              You can control and manage cookies through your
+              browser settings. Note that disabling certain cookies
+              may affect the functionality of TrabahoWatch
+              (e.g., your theme preference will not be remembered).
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Chrome:</strong>
+                  Settings → Privacy and Security → Cookies and other site data
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Firefox:</strong>
+                  Settings → Privacy and Security → Cookies and Site Data
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Safari (iOS):</strong>
+                  Settings → Safari → Privacy and Security
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ── 7. Third-Party Links ── -->
+        <section class="article-section" id="third-party-links"
+                 aria-labelledby="links-heading">
+          <h2 class="article-section__title" id="links-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+            </div>
+            7. Third-Party Links
+          </h2>
+          <div class="article-section__body">
+            <p>
+              TrabahoWatch contains links to external websites
+              including government portals (csc.gov.ph, doh.gov.ph,
+              pnp.gov.ph, dmwph.com), company career pages, and
+              other informational resources.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              <strong>We are not responsible for the privacy
+              practices or content of third-party websites.</strong>
+              When you click on an external link, you leave
+              TrabahoWatch and your activity is governed by
+              that website's own privacy policy.
+              We recommend reading the privacy policy of any
+              external site you visit.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              All external links on TrabahoWatch open in a new tab
+              with <code>rel="noopener noreferrer"</code>
+              for your security.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 8. Children's Privacy ── -->
+        <section class="article-section" id="childrens-privacy"
+                 aria-labelledby="children-heading">
+          <h2 class="article-section__title" id="children-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            8. Children's Privacy
+          </h2>
+          <div class="article-section__body">
+            <p>
+              TrabahoWatch is intended for individuals who are
+              <strong>18 years of age or older</strong> — the
+              minimum working age in most regulated employment
+              in the Philippines.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              We do not knowingly collect personal information
+              from children under the age of 18. If you are a
+              parent or guardian and believe your child has
+              provided personal information to us, please contact
+              us immediately using the contact form and we will
+              promptly delete such information.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              Our website does not contain content directed at
+              minors and is not designed to appeal to children.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 9. Data Sharing ── -->
+        <section class="article-section" id="data-sharing"
+                 aria-labelledby="sharing-heading">
+          <h2 class="article-section__title" id="sharing-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <circle cx="18" cy="5"  r="3"/>
+                <circle cx="6"  cy="12" r="3"/>
+                <circle cx="18" cy="19" r="3"/>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                <line x1="15.41" y1="6.51"  x2="8.59"  y2="10.49"/>
+              </svg>
+            </div>
+            9. Data Sharing and Disclosure
+          </h2>
+          <div class="article-section__body">
+            <p>
+              We do not sell, trade, or rent your personal
+              information to third parties.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              We may share information in the following
+              limited circumstances:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Service Providers:</strong>
+                  We use Vercel (hosting) and Google (Analytics,
+                  AdSense, Fonts) as service providers.
+                  These providers process data on our behalf and
+                  are contractually bound to protect your information.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Legal Requirements:</strong>
+                  We may disclose your information if required
+                  by Philippine law, court order, or government
+                  authority (e.g., under the Cybercrime Prevention
+                  Act of 2012, RA 10175).
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Safety:</strong>
+                  We may disclose information if we believe disclosure
+                  is necessary to prevent fraud, protect our rights,
+                  or protect the safety of users or the public.
+                </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ── 10. Data Security ── -->
+        <section class="article-section" id="data-security"
+                 aria-labelledby="security-heading">
+          <h2 class="article-section__title" id="security-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            10. Data Security
+          </h2>
+          <div class="article-section__body">
+            <p>
+              We implement reasonable technical and organizational
+              measures to protect your information:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>HTTPS/TLS encryption</strong> on all
+                  pages — all data transmitted between your browser
+                  and trabahowatch.com is encrypted in transit
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Security headers</strong> (X-Content-Type-Options,
+                  X-Frame-Options, Referrer-Policy) configured
+                  on our hosting platform
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>No server-side storage</strong> of
+                  personally identifiable information
+                  (contact form messages are processed via
+                  Formspree and not stored on our servers)
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-3);">
+              However, no method of transmission over the internet
+              or electronic storage is 100% secure.
+              We cannot guarantee absolute security of your data.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 11. Your Rights ── -->
+        <section class="article-section" id="your-rights"
+                 aria-labelledby="rights-heading">
+          <h2 class="article-section__title" id="rights-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            11. Your Rights Under Philippine Data Privacy Act
+          </h2>
+          <div class="article-section__body">
+            <p>
+              Under the <strong>Data Privacy Act of 2012
+              (Republic Act 10173)</strong>, you have the
+              following rights regarding your personal data:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to be Informed:</strong>
+                  You have the right to know what personal data
+                  we collect and how it is used.
+                  (This Privacy Policy fulfills that obligation.)
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Access:</strong>
+                  You have the right to request a copy of any
+                  personal data we hold about you.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Correction:</strong>
+                  You have the right to request correction of
+                  inaccurate personal data.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Erasure:</strong>
+                  You have the right to request deletion of
+                  your personal data, subject to legal retention
+                  requirements.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Object:</strong>
+                  You have the right to object to the processing
+                  of your personal data for direct marketing,
+                  profiling, or statistical purposes.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Data Portability:</strong>
+                  You have the right to obtain a copy of your
+                  personal data in a structured, machine-readable
+                  format.
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Right to Lodge a Complaint:</strong>
+                  You have the right to file a complaint with
+                  the <strong>National Privacy Commission (NPC)</strong>
+                  of the Philippines at
+                  <a href="https://www.privacy.gov.ph"
+                     target="_blank" rel="noopener noreferrer">
+                    privacy.gov.ph
+                  </a>
+                  if you believe your data rights have been violated.
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-4);">
+              To exercise any of these rights, please contact us
+              through our
+              <a href="/pages/contact.html">contact page</a>.
+              We will respond within <strong>30 days</strong>
+              as required by the Data Privacy Act.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 12. GDPR Notice ── -->
+        <section class="article-section" id="gdpr"
+                 aria-labelledby="gdpr-heading">
+          <h2 class="article-section__title" id="gdpr-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2"  y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10
+                          15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            12. Notice for European Union Visitors (GDPR)
+          </h2>
+          <div class="article-section__body">
+            <p>
+              If you are visiting TrabahoWatch from the European
+              Union, you have additional rights under the
+              <strong>General Data Protection Regulation (GDPR)</strong>.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              Our legal bases for processing your data are:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Consent (Art. 6(1)(a)):</strong>
+                  For advertising cookies (Google AdSense)
+                  and preference cookies
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Legitimate Interest (Art. 6(1)(f)):</strong>
+                  For website analytics (Google Analytics) and
+                  security functions
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  <strong>Contract (Art. 6(1)(b)):</strong>
+                  For processing contact form submissions in
+                  order to respond to your inquiry
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-3);">
+              EU visitors may also lodge complaints with their
+              local Data Protection Authority (DPA).
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 13. Data Retention ── -->
+        <section class="article-section" id="data-retention"
+                 aria-labelledby="retention-heading">
+          <h2 class="article-section__title" id="retention-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 .49-3.52"/>
+              </svg>
+            </div>
+            13. Data Retention
+          </h2>
+          <div class="article-section__body">
+
+            <div style="overflow-x:auto;">
+              <table style="width:100%;border-collapse:collapse;
+                             font-size:var(--text-sm);">
+                <thead>
+                  <tr>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;
+                                border-radius:var(--radius-md) 0 0 0;">Data Type</th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:center;">Retention Period</th>
+                    <th style="background:var(--color-primary);color:white;
+                                padding:10px 14px;text-align:left;
+                                border-radius:0 var(--radius-md) 0 0;">Reason</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Contact form submissions</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">90 days</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Respond to inquiries; deleted after resolution</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Google Analytics data</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">14 months</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Configured data retention period in GA4</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Google AdSense cookies</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">Up to 2 years</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Per Google's data retention policies</td>
+                  </tr>
+                  <tr style="background:var(--bg-surface-2);">
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Server log files (Vercel)</td>
+                    <td style="padding:9px 14px;text-align:center;border-bottom:1px solid var(--border-color);">30 days</td>
+                    <td style="padding:9px 14px;border-bottom:1px solid var(--border-color);">Security monitoring and debugging</td>
+                  </tr>
+                  <tr>
+                    <td style="padding:9px 14px;">localStorage data (theme, searches)</td>
+                    <td style="padding:9px 14px;text-align:center;">Until you clear browser data</td>
+                    <td style="padding:9px 14px;">Stored locally on your device only; never sent to us</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── 14. Policy Changes ── -->
+        <section class="article-section" id="policy-changes"
+                 aria-labelledby="changes-heading">
+          <h2 class="article-section__title" id="changes-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+              </svg>
+            </div>
+            14. Changes to This Privacy Policy
+          </h2>
+          <div class="article-section__body">
+            <p>
+              We may update this Privacy Policy from time to time
+              to reflect changes in our practices, technology,
+              legal requirements, or for other operational reasons.
+            </p>
+            <p style="margin-top:var(--space-3);">
+              When we make significant changes, we will:
+            </p>
+            <ul class="requirements-list" style="margin-top:var(--space-3);">
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Update the <strong>"Last updated"</strong> date
+                  at the top of this page
+                </span>
+              </li>
+              <li class="requirements-list__item requirements-list__item--required">
+                <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                     stroke-width="2.5" aria-hidden="true">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>
+                  Post a notice on our homepage for
+                  material changes affecting your rights
+                </span>
+              </li>
+            </ul>
+            <p style="margin-top:var(--space-3);">
+              Your continued use of TrabahoWatch after changes
+              are posted constitutes acceptance of the revised
+              Privacy Policy. We encourage you to review this
+              page periodically.
+            </p>
+          </div>
+        </section>
+
+        <!-- ── 15. Contact DPO ── -->
+        <section class="article-section" id="contact-us"
+                 aria-labelledby="contact-pp-heading">
+          <h2 class="article-section__title" id="contact-pp-heading">
+            <div class="article-section__title-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+                   stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            15. Contact Us Regarding Privacy
+          </h2>
+          <div class="article-section__body">
+            <p>
+              If you have questions, concerns, or requests regarding
+              this Privacy Policy or the handling of your personal
+              data, please contact us:
+            </p>
+
+            <div class="card" style="padding:var(--space-5);
+                                      margin-top:var(--space-4);">
+              <p style="font-size:var(--text-sm);color:var(--text-secondary);
+                          line-height:1.8;">
+                <strong>TrabahoWatch</strong><br>
+                Website:
+                <a href="https://trabahowatch.com">trabahowatch.com</a><br>
+                Contact form:
+                <a href="/pages/contact.html">
+                  trabahowatch.com/pages/contact.html
+                </a><br>
+                Country: Republic of the Philippines<br>
+                Response time: Within 30 days (as required by RA 10173)
+              </p>
+            </div>
+
+            <p style="margin-top:var(--space-4);">
+              For complaints regarding data privacy violations,
+              you may also contact the
+              <strong>National Privacy Commission (NPC)</strong>
+              of the Philippines:
+            </p>
+            <div class="card" style="padding:var(--space-5);
+                                      margin-top:var(--space-3);">
+              <p style="font-size:var(--text-sm);color:var(--text-secondary);
+                          line-height:1.8;">
+                <strong>National Privacy Commission (NPC)</strong><br>
+                5th Floor, Philippine International Convention Center (PICC),<br>
+                Pasay City, Metro Manila, Philippines<br>
+                Website:
+                <a href="https://www.privacy.gov.ph"
+                   target="_blank" rel="noopener noreferrer">
+                  privacy.gov.ph
+                </a><br>
+                Email: info@privacy.gov.ph<br>
+                Hotline: +63 2 8234-2228
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Final Note -->
+        <div class="info-box" style="margin-top:var(--space-8);"
+             role="note">
+          <svg viewBox="0 0 24 24" stroke="currentColor" fill="none"
+               stroke-width="2" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+          </svg>
+          <span>
+            <strong>This Privacy Policy is effective as of
+            May 1, 2026.</strong>
+            It was written for compliance with the Philippine
+            Data Privacy Act of 2012 (RA 10173), the EU General
+            Data Protection Regulation (GDPR), and Google AdSense
+            Publisher Policies. For questions:
+            <a href="/pages/contact.html">Contact us →</a>
+          </span>
+        </div>
+
+      </div><!-- /.article-wrap -->
     </main>
-  </div><!-- end page-wrapper -->
 
-  <!-- Footer -->
+    <!-- Sidebar -->
+    <aside id="site-sidebar" aria-label="Sidebar">
+      <div id="sidebar-toc"         data-sidebar-toc></div>
+      <div id="sidebar-quick-links" data-sidebar-links></div>
+    </aside>
+
+  </div><!-- /.page-wrapper -->
+
   <footer id="site-footer" data-loading role="contentinfo"></footer>
 
-  <!-- Toast -->
   <div id="toast-container" role="region" aria-live="polite"
        aria-label="Notifications"></div>
 
   <!-- Scripts -->
-  <script src="/assets/js/utils/string.js"   defer></script>
-  <script src="/assets/js/utils/date.js"     defer></script>
-  <script src="/assets/js/utils/dom.js"      defer></script>
-
-  <script src="/assets/js/core/app.js"       defer></script>
-  <script src="/assets/js/core/router.js"    defer></script>
-
-  <script src="/assets/js/ui/scroll-top.js"  defer></script>
+  <script src="/assets/js/utils/string.js"         defer></script>
+  <script src="/assets/js/utils/date.js"           defer></script>
+  <script src="/assets/js/utils/dom.js"            defer></script>
+  <script src="/assets/js/core/app.js"              defer></script>
+  <script src="/assets/js/core/router.js"           defer></script>
+  <script src="/assets/js/ui/sidebar.js"            defer></script>
+  <script src="/assets/js/ui/scroll-top.js"         defer></script>
+  <script src="/assets/js/ui/reading-progress.js"   defer></script>
 
   <script>
     if ('serviceWorker' in navigator) {
