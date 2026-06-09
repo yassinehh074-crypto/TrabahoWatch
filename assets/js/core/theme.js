@@ -42,7 +42,7 @@
   /* ── Expose for app.js ──────────────────────────────────── */
   window.__trabahoTheme = theme;
 
-}());ly
+}());
     }
   }
 
