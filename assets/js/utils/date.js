@@ -185,10 +185,7 @@
     CSC_EXAM_DATES:     CSC_EXAM_DATES
   };
 
-}());  return formatDateShort(d);
-  }
-
-
+}());
   /* ----------------------------------------------------------
      FORMAT PUBLISHED DATE
      Shows "X days ago" for recent posts, date for older.
