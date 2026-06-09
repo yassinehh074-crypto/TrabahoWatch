@@ -159,7 +159,8 @@
     esc:               escapeHtml  /* alias */
   };
 
-}());h, suffix) {
+
+function truncate(str ,  maxLength, suffix) {
     if (!str) return '';
     if (suffix === undefined) suffix = '…';
     const s = String(str).trim();
