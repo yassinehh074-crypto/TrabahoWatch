@@ -591,9 +591,16 @@
      ============================================================ */
 
   window.TrabahoApp = {
-    showToast:    showToast,
-    removeToast:  removeToast,
-    initReveal:   initRevealAnimations
-  };
+  showToast:    showToast,
+  removeToast:  removeToast,
+  initReveal:   initRevealAnimations,
+  onReady:      function (callback) {
+    if (document.readyState !== 'loading') {
+      callback();
+    } else {
+      document.addEventListener('DOMContentLoaded', callback, { once: true });
+    }
+  }
+};
 
 }());
