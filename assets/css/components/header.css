@@ -1,655 +1,490 @@
-/* ============================================================
-   FILE: assets/css/components/header.css
-   PURPOSE: Site header — logo, nav, search toggle,
-            theme toggle, mobile menu.
-   DEPENDS ON: variables.css, layout.css
-   RULE: Header must work perfectly on both mobile and desktop.
-         Mobile menu must not cause layout shift.
-   ============================================================ */
+<!-- ============================================================
+     COMPONENTS/HEADER.HTML
+     Injected into #site-header by app.js (fetchComponent)
+     Matches classes/IDs in header.css exactly
+     TrabahoWatch v1.0
+     ============================================================ -->
+
+<div class="header-inner container">
+
+  <!-- ============================================================
+       LOGO
+       ============================================================ -->
+  <a href="/" class="site-logo" aria-label="TrabahoWatch — Home">
+    <span class="site-logo__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+        <line x1="12" y1="22.08" x2="12" y2="12"/>
+      </svg>
+    </span>
+    <span class="site-logo__text">
+      <span class="site-logo__name">TrabahoWatch</span>
+      <span class="site-logo__tagline">Philippine Job Information</span>
+    </span>
+  </a>
+
+  <!-- ============================================================
+       DESKTOP NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav" aria-label="Main navigation">
+
+    <!-- Government -->
+    <div class="site-nav__item">
+      <a href="/government/" class="site-nav__link" data-nav-link>
+        Government
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+      <div class="site-nav__dropdown">
+        <a href="/government/" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span class="site-nav__dropdown-label">
+            All Government Jobs
+            <span class="site-nav__dropdown-desc">SG1–SG33 · CSC eligible</span>
+          </span>
+        </a>
+        <a href="/government/deped-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          <span class="site-nav__dropdown-label">DepEd Teaching Jobs</span>
+        </a>
+        <a href="/government/doh-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          <span class="site-nav__dropdown-label">DOH / Healthcare Jobs</span>
+        </a>
+        <a href="/government/lgu-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M8 10h.01M16 10h.01M8 14h.01M16 14h.01"/></svg>
+          <span class="site-nav__dropdown-label">LGU Jobs</span>
+        </a>
+        <a href="/government/nbi-pnp-afp.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="site-nav__dropdown-label">PNP / BFP / NBI</span>
+        </a>
+        <div class="site-nav__dropdown-divider"></div>
+        <a href="/government/salary-grade.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="site-nav__dropdown-label">Salary Grade Table 2026</span>
+        </a>
+        <a href="/government/csc-exams.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <span class="site-nav__dropdown-label">CSC Exam Guide</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Private Sector -->
+    <div class="site-nav__item">
+      <a href="/private/" class="site-nav__link" data-nav-link>
+        Private Sector
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+      <div class="site-nav__dropdown">
+        <a href="/private/" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+          <span class="site-nav__dropdown-label">
+            All Private Jobs
+            <span class="site-nav__dropdown-desc">BPO, Tech, Healthcare &amp; more</span>
+          </span>
+        </a>
+        <a href="/private/bpo-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          <span class="site-nav__dropdown-label">BPO / Call Center</span>
+        </a>
+        <a href="/private/tech-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <span class="site-nav__dropdown-label">Tech &amp; IT Jobs</span>
+        </a>
+        <a href="/private/healthcare-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+          <span class="site-nav__dropdown-label">Healthcare / Nursing</span>
+        </a>
+        <a href="/private/finance-jobs.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span class="site-nav__dropdown-label">Banking &amp; Finance</span>
+        </a>
+        <a href="/private/skilled-trades.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span class="site-nav__dropdown-label">Skilled Trades (TESDA)</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- OFW -->
+    <div class="site-nav__item">
+      <a href="/ofw/" class="site-nav__link" data-nav-link>
+        OFW
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+      <div class="site-nav__dropdown">
+        <a href="/ofw/" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="site-nav__dropdown-label">
+            All OFW Jobs
+            <span class="site-nav__dropdown-desc">DMW-accredited only</span>
+          </span>
+        </a>
+        <a href="/ofw/middle-east.html" class="site-nav__dropdown-link">
+          <span style="font-size:18px;line-height:1;" aria-hidden="true">🇸🇦</span>
+          <span class="site-nav__dropdown-label">Middle East</span>
+        </a>
+        <a href="/ofw/asia-pacific.html" class="site-nav__dropdown-link">
+          <span style="font-size:18px;line-height:1;" aria-hidden="true">🇯🇵</span>
+          <span class="site-nav__dropdown-label">Asia Pacific</span>
+        </a>
+        <a href="/ofw/europe-americas.html" class="site-nav__dropdown-link">
+          <span style="font-size:18px;line-height:1;" aria-hidden="true">🇨🇦</span>
+          <span class="site-nav__dropdown-label">Europe &amp; Americas</span>
+        </a>
+        <div class="site-nav__dropdown-divider"></div>
+        <a href="/ofw/poea-guide.html" class="site-nav__dropdown-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10.29 3.86-8.19 14.2A1 1 0 0 0 3 20h18a1 1 0 0 0 .9-1.45L13.7 3.86a1 1 0 0 0-1.79.01z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <span class="site-nav__dropdown-label">DMW / POEA Safe Deployment Guide</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Salary Guide (direct link, no dropdown) -->
+    <div class="site-nav__item">
+      <a href="/government/salary-grade.html" class="site-nav__link" data-nav-link>
+        Salary Guide
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- ============================================================
+       HEADER ACTIONS — search, theme, mobile menu
+       ============================================================ -->
+  <div class="header-actions">
+
+    <!-- Search toggle -->
+    <button type="button"
+            id="search-toggle"
+            class="header-btn"
+            aria-label="Search jobs"
+            aria-expanded="false"
+            aria-controls="search-overlay">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+    </button>
+
+    <!-- Theme toggle -->
+    <button type="button"
+            id="theme-toggle"
+            class="header-btn"
+            aria-label="Switch to dark mode"
+            aria-pressed="false">
+      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"/>
+        <line x1="12" y1="1"  x2="12" y2="3"/>
+        <line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/>
+        <line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <!-- Mobile menu toggle -->
+    <button type="button"
+            id="mobile-menu-toggle"
+            class="header-btn"
+            data-mobile-menu-btn
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu">
+      <span class="hamburger" aria-hidden="true">
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+        <span class="hamburger__line"></span>
+      </span>
+    </button>
+
+  </div>
+
+</div><!-- /.header-inner -->
 
 
-/* ----------------------------------------------------------
-   HEADER STRUCTURE
-   Already positioned sticky in layout.css.
-   Here we style the inner content.
----------------------------------------------------------- */
-.header-inner {
-  display:         flex;
-  align-items:     center;
-  justify-content: space-between;
-  height:          var(--header-height);
-  gap:             var(--space-4);
-}
+<!-- ============================================================
+     SEARCH OVERLAY
+     ============================================================ -->
+<div id="search-overlay" role="search" aria-hidden="true">
+  <div class="container search-overlay__inner">
+    <div class="search-overlay__input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="search"
+             id="search-overlay-input"
+             class="search-overlay__input"
+             placeholder="Search — e.g. Teacher I, Nurse, BPO, OFW Saudi..."
+             autocomplete="off"
+             spellcheck="false"
+             aria-label="Search jobs">
+      <button type="button" class="search-overlay__clear" aria-label="Clear search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+    <button type="button" class="search-overlay__close">
+      Close
+    </button>
+  </div>
+</div>
 
 
-/* ----------------------------------------------------------
-   LOGO
----------------------------------------------------------- */
-.site-logo {
-  display:         flex;
-  align-items:     center;
-  gap:             var(--space-2);
-  text-decoration: none;
-  flex-shrink:     0;
-  color:           inherit;
-}
+<!-- ============================================================
+     MOBILE MENU
+     ============================================================ -->
+<div id="mobile-menu" aria-hidden="true">
 
-.site-logo:hover {
-  text-decoration: none;
-}
+  <div class="mobile-nav__section">
+    <p class="mobile-nav__section-title">Government</p>
+    <a href="/government/" class="mobile-nav__link" data-nav-link>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      <span class="mobile-nav__link-label">All Government Jobs</span>
+    </a>
+    <a href="/government/deped-jobs.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      <span class="mobile-nav__link-label">DepEd Teaching Jobs</span>
+    </a>
+    <a href="/government/lgu-jobs.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg>
+      <span class="mobile-nav__link-label">LGU Jobs</span>
+    </a>
+    <a href="/government/salary-grade.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      <span class="mobile-nav__link-label">Salary Grade Table</span>
+    </a>
+    <a href="/government/csc-exams.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      <span class="mobile-nav__link-label">CSC Exam Guide</span>
+    </a>
+  </div>
 
-.site-logo__icon {
-  width:         36px;
-  height:        36px;
-  border-radius: var(--radius-md);
-  background:    var(--color-primary);
-  display:       flex;
-  align-items:   center;
-  justify-content: center;
-  flex-shrink:   0;
-}
+  <div class="mobile-nav__divider"></div>
 
-.site-logo__icon svg {
-  width:  22px;
-  height: 22px;
-  color:  var(--color-white);
-}
+  <div class="mobile-nav__section">
+    <p class="mobile-nav__section-title">Private Sector</p>
+    <a href="/private/" class="mobile-nav__link" data-nav-link>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      <span class="mobile-nav__link-label">All Private Jobs</span>
+    </a>
+    <a href="/private/bpo-jobs.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/></svg>
+      <span class="mobile-nav__link-label">BPO / Call Center</span>
+    </a>
+    <a href="/private/tech-jobs.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <span class="mobile-nav__link-label">Tech &amp; IT Jobs</span>
+    </a>
+    <a href="/private/healthcare-jobs.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"/></svg>
+      <span class="mobile-nav__link-label">Healthcare / Nursing</span>
+    </a>
+  </div>
 
-.site-logo__text {
-  display:    flex;
-  flex-direction: column;
-  line-height:1;
-}
+  <div class="mobile-nav__divider"></div>
 
-.site-logo__name {
-  font-size:   var(--text-lg);
-  font-weight: var(--font-bold);
-  color:       var(--color-primary);
-  letter-spacing: -0.02em;
-}
+  <div class="mobile-nav__section">
+    <p class="mobile-nav__section-title">OFW</p>
+    <a href="/ofw/" class="mobile-nav__link" data-nav-link>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="mobile-nav__link-label">All OFW Jobs</span>
+    </a>
+    <a href="/ofw/middle-east.html" class="mobile-nav__link">
+      <span style="font-size:18px;line-height:1;" aria-hidden="true">🇸🇦</span>
+      <span class="mobile-nav__link-label">Middle East</span>
+    </a>
+    <a href="/ofw/asia-pacific.html" class="mobile-nav__link">
+      <span style="font-size:18px;line-height:1;" aria-hidden="true">🇯🇵</span>
+      <span class="mobile-nav__link-label">Asia Pacific</span>
+    </a>
+    <a href="/ofw/europe-americas.html" class="mobile-nav__link">
+      <span style="font-size:18px;line-height:1;" aria-hidden="true">🇨🇦</span>
+      <span class="mobile-nav__link-label">Europe &amp; Americas</span>
+    </a>
+    <a href="/ofw/poea-guide.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m10.29 3.86-8.19 14.2A1 1 0 0 0 3 20h18a1 1 0 0 0 .9-1.45L13.7 3.86a1 1 0 0 0-1.79.01z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <span class="mobile-nav__link-label">DMW / POEA Guide</span>
+    </a>
+  </div>
 
-.site-logo__tagline {
-  font-size:  var(--text-xs);
-  color:      var(--text-muted);
-  margin-top: 2px;
-}
+  <div class="mobile-nav__divider"></div>
 
-/* Hide tagline on very small screens */
-@media (max-width: 360px) {
-  .site-logo__tagline { display: none; }
-}
+  <div class="mobile-nav__section">
+    <a href="/jobs/job-map.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      <span class="mobile-nav__link-label">Search All Jobs</span>
+    </a>
+    <a href="/pages/about.html" class="mobile-nav__link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      <span class="mobile-nav__link-label">About TrabahoWatch</span>
+    </a>
+  </div>
+
+  <div class="mobile-nav__divider"></div>
+
+  <!-- Theme toggle row -->
+  <div class="mobile-nav__theme-row">
+    <span class="mobile-nav__theme-label">Dark Mode</span>
+    <label class="toggle-switch">
+      <input type="checkbox" id="theme-toggle-mobile" aria-label="Toggle dark mode">
+      <span class="toggle-switch__track"></span>
+      <span class="toggle-switch__thumb"></span>
+    </label>
+  </div>
+
+</div><!-- /#mobile-menu -->
 
 
-/* ----------------------------------------------------------
-   DESKTOP NAVIGATION
-   Hidden on mobile — shown via hamburger menu instead.
----------------------------------------------------------- */
-.site-nav {
-  display: none;
-}
+<!-- ============================================================
+     BACKDROP — shared by search overlay & mobile menu
+     ============================================================ -->
+<div class="menu-backdrop" id="menu-backdrop"></div>
 
-@media (min-width: 1024px) {
-  .site-nav {
-    display:     flex;
-    align-items: center;
-    gap:         var(--space-1);
-    flex:        1;
-    margin:      0 var(--space-6);
+
+<!-- ============================================================
+     HEADER INLINE SCRIPT
+     Self-contained logic for search overlay + mobile menu.
+     Does NOT depend on app.js selectors (avoids ID mismatches).
+     Theme toggle is handled separately by theme.js (#theme-toggle,
+     #theme-toggle-mobile).
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  var searchToggle  = document.getElementById('search-toggle');
+  var searchOverlay = document.getElementById('search-overlay');
+  var searchInput   = document.getElementById('search-overlay-input');
+  var searchClear   = searchOverlay ? searchOverlay.querySelector('.search-overlay__clear') : null;
+  var searchClose   = searchOverlay ? searchOverlay.querySelector('.search-overlay__close') : null;
+  var searchWrap    = searchOverlay ? searchOverlay.querySelector('.search-overlay__input-wrap') : null;
+
+  var menuToggle = document.getElementById('mobile-menu-toggle');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var hamburger  = menuToggle ? menuToggle.querySelector('.hamburger') : null;
+
+  var backdrop = document.getElementById('menu-backdrop');
+
+  /* ── Close everything ─────────────────────────────────────── */
+  function closeAll() {
+    if (searchOverlay) {
+      searchOverlay.classList.remove('open');
+      searchOverlay.setAttribute('aria-hidden', 'true');
+    }
+    if (searchToggle) searchToggle.setAttribute('aria-expanded', 'false');
+
+    if (mobileMenu) {
+      mobileMenu.classList.remove('open');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+    if (hamburger)  hamburger.classList.remove('hamburger--open');
+
+    if (backdrop) backdrop.classList.remove('visible');
+
+    document.body.style.overflow = '';
   }
-}
 
-.site-nav__item {
-  position: relative;
-}
-
-.site-nav__link {
-  display:       flex;
-  align-items:   center;
-  gap:           var(--space-1);
-  padding:       var(--space-2) var(--space-3);
-  border-radius: var(--radius-md);
-  font-size:     var(--text-sm);
-  font-weight:   var(--font-medium);
-  color:         var(--text-secondary);
-  text-decoration: none;
-  white-space:   nowrap;
-  transition:
-    color      var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.site-nav__link:hover,
-.site-nav__link--active {
-  color:       var(--text-primary);
-  background:  var(--bg-surface-2);
-  text-decoration: none;
-}
-
-.site-nav__link--active {
-  color:       var(--color-primary);
-  font-weight: var(--font-semibold);
-}
-
-/* Dropdown arrow */
-.site-nav__link svg {
-  width:      14px;
-  height:     14px;
-  transition: transform var(--transition-fast);
-  flex-shrink:0;
-}
-
-.site-nav__item:hover .site-nav__link svg,
-.site-nav__item:focus-within .site-nav__link svg {
-  transform: rotate(180deg);
-}
-
-
-/* ----------------------------------------------------------
-   DROPDOWN MENU
-   Appears on hover/focus of nav items with children.
----------------------------------------------------------- */
-.site-nav__dropdown {
-  position:      absolute;
-  top:           calc(100% + var(--space-2));
-  left:          50%;
-  transform:     translateX(-50%);
-  z-index:       var(--z-dropdown);
-
-  min-width:     200px;
-  background:    var(--bg-surface);
-  border:        1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  box-shadow:    var(--shadow-xl);
-  padding:       var(--space-2);
-
-  /* Hidden by default */
-  opacity:        0;
-  pointer-events: none;
-  transform:      translateX(-50%) translateY(-8px);
-  transition:
-    opacity   var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.site-nav__item:hover .site-nav__dropdown,
-.site-nav__item:focus-within .site-nav__dropdown {
-  opacity:        1;
-  pointer-events: auto;
-  transform:      translateX(-50%) translateY(0);
-}
-
-.site-nav__dropdown-link {
-  display:       flex;
-  align-items:   center;
-  gap:           var(--space-3);
-  padding:       var(--space-3);
-  border-radius: var(--radius-md);
-  font-size:     var(--text-sm);
-  color:         var(--text-secondary);
-  text-decoration: none;
-  transition:
-    color      var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.site-nav__dropdown-link:hover {
-  color:       var(--text-primary);
-  background:  var(--bg-surface-2);
-  text-decoration: none;
-}
-
-.site-nav__dropdown-link svg {
-  width:      18px;
-  height:     18px;
-  flex-shrink:0;
-  color:      var(--text-muted);
-}
-
-.site-nav__dropdown-link:hover svg {
-  color: var(--color-primary);
-}
-
-.site-nav__dropdown-label {
-  flex: 1;
-}
-
-.site-nav__dropdown-desc {
-  display:    block;
-  font-size:  var(--text-xs);
-  color:      var(--text-muted);
-  margin-top: 2px;
-}
-
-/* Divider inside dropdown */
-.site-nav__dropdown-divider {
-  height:     1px;
-  background: var(--border-color);
-  margin:     var(--space-2) 0;
-}
-
-
-/* ----------------------------------------------------------
-   HEADER ACTIONS
-   Right side — search, theme toggle, hamburger.
----------------------------------------------------------- */
-.header-actions {
-  display:     flex;
-  align-items: center;
-  gap:         var(--space-2);
-  flex-shrink: 0;
-}
-
-/* Icon button base */
-.header-btn {
-  width:         40px;
-  height:        40px;
-  border-radius: var(--radius-md);
-  display:       flex;
-  align-items:   center;
-  justify-content: center;
-  background:    transparent;
-  border:        none;
-  cursor:        pointer;
-  color:         var(--text-secondary);
-  transition:
-    color      var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.header-btn:hover {
-  color:       var(--text-primary);
-  background:  var(--bg-surface-2);
-}
-
-.header-btn svg {
-  width:  20px;
-  height: 20px;
-  /* Explicit stroke to prevent invisible icon on first load */
-  stroke: currentColor;
-}
-
-
-/* ----------------------------------------------------------
-   THEME TOGGLE
-   Sun / Moon icon swap via CSS.
-   JS adds/removes html.dark class.
----------------------------------------------------------- */
-#theme-toggle .icon-sun  { display: block; }
-#theme-toggle .icon-moon { display: none;  }
-
-html.dark #theme-toggle .icon-sun  { display: none;  }
-html.dark #theme-toggle .icon-moon { display: block; }
-
-/* Smooth icon transition */
-#theme-toggle svg {
-  transition: transform var(--transition-normal);
-}
-
-#theme-toggle:hover svg {
-  transform: rotate(20deg);
-}
-
-
-/* ----------------------------------------------------------
-   SEARCH TOGGLE
-   Opens the search overlay.
----------------------------------------------------------- */
-#search-toggle {
-  /* Visible on all screen sizes */
-}
-
-
-/* ----------------------------------------------------------
-   HAMBURGER BUTTON
-   Mobile only.
----------------------------------------------------------- */
-#mobile-menu-toggle {
-  display: flex;
-}
-
-@media (min-width: 1024px) {
-  #mobile-menu-toggle { display: none; }
-}
-
-/* Animated hamburger → X */
-.hamburger {
-  width:     20px;
-  height:    16px;
-  position:  relative;
-  display:   flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger__line {
-  display:       block;
-  width:         100%;
-  height:        2px;
-  background:    currentColor;
-  border-radius: var(--radius-full);
-  transform-origin: center;
-  transition:
-    transform  var(--transition-normal),
-    opacity    var(--transition-fast),
-    width      var(--transition-normal);
-}
-
-/* Open state — transforms to X */
-.hamburger--open .hamburger__line:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger--open .hamburger__line:nth-child(2) {
-  opacity: 0;
-  width:   0;
-}
-
-.hamburger--open .hamburger__line:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-
-/* ----------------------------------------------------------
-   SEARCH OVERLAY
-   Full-width dropdown that appears below header.
----------------------------------------------------------- */
-#search-overlay {
-  position:   fixed;
-  top:        var(--header-height);
-  left:       0;
-  right:      0;
-  z-index:    var(--z-overlay);
-
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: var(--shadow-xl);
-  padding:    var(--space-4) 0;
-
-  /* Hidden by default */
-  opacity:        0;
-  pointer-events: none;
-  transform:      translateY(-12px);
-  transition:
-    opacity   var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-#search-overlay.open {
-  opacity:        1;
-  pointer-events: auto;
-  transform:      translateY(0);
-}
-
-.search-overlay__inner {
-  display:     flex;
-  align-items: center;
-  gap:         var(--space-3);
-}
-
-.search-overlay__input-wrap {
-  flex:          1;
-  position:      relative;
-  display:       flex;
-  align-items:   center;
-}
-
-.search-overlay__input-wrap svg {
-  position: absolute;
-  left:     var(--space-4);
-  width:    20px;
-  height:   20px;
-  color:    var(--text-muted);
-  pointer-events: none;
-}
-
-.search-overlay__input {
-  width:         100%;
-  height:        48px;
-  padding:       0 var(--space-10) 0 var(--space-12);
-  background:    var(--bg-surface-2);
-  border:        2px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  font-size:     var(--text-base);
-  color:         var(--text-primary);
-  transition:    border-color var(--transition-fast);
-}
-
-.search-overlay__input::placeholder {
-  color: var(--text-muted);
-}
-
-.search-overlay__input:focus {
-  outline:      none;
-  border-color: var(--color-primary);
-  background:   var(--bg-surface);
-}
-
-/* Clear button inside input */
-.search-overlay__clear {
-  position:   absolute;
-  right:      var(--space-3);
-  width:      28px;
-  height:     28px;
-  border-radius: var(--radius-full);
-  background: var(--bg-surface-3);
-  color:      var(--text-muted);
-  display:    none;
-  align-items:center;
-  justify-content: center;
-  cursor:     pointer;
-  border:     none;
-  transition: background var(--transition-fast);
-}
-
-.search-overlay__clear:hover {
-  background: var(--border-color-strong);
-  color:      var(--text-primary);
-}
-
-.search-overlay__clear svg {
-  width:  14px;
-  height: 14px;
-}
-
-/* Show clear button when input has value — toggled by JS */
-.search-overlay__input-wrap.has-value .search-overlay__clear {
-  display: flex;
-}
-
-.search-overlay__close {
-  font-size:  var(--text-sm);
-  color:      var(--text-muted);
-  cursor:     pointer;
-  background: none;
-  border:     none;
-  padding:    var(--space-2);
-  white-space:nowrap;
-  transition: color var(--transition-fast);
-}
-
-.search-overlay__close:hover {
-  color: var(--text-primary);
-}
-
-
-/* ----------------------------------------------------------
-   MOBILE MENU
-   Full-screen overlay on mobile.
----------------------------------------------------------- */
-#mobile-menu {
-  position:   fixed;
-  inset:      0;
-  top:        var(--header-height);
-  z-index:    var(--z-overlay);
-
-  background: var(--bg-surface);
-  overflow-y: auto;
-  padding:    var(--space-6);
-
-  /* Hidden by default */
-  opacity:        0;
-  pointer-events: none;
-  transform:      translateX(100%);
-  transition:
-    opacity   var(--transition-normal),
-    transform var(--transition-normal);
-}
-
-#mobile-menu.open {
-  opacity:        1;
-  pointer-events: auto;
-  transform:      translateX(0);
-}
-
-@media (min-width: 1024px) {
-  #mobile-menu { display: none; }
-}
-
-/* Mobile nav links */
-.mobile-nav__section {
-  margin-bottom: var(--space-6);
-}
-
-.mobile-nav__section-title {
-  font-size:     var(--text-xs);
-  font-weight:   var(--font-semibold);
-  text-transform:uppercase;
-  letter-spacing:0.08em;
-  color:         var(--text-muted);
-  margin-bottom: var(--space-3);
-  padding-left:  var(--space-3);
-}
-
-.mobile-nav__link {
-  display:       flex;
-  align-items:   center;
-  gap:           var(--space-3);
-  padding:       var(--space-4) var(--space-3);
-  border-radius: var(--radius-lg);
-  font-size:     var(--text-base);
-  font-weight:   var(--font-medium);
-  color:         var(--text-secondary);
-  text-decoration: none;
-  transition:
-    color      var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.mobile-nav__link:hover,
-.mobile-nav__link--active {
-  color:       var(--color-primary);
-  background:  var(--bg-surface-2);
-  text-decoration: none;
-}
-
-.mobile-nav__link svg {
-  width:      22px;
-  height:     22px;
-  flex-shrink:0;
-  color:      var(--text-muted);
-}
-
-.mobile-nav__link:hover svg,
-.mobile-nav__link--active svg {
-  color: var(--color-primary);
-}
-
-.mobile-nav__link-label {
-  flex: 1;
-}
-
-.mobile-nav__link-badge {
-  font-size:     var(--text-xs);
-  padding:       2px var(--space-2);
-  border-radius: var(--radius-full);
-  background:    var(--badge-soon-bg);
-  color:         var(--badge-soon-text);
-  font-weight:   var(--font-semibold);
-}
-
-.mobile-nav__divider {
-  height:     1px;
-  background: var(--border-color);
-  margin:     var(--space-4) 0;
-}
-
-/* Theme toggle inside mobile menu */
-.mobile-nav__theme-row {
-  display:         flex;
-  align-items:     center;
-  justify-content: space-between;
-  padding:         var(--space-4) var(--space-3);
-}
-
-.mobile-nav__theme-label {
-  font-size:   var(--text-base);
-  font-weight: var(--font-medium);
-  color:       var(--text-secondary);
-}
-
-/* Toggle switch */
-.toggle-switch {
-  position:  relative;
-  width:     48px;
-  height:    26px;
-}
-
-.toggle-switch input {
-  opacity: 0;
-  width:   0;
-  height:  0;
-  position:absolute;
-}
-
-.toggle-switch__track {
-  position:      absolute;
-  inset:         0;
-  background:    var(--color-gray-300);
-  border-radius: var(--radius-full);
-  cursor:        pointer;
-  transition:    background var(--transition-normal);
-}
-
-html.dark .toggle-switch__track {
-  background: var(--color-primary);
-}
-
-.toggle-switch__thumb {
-  position:      absolute;
-  top:           3px;
-  left:          3px;
-  width:         20px;
-  height:        20px;
-  background:    white;
-  border-radius: var(--radius-full);
-  box-shadow:    var(--shadow-sm);
-  transition:    transform var(--transition-normal);
-  pointer-events:none;
-}
-
-html.dark .toggle-switch__thumb {
-  transform: translateX(22px);
-}
-
-
-/* ----------------------------------------------------------
-   BACKDROP
-   Darkens content behind mobile menu / search overlay.
----------------------------------------------------------- */
-.menu-backdrop {
-  position:   fixed;
-  inset:      0;
-  top:        var(--header-height);
-  z-index:    calc(var(--z-overlay) - 1);
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(2px);
-
-  opacity:        0;
-  pointer-events: none;
-  transition:     opacity var(--transition-normal);
-}
-
-.menu-backdrop.visible {
-  opacity:        1;
-  pointer-events: auto;
-}
+  /* ── Search overlay toggle ────────────────────────────────── */
+  if (searchToggle && searchOverlay) {
+    searchToggle.addEventListener('click', function () {
+      var isOpen = searchOverlay.classList.contains('open');
+
+      closeAll();
+
+      if (!isOpen) {
+        searchOverlay.classList.add('open');
+        searchOverlay.setAttribute('aria-hidden', 'false');
+        searchToggle.setAttribute('aria-expanded', 'true');
+        if (backdrop) backdrop.classList.add('visible');
+
+        setTimeout(function () {
+          if (searchInput) searchInput.focus();
+        }, 50);
+      }
+    });
+  }
+
+  if (searchClose) {
+    searchClose.addEventListener('click', closeAll);
+  }
+
+  if (searchClear && searchInput && searchWrap) {
+    searchInput.addEventListener('input', function () {
+      searchWrap.classList.toggle('has-value', !!searchInput.value);
+    });
+    searchClear.addEventListener('click', function () {
+      searchInput.value = '';
+      searchWrap.classList.remove('has-value');
+      searchInput.focus();
+    });
+  }
+
+  /* Submit search on Enter */
+  if (searchInput) {
+    searchInput.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var q = searchInput.value.trim();
+        if (q) {
+          window.location.href = '/jobs/job-map.html?q=' + encodeURIComponent(q);
+        }
+      }
+    });
+  }
+
+  /* ── Mobile menu toggle ───────────────────────────────────── */
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function () {
+      var isOpen = mobileMenu.classList.contains('open');
+
+      closeAll();
+
+      if (!isOpen) {
+        mobileMenu.classList.add('open');
+        mobileMenu.setAttribute('aria-hidden', 'false');
+        menuToggle.setAttribute('aria-expanded', 'true');
+        if (hamburger) hamburger.classList.add('hamburger--open');
+        if (backdrop)  backdrop.classList.add('visible');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  }
+
+  /* ── Backdrop click closes everything ─────────────────────── */
+  if (backdrop) {
+    backdrop.addEventListener('click', closeAll);
+  }
+
+  /* ── Escape key closes everything ─────────────────────────── */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAll();
+  });
+
+  /* ── Close mobile menu when a nav link is clicked ─────────── */
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeAll);
+    });
+  }
+
+}());
+</script>
