@@ -6,7 +6,30 @@
      ============================================================ -->
 
 <div class="header-inner container">
-
+<style>
+  /* ===== FALLBACK — يعمل حتى لو header.css لم يُحمّل ===== */
+  .site-nav { display: none; }
+  @media (min-width: 1024px) {
+    .site-nav { display: flex; }
+  }
+  .site-nav__dropdown,
+  #search-overlay,
+  #mobile-menu {
+    display: none;
+  }
+  .site-nav__dropdown.open,
+  #search-overlay.open,
+  #mobile-menu.open {
+    display: block;
+  }
+  .site-nav__dropdown-link svg,
+  .mobile-nav__link svg,
+  .header-btn svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+</style>
   <!-- ============================================================
        LOGO
        ============================================================ -->
